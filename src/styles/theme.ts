@@ -6,5 +6,8 @@ export const theme = {
     grey2: '#86868B',
     grey3: '#424245',
     black: '#000',
+    viewport: {
+      mobile: '420px',
+    },
   },
 };
