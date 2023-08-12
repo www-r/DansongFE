@@ -8,7 +8,7 @@ export default function ContactPage() {
         <div>
           <h3>CONTACT INFO</h3>
           <ul>
-            <li >
+            <li>
               <label>전화</label>
               <p>070 7799 0703</p>
             </li>
