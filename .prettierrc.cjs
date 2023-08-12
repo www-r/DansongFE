@@ -1,5 +1,3 @@
-// .prettierrc.js
-
 module.exports = {
   printWidth: 100, // printWidth default 80 => 100 으로 변경
   singleQuote: true, // "" => ''
