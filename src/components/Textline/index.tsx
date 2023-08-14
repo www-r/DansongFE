@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
 export default function Textline() {
-  return (
-    <div> Textline</div>
-  )
+  return <div>Textline</div>;
 }
