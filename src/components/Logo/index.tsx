@@ -1,7 +1,10 @@
-import React from 'react'
+import * as S from './style';
 
-export default function Logo() {
-  return (
-    <div>Logo</div>
-  )
+type LogoProps = {
+  children: React.ReactNode;
+  height: number;
+};
+
+export default function Logo({ children, height }: LogoProps) {
+  return <S.LogoContainer height={height}>{children}</S.LogoContainer>;
 }
