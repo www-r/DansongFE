@@ -1,3 +1,3 @@
 export default function Map() {
-  return <div>Map</div>;
+  return <div id="map" style={{ width: '80vw', height: '400px' }}></div>;
 }
