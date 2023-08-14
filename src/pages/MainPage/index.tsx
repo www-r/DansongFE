@@ -1,9 +1,12 @@
-import Header from '../../components/Header';
+
+import DansongKorea from '../../components/Section/DansongKorea';
+import * as S from './style';
 
 export default function MainPage() {
   return (
-    <main>
+    <S.Wrapper>
       <Header />
-    </main>
+      <DansongKorea />
+    </S.Wrapper>
   );
 }
