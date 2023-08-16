@@ -8,7 +8,9 @@ export const theme = {
     black: '#000',
   },
   viewport: {
-    mobile: '420px',
+    mobile: '480px',
+    tablet: '768px',
+    desktop: '1024px',
   },
   width: {
     maxWidth: '1200px',
