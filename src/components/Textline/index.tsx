@@ -1,31 +1,44 @@
+
+import React from 'react';
 import * as S from './style';
 
-interface TextlineProps {
-  children: string;
-  textAlign?: string;
-  fontSize: number;
-  fontWeight?: number;
+type Props = {
+  fontSize: string;
+  isFontBold?: boolean;
   color?: string;
-  animation?: 'none' | 'up' | 'side';
-}
+  text: string;
+  animation?: keyof typeof direction;
+  dynamicStyles?: React.CSSProperties;
+};
+
+const scale = 50;
+const direction = {
+  left: { initialX: -scale, initialY: 0 },
+  right: { initialX: scale, initialY: 0 },
+  top: { initialX: 0, initialY: -scale },
+  bottom: { initialX: 0, initialY: scale },
+  none: { initialX: 0, initialY: 0 },
+};
 
 export default function Textline({
-  children,
-  textAlign = 'left',
   fontSize,
-  fontWeight = 600,
   color = '#000',
+  text,
   animation = 'none',
-}: TextlineProps) {
+  isFontBold = false,
+}: Props) {
+  const { initialX, initialY } = direction[animation] || direction.none;
+
   return (
     <S.Textline
-      textAlign={textAlign}
       fontSize={fontSize}
-      fontWeight={fontWeight}
+      isFontBold={isFontBold}
       color={color}
-      animation={animation}
+      initial={{ opacity: 0, x: initialX, y: initialY }}
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      transition={{ duration: 1 }}
     >
-      {children}
+      {text}
     </S.Textline>
   );
 }

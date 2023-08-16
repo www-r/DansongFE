@@ -1,8 +1,19 @@
 import styled from '@emotion/styled';
 
-export const Textline = styled.span`
-  text-align: ${({ textAlign }) => textAlign};
-  font-size: ${({ fontSize }) => fontSize + 'rem'};
-  font-weight: ${({ fontWeight }) => fontWeight};
-  color: ${({ color }) => color};
+import { motion, HTMLMotionProps } from 'framer-motion';
+
+type TextlineProps = HTMLMotionProps<'span'> & {
+  fontSize?: string;
+  color?: string;
+  isFontBold?: boolean;
+};
+
+export const Textline = styled(motion.span)<TextlineProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: ${props => props.fontSize || '16rem'};
+  font-weight: ${props => (props.isFontBold ? 'bold' : 'normal')};
+  color: ${props => props.color};
 `;
