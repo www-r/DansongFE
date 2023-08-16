@@ -1,5 +1,4 @@
 export const theme = {
-
   colors: {
     header: '#454545',
     white: '#fff',
@@ -14,6 +13,17 @@ export const theme = {
     mobile: '480px',
     tablet: '768px',
     desktop: '1024px',
+  },
+
+  backgroundColor: {
+    header: '#454545',
+    lightGrey: '#f5f5f7',
+    grey: '#DCDCDE',
+    black: '#000',
+  },
+  textColor: {
+    header: '#f5f5f7',
+    grey: '#6E6E73',
   },
 
   width: {
