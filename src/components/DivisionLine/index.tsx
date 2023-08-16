@@ -1,7 +1,4 @@
-import React from 'react'
-
+import * as S from './style';
 export default function DivisionLine() {
-  return (
-    <div>DivisionLine</div>
-  )
+  return <S.DivisionLine />;
 }

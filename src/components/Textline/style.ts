@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-
 import { motion, HTMLMotionProps } from 'framer-motion';
 
 type TextlineProps = HTMLMotionProps<'span'> & {

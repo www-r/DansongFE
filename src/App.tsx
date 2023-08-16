@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import MainPage from './pages/MainPage';
 import ContactPage from './pages/ContactPage';
-import { Global } from '@emotion/react';
+import { Global, ThemeProvider } from '@emotion/react';
 import { globalStyle } from './styles/global';
-import { ThemeProvider } from '@emotion/react';
 import { theme } from './styles/theme';
+
 const router = createBrowserRouter([
   {
     path: '/',
