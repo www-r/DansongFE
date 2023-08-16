@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 
 export const Button = styled.button`
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   border: none;
   cursor: pointer;
-  font-size: 16px;
-  border-radius: 4px;
+  font-size: 1.6rem;
+  border-radius: 0.4rem;
 
   &.scroll {
     background-color: #3498db;
