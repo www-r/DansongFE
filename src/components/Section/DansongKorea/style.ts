@@ -3,7 +3,7 @@ import { theme } from '../../../styles/theme';
 
 export const Section = styled.section``;
 
-export const VideoWrapper = styled.section`
+export const VideoSection = styled.section`
   background-image: linear-gradient(to bottom, ${theme.colors.navy1}, ${theme.colors.navy2});
   display: flex;
   justify-content: center;
@@ -18,23 +18,23 @@ export const VideoContainer = styled.div`
   }
 `;
 
-export const TextWrapper = styled.section`
+export const TextSection = styled.section`
   height: 20rem;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
-export const TextContainer = styled.div`
-  & > h2 {
-    font-size: 4.8rem;
-    font-weight: 900;
-    margin-bottom: 12px;
-  }
+export const TextContainer = styled.div``;
 
-  & > p {
-    font-size: 2.4rem;
-    display: flex;
-    justify-content: center;
-  }
+export const LogoSection = styled.section`
+  background-image: linear-gradient(to bottom, ${theme.colors.navy1}, ${theme.colors.navy2});
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const LogoContainer = styled.div`
+  min-width: ${theme.width.maxWidth};
+  height: 20rem;
 `;
