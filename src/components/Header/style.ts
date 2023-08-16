@@ -2,6 +2,10 @@ import styled from '@emotion/styled';
 import { theme } from '../../styles/theme';
 
 export const Header = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: ${theme.colors.header};
   min-width: ${theme.viewport.tablet};
   height: 4.2rem;
