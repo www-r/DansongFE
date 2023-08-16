@@ -1,10 +1,8 @@
-import * as S from './style';
-
 type LogoProps = {
   children: React.ReactNode;
-  height: number;
+  size: 'small' | 'medium' | 'large';
 };
 
-export default function Logo({ children, height }: LogoProps) {
-  return <S.LogoContainer height={height}>{children}</S.LogoContainer>;
+export default function Logo({ children, size }: LogoProps) {
+  return <div className={size}>{children}</div>;
 }
