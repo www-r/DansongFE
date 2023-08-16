@@ -1,3 +1,39 @@
+import '@emotion/react';
+
+declare module '@emotion/react' {
+  export interface Theme {
+    colors: {
+      header: string;
+      white: string;
+      grey1: string;
+      grey2: string;
+      grey3: string;
+      navy1: string;
+      navy2: string;
+      black: string;
+    };
+    viewport: {
+      mobile: string;
+      tablet: string;
+      desktop: string;
+    };
+    backgroundColor: {
+      header: string;
+      lightGrey: string;
+      grey: string;
+      black: string;
+    };
+    textColor: {
+      header: string;
+      grey: string;
+    };
+    width: {
+      maxWidth: string;
+    };
+    // Add other properties as needed
+  }
+}
+
 export const theme = {
   colors: {
     header: '#454545',
