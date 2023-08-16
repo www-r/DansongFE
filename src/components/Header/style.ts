@@ -3,6 +3,7 @@ import { theme } from '../../styles/theme';
 
 export const Header = styled.header`
   background-color: ${theme.colors.header};
+  min-width: ${theme.viewport.tablet};
   height: 4.2rem;
 
   &:hover {
