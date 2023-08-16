@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import emotionReset from 'emotion-reset';
 
 export const globalStyle = css`
@@ -7,6 +8,8 @@ export const globalStyle = css`
   * {
     margin: 0;
     padding: 0;
+    line-height: 1.5;
+    box-sizing: border-box;
   }
 
   html {
@@ -14,6 +17,12 @@ export const globalStyle = css`
   }
 
   body {
-    box-sizing: border-box;
+    width: 100%;
   }
+`;
+
+export const Center = styled.div`
+
+  margin: auto;
+  padding: 0 7.4rem;
 `;
