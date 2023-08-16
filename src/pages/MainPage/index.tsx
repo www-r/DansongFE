@@ -1,4 +1,4 @@
-
+import Header from '../../components/Header';
 import DansongKorea from '../../components/Section/DansongKorea';
 import * as S from './style';
 
