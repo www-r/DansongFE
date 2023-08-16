@@ -35,7 +35,7 @@ export default function Textline({
       color={color}
       initial={{ opacity: 0, x: initialX, y: initialY }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 1 }}
     >
       {text}
     </S.Textline>
