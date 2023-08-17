@@ -5,7 +5,7 @@ type Props = {
   fontSize: string;
   isFontBold?: boolean;
   color?: string;
-  text: string;
+  children: React.ReactNode;
   animation?: keyof typeof direction;
   dynamicStyles?: React.CSSProperties;
 };
@@ -22,7 +22,7 @@ const direction = {
 export default function Textline({
   fontSize,
   color = '#000',
-  text,
+  children,
   animation = 'none',
   isFontBold = false,
 }: Props) {
@@ -37,7 +37,7 @@ export default function Textline({
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       transition={{ duration: 1 }}
     >
-      {text}
+      {children}
     </S.Textline>
   );
 }
