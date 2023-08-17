@@ -1,12 +1,18 @@
+import { useState } from 'react';
 import Hover from '../../Hover';
 import Textline from '../../Textline';
 import * as S from './style';
+import useDebounce from '../../../hooks/useDebounce';
 
 const src = 'https://www.youtube.com/watch?v=H6jx_By_dKg&t=2s';
 const videoId = src.match(/(?<=\?v=)[^&]+/)![0];
 const thumbnail = `https://img.youtube.com/vi/${videoId}/0.jpg`;
 
 export default function DansongKorea() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const debouncedHoveredIndex = useDebounce(hoveredIndex, 300);
+
   return (
     <S.Section>
       <S.VideoSection>
@@ -25,12 +31,24 @@ export default function DansongKorea() {
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           /> */}
-          <Hover>
-            <img src={thumbnail} />
-          </Hover>
-          <Hover>
-            <img src={thumbnail} />
-          </Hover>
+          {debouncedHoveredIndex !== 0 && (
+            <Hover>
+              <img
+                src={thumbnail}
+                onMouseEnter={() => setHoveredIndex(1)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              />
+            </Hover>
+          )}
+          {debouncedHoveredIndex !== 1 && (
+            <Hover>
+              <img
+                src={thumbnail}
+                onMouseEnter={() => setHoveredIndex(0)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              />
+            </Hover>
+          )}
         </S.VideoContainer>
       </S.VideoSection>
       {/* <Button text="sss" type="link" onClick={() => {}} /> */}
