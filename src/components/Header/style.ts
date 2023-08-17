@@ -8,7 +8,7 @@ export const Header = styled.header`
   width: 100%;
   background-color: ${theme.colors.header};
   min-width: ${theme.viewport.tablet};
-  height: 4.2rem;
+  height: 7vh;
 
   &:hover {
     background-color: ${theme.colors.black};
