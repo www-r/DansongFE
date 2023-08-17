@@ -4,7 +4,7 @@ import { theme } from '../../../styles/theme';
 export const Section = styled.section``;
 
 export const VideoSection = styled.section`
-  height: 53vh;
+  height: 63vh;
   width: 100%;
   margin-top: 7vh;
   background-image: linear-gradient(to bottom, ${theme.colors.navy1}, ${theme.colors.navy2});
@@ -38,7 +38,7 @@ export const VideoContainer = styled.div`
 `;
 
 export const TextSection = styled.section`
-  height: 40vh;
+  height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
