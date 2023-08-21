@@ -1,6 +1,6 @@
 import Header from '../../components/Header';
 
-import CommerceSection from '../../components/Section/Commerce';
+// import CommerceSection from '../../components/Section/Commerce';
 
 import DansongKorea from '../../components/Section/DansongKorea';
 import DivisionLine from '../../components/DivisionLine';
@@ -12,7 +12,7 @@ export default function MainPage() {
       <Header />
       <main>
         <DansongKorea />
-        <CommerceSection />
+        {/* <CommerceSection /> */}
         <DivisionLine />
       </main>
       <Footer />
