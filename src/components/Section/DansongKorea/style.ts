@@ -14,10 +14,11 @@ export const VideoSection = styled.section`
   }
 `;
 
-export const VideoContainer = styled.div`
+export const VideoContainer = styled.ul`
   display: flex;
   justify-content: center;
   height: 100%;
+  position: relative;
 `;
 
 export const TextSection = styled.section`
