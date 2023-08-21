@@ -1,4 +1,10 @@
+import { theme } from '../../styles/theme';
 import * as S from './style';
-export default function DivisionLine() {
-  return <S.DivisionLine />;
+
+type Props = {
+  color?: string;
+};
+
+export default function DivisionLine({ color = theme.colors.line }: Props) {
+  return <S.DivisionLine color={color} />;
 }
