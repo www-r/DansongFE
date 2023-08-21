@@ -1,17 +1,17 @@
 import styled from '@emotion/styled';
-import { theme } from '../../styles/theme';
 
 export const Header = styled.header`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 999;
   width: 100%;
-  background-color: ${theme.colors.header};
-  min-width: ${theme.viewport.tablet};
+  background-color: ${({ theme }) => theme.colors.header};
+  min-width: ${({ theme }) => theme.viewport.tablet};
   height: 7vh;
 
   &:hover {
-    background-color: ${theme.colors.black};
+    background-color: ${({ theme }) => theme.colors.black};
   }
 `;
 
@@ -29,6 +29,6 @@ export const Menu = styled.li`
 
   &:hover {
     text-decoration: underline;
-    color: ${theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
