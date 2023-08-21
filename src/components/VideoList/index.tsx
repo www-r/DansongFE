@@ -15,9 +15,18 @@ export default function VideoList() {
         </S.ImgContainer>
       ))}
       {activeItem !== 0 && (
-        <S.Video width="100%" height="100%" controls autoPlay onMouseLeave={() => setActiveItem(0)}>
-          <source src={VIDEO[activeItem - 1].video} type="video/mp4" />
-        </S.Video>
+        <S.Box initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
+          <S.Video
+            width="100%"
+            height="100%"
+            autoPlay
+            muted
+            loop
+            onMouseLeave={() => setActiveItem(0)}
+          >
+            <source src={VIDEO[activeItem - 1].video} type="video/mp4" />
+          </S.Video>
+        </S.Box>
       )}
     </>
   );
