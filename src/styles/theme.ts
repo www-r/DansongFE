@@ -36,7 +36,7 @@ declare module '@emotion/react' {
 
 export const theme = {
   colors: {
-    header: '#454545',
+    header: '#11161f',
     white: '#fff',
     grey1: '#F5F5F7',
     grey2: '#86868B',
@@ -44,6 +44,7 @@ export const theme = {
     navy1: '#1a212e',
     navy2: '#161a20',
     black: '#000',
+    line: '#2c2c2c',
   },
   viewport: {
     mobile: '480px',
