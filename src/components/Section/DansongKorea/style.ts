@@ -4,7 +4,7 @@ import { theme } from '../../../styles/theme';
 export const Section = styled.section``;
 
 export const VideoSection = styled.section`
-  height: 53vh;
+  height: 63vh;
   width: 100%;
   margin-top: 7vh;
   background-image: linear-gradient(to bottom, ${theme.colors.navy1}, ${theme.colors.navy2});
@@ -14,31 +14,15 @@ export const VideoSection = styled.section`
   }
 `;
 
-export const VideoContainer = styled.div`
+export const VideoContainer = styled.ul`
   display: flex;
   justify-content: center;
   height: 100%;
-
-  & img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-
-  @media (max-width: ${theme.viewport.tablet}) {
-    display: block;
-    height: 50%;
-  }
-
-  @media (max-width: ${theme.viewport.mobile}) {
-    & img {
-      min-width: ${theme.viewport.mobile};
-    }
-  }
+  position: relative;
 `;
 
 export const TextSection = styled.section`
-  height: 40vh;
+  height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;

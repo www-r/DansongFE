@@ -3,19 +3,23 @@ import { motion } from 'framer-motion';
 
 type Props = {
   children: React.ReactNode;
-  ref: React.RefObject<HTMLElement>;
 };
 
-export default function Hover({ children, ref }: Props) {
+const variants = {
+  open: { opacity: 1, x: 0 },
+  closed: { opacity: 0, x: '-100%' },
+};
+
+export default function Hover({ children }: Props) {
   const [isHovered, setHovered] = useState(false);
 
   return (
     <motion.div
       whileHover={{
-        scale: 1.2,
-        transition: { duration: 1 },
+        scale: 1.1,
+        transition: { duration: 0.7 },
       }}
-      whileTap={{ scale: 0.9 }}
+      whileTap={{ scale: 1 }}
       initial={false}
     >
       {children}

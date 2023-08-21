@@ -1,3 +1,4 @@
+import DivisionLine from '../DivisionLine';
 import * as S from './style';
 
 export default function Header() {
@@ -9,6 +10,7 @@ export default function Header() {
         <S.Menu>COMMERCE</S.Menu>
         <S.Menu>CONTACT</S.Menu>
       </S.Wrapper>
+      <DivisionLine />
     </S.Header>
   );
 }
