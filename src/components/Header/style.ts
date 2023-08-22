@@ -7,18 +7,26 @@ export const Header = styled.header`
   z-index: 999;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.header};
-  min-width: ${({ theme }) => theme.viewport.tablet};
-  height: 7vh;
+  /* min-width: ${({ theme }) => theme.viewport.tablet}; */
+  height: 8rem;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.black};
   }
 `;
 
+export const Container = styled.div`
+  margin: 0 3.6rem;
+  display: flex;
+  height: 100%;
+  align-items: center;
+`;
+
 export const Wrapper = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: 100%;
   gap: 10rem;
 `;
