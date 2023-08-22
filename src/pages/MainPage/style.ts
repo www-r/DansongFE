@@ -1,6 +1,5 @@
-// import styled from '@emotion/styled';
+import styled from '@emotion/styled';
 
-// export const Wrapper = styled.div`
-//   margin: auto; //!important
-//   width: 100%;
-// `;
+export const Main = styled.main`
+  height: calc(100% - 8rem);
+`;

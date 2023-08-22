@@ -23,11 +23,11 @@ export default function DansongKorea() {
       </S.TextSection>
       <div style={{ height: '1000px' }}></div>
 
-      <S.LogoSection>
+      {/* <S.LogoSection>
         <S.LogoContainer>
           <div>ddd</div>
         </S.LogoContainer>
-      </S.LogoSection>
+      </S.LogoSection> */}
     </S.Section>
   );
 }

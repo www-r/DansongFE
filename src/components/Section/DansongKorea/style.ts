@@ -1,17 +1,17 @@
 import styled from '@emotion/styled';
 import { theme } from '../../../styles/theme';
 
-export const Section = styled.section``;
+export const Section = styled.section`
+`;
 
 export const VideoSection = styled.section`
-  height: 63vh;
-  width: 100%;
-  margin-top: 7vh;
+  height: 60vh;
+  margin-top: 8rem;
   background-image: linear-gradient(to bottom, ${theme.colors.navy1}, ${theme.colors.navy2});
 
-  @media (max-width: ${theme.viewport.tablet}) {
-    height: 63vh;
-  }
+  /* @media (max-width: ${theme.viewport.tablet}) {
+    height: 60vh;
+  } */
 `;
 
 export const VideoContainer = styled.ul`
@@ -22,18 +22,20 @@ export const VideoContainer = styled.ul`
 `;
 
 export const TextSection = styled.section`
-  height: 30vh;
+  height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
   @media (max-width: ${theme.viewport.tablet}) {
-    height: 30vh;
+    height: 40vh;
   }
 `;
 
 export const TextContainer = styled.div`
-  @media (max-width: ${theme.viewport.mobile}) {
+  background-color: red;
+
+  /* @media (max-width: ${theme.viewport.mobile}) {
     min-width: ${theme.viewport.mobile};
     & span {
       font-size: 3.6rem;
@@ -41,7 +43,7 @@ export const TextContainer = styled.div`
     & span + span {
       font-size: 1.8rem;
     }
-  }
+  } */
 `;
 
 export const LogoSection = styled.section`
