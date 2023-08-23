@@ -10,7 +10,7 @@ export default function DansongKorea() {
           <VideoList />
         </S.VideoContainer>
       </S.VideoSection>
-      {/* <Button text="sss" type="link" onClick={() => {}} /> */}
+
       <S.TextSection>
         <S.TextContainer>
           <Textline fontSize="4.8rem" animation="top" isFontBold={true}>
@@ -21,13 +21,17 @@ export default function DansongKorea() {
           </Textline>
         </S.TextContainer>
       </S.TextSection>
-      <div style={{ height: '1000px' }}></div>
 
-      {/* <S.LogoSection>
-        <S.LogoContainer>
-          <div>ddd</div>
-        </S.LogoContainer>
-      </S.LogoSection> */}
+      <S.LogoSection>
+        <S.TextContainer>
+          <Textline fontSize="28rem" animation="top" isFontBold={true} color="#fff">
+            DSS
+          </Textline>
+          <Textline fontSize="8rem" animation="top" isFontBold={true} color="#fff">
+            DANSONG STUDIOS
+          </Textline>
+        </S.TextContainer>
+      </S.LogoSection>
     </S.Section>
   );
 }
