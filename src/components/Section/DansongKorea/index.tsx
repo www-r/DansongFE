@@ -5,11 +5,9 @@ import Studio from '../../Studio';
 
 export default function DansongKorea() {
   return (
-    <S.Section>
+    <>
       <S.VideoSection>
-        <S.VideoContainer>
-          <VideoList />
-        </S.VideoContainer>
+        <VideoList />
       </S.VideoSection>
 
       <S.TextSection>
@@ -23,9 +21,10 @@ export default function DansongKorea() {
         </S.TextContainer>
       </S.TextSection>
 
-      <S.LogoSection>
+      <S.StudioSection>
         <Studio />
-      </S.LogoSection>
-    </S.Section>
+      </S.StudioSection>
+
+    </>
   );
 }
