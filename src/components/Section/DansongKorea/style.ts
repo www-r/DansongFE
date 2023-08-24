@@ -14,13 +14,6 @@ export const VideoSection = styled.section`
   } */
 `;
 
-export const VideoContainer = styled.ul`
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  position: relative;
-`;
-
 export const TextSection = styled.section`
   height: 40vh;
   display: flex;
@@ -37,6 +30,17 @@ export const TextContainer = styled(CenterContainer)`
   flex-direction: column;
 `;
 
-export const LogoSection = styled.section``;
+export const StudioSection = styled.section`
+  width: 100%;
+  background: url('../../../public/images/studio1.webp') no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: grayscale(100%);
+`;
 
-export const LogoContainer = styled.div``;
+export const LogoSection = styled.section`
+  width: 100%;
+
+  height: 100vh;
+  background-color: ${({ theme }) => theme.colors.header};
+`;
