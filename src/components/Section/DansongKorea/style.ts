@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { theme } from '../../../styles/theme';
+import { CenterContainer } from '../../../styles/global';
 
 export const Section = styled.section``;
 
@@ -11,13 +12,6 @@ export const VideoSection = styled.section`
   /* @media (max-width: ${theme.viewport.tablet}) {
     height: 60vh;
   } */
-`;
-
-export const VideoContainer = styled.ul`
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  position: relative;
 `;
 
 export const TextSection = styled.section`
@@ -32,19 +26,21 @@ export const TextSection = styled.section`
   }
 `;
 
-export const TextContainer = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+export const TextContainer = styled(CenterContainer)`
+  flex-direction: column;
 `;
 
-export const LogoSection = styled.section`
-  position: relative;
+export const StudioSection = styled.section`
+  width: 100%;
   background: url('../../../public/images/studio1.webp') no-repeat;
   background-size: cover;
-  height: calc(100vh - 8rem);
+  background-attachment: fixed;
   filter: grayscale(100%);
 `;
 
-export const LogoContainer = styled.div``;
+export const LogoSection = styled.section`
+  width: 100%;
+
+  height: 100vh;
+  background-color: ${({ theme }) => theme.colors.header};
+`;

@@ -15,6 +15,13 @@ export const ImgContainer = styled.li`
     width: 100%;
   }
 `;
+
+export const Wrapper = styled.ul`
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+`;
 /* & img {
     object-fit: cover;
     width: 100%;

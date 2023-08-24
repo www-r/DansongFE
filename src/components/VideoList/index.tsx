@@ -8,7 +8,7 @@ export default function VideoList() {
     idx === activeItem ? setActiveItem(0) : setActiveItem(idx);
   };
   return (
-    <>
+    <S.Wrapper>
       {VIDEO.map((item, idx) => (
         <S.ImgContainer key={item.id} onMouseEnter={() => handleItemMouseEnter(idx + 1)}>
           <img src={item.thumbnail} />
@@ -28,7 +28,7 @@ export default function VideoList() {
           </S.Video>
         </S.Box>
       )}
-    </>
+    </S.Wrapper>
   );
 }
 // <iframe
