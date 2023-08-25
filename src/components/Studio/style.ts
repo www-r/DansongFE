@@ -12,7 +12,7 @@ export const Overlay = styled(motion.div)`
 `;
 
 export const Container = styled.div`
-  margin: 20rem 0;
+  padding: 10rem 0;
 `;
 
 export const TextContainer = styled(CenterContainer)`
