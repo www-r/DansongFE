@@ -10,18 +10,18 @@ export default function ServiceIntro() {
   return (
     <S.Wrapper>
       <S.Container>
-        <Circle size="large" bgColor="#fff">
+        <Circle size="large" bgColor="#fff" isBoxShadow={true}>
           <Logo logo="dansongB.png" />
         </Circle>
-        <CenterContainer direction="column" style={{ minWidth: '16rem' }}>
-          <Textline fontSize={2.4} animation="top" isFontBold={true} color="#fff">
+        <S.MiddleContainer direction="column">
+          <Textline fontSize={2.4} animation="top" isFontBold={true}>
             컨텐츠
           </Textline>
           <DivisionLine borderStyle="dashed" />
-          <Textline fontSize={2.4} animation="bottom" isFontBold={true} color="#fff">
+          <Textline fontSize={2.4} animation="bottom" isFontBold={true}>
             단송코리아
           </Textline>
-        </CenterContainer>
+        </S.MiddleContainer>
         <CenterContainer>
           <CenterContainer direction="column">
             <Circle size="medium">
@@ -48,18 +48,18 @@ export default function ServiceIntro() {
       </S.Container>
 
       <S.Container>
-        <Circle size="large" bgColor="#fff">
+        <Circle size="large" bgColor="#fff" isBoxShadow={true}>
           <Logo logo="itreaming1.png" />
         </Circle>
-        <CenterContainer direction="column" style={{ minWidth: '16rem' }}>
-          <Textline fontSize={2.4} animation="top" isFontBold={true} color="#fff">
+        <S.MiddleContainer direction="column">
+          <Textline fontSize={2.4} animation="top" isFontBold={true}>
             커머스
           </Textline>
           <DivisionLine borderStyle="dashed" />
-          <Textline fontSize={2.4} animation="bottom" isFontBold={true} color="#fff">
+          <Textline fontSize={2.4} animation="bottom" isFontBold={true}>
             잇트리밍
           </Textline>
-        </CenterContainer>
+        </S.MiddleContainer>
 
         <CenterContainer direction="column">
           <CenterContainer style={{ marginBottom: '1rem' }}>
@@ -74,7 +74,7 @@ export default function ServiceIntro() {
               <S.Text>제작</S.Text>
             </Circle>
           </CenterContainer>
-          <DivisionLine />
+          <DivisionLine borderStyle="dashed" />
           <CenterContainer style={{ marginTop: '1rem' }}>
             <Circle size="small" style={{ x: 10 }}>
               <S.Text>틱톡</S.Text>
