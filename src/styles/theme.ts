@@ -11,6 +11,7 @@ declare module '@emotion/react' {
       navy1: string;
       navy2: string;
       black: string;
+      border: string;
     };
     viewport: {
       mobile: string;
@@ -44,7 +45,7 @@ export const theme = {
     navy1: '#1a212e',
     navy2: '#161a20',
     black: '#000',
-    line: '#2c2c2c',
+    border: '#2c2c2c',
   },
   viewport: {
     mobile: '480px',
