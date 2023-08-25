@@ -18,11 +18,6 @@ export const TextSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-
-  @media (max-width: ${theme.viewport.tablet}) {
-    height: 40vh;
-  }
 `;
 
 export const StudioSection = styled.section`
