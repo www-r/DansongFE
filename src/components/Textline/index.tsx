@@ -2,7 +2,7 @@ import React from 'react';
 import * as S from './style';
 
 type Props = {
-  fontSize: string;
+  fontSize: number;
   isFontBold?: boolean;
   color?: string;
   marginBottom?: string;
