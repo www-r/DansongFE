@@ -42,8 +42,13 @@ export const Center = styled.div`
   padding: 0 7.4rem;
 `;
 
-export const CenterContainer = styled.div`
+type CenterContainerProps = {
+  direction?: 'column' | 'row';
+};
+
+export const CenterContainer = styled.div<CenterContainerProps>`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: ${({ direction }) => direction || 'row'};
 `;
