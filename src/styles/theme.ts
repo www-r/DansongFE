@@ -8,9 +8,11 @@ declare module '@emotion/react' {
       grey1: string;
       grey2: string;
       grey3: string;
+      logoContainer: string;
       navy1: string;
       navy2: string;
       black: string;
+      border: string;
     };
     viewport: {
       mobile: string;
@@ -30,6 +32,9 @@ declare module '@emotion/react' {
     width: {
       maxWidth: string;
     };
+    border: {
+      boxShadow: string;
+    };
     // Add other properties as needed
   }
 }
@@ -40,11 +45,12 @@ export const theme = {
     white: '#fff',
     grey1: '#F5F5F7',
     grey2: '#86868B',
+    logoContainer: '#dee2e6',
     grey3: '#424245',
     navy1: '#1a212e',
     navy2: '#161a20',
     black: '#000',
-    line: '#2c2c2c',
+    border: '#2c2c2c',
   },
   viewport: {
     mobile: '480px',
@@ -65,5 +71,9 @@ export const theme = {
 
   width: {
     maxWidth: '1200px',
+  },
+
+  border: {
+    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.2)',
   },
 };

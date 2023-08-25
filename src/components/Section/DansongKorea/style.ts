@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { theme } from '../../../styles/theme';
-import { CenterContainer } from '../../../styles/global';
 
 export const Section = styled.section``;
 
@@ -19,15 +18,6 @@ export const TextSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-
-  @media (max-width: ${theme.viewport.tablet}) {
-    height: 40vh;
-  }
-`;
-
-export const TextContainer = styled(CenterContainer)`
-  flex-direction: column;
 `;
 
 export const StudioSection = styled.section`
@@ -40,7 +30,6 @@ export const StudioSection = styled.section`
 
 export const LogoSection = styled.section`
   width: 100%;
-
   height: 100vh;
-  background-color: ${({ theme }) => theme.colors.header};
+  background-color: ${({ theme }) => theme.colors.navy1};
 `;

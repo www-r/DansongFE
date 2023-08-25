@@ -2,6 +2,8 @@ import Textline from '../../Textline';
 import * as S from './style';
 import VideoList from '../../VideoList';
 import Studio from '../../Studio';
+import ServiceIntro from '../../ServiceIntro';
+import { CenterContainer } from '../../../styles/global';
 
 export default function DansongKorea() {
   return (
@@ -11,20 +13,23 @@ export default function DansongKorea() {
       </S.VideoSection>
 
       <S.TextSection>
-        <S.TextContainer>
-          <Textline fontSize="4.8rem" animation="top" isFontBold={true}>
+        <CenterContainer direction="column">
+          <Textline fontSize={4.8} animation="top" isFontBold={true}>
             Think Make Change
           </Textline>
-          <Textline fontSize="2.4rem" animation="top" isFontBold={true}>
+          <Textline fontSize={2.4} animation="top" isFontBold={true}>
             생각이 실현되는 곳
           </Textline>
-        </S.TextContainer>
+        </CenterContainer>
       </S.TextSection>
 
       <S.StudioSection>
         <Studio />
       </S.StudioSection>
 
+      <S.LogoSection>
+        <ServiceIntro />
+      </S.LogoSection>
     </>
   );
 }

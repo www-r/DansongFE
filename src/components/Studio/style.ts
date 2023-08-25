@@ -8,13 +8,19 @@ export const Box = styled(motion.div)`
 
 export const Overlay = styled(motion.div)`
   width: 100%;
-  height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
 `;
 
-export const TextContainer = styled(CenterContainer)`
+export const Container = styled.div`
   padding: 10rem 0;
+`;
+
+export const TextContainer = styled(CenterContainer)`
+  display: flex;
   flex-direction: column;
+  text-align: center;
+  @media screen and (max-width: ${({ theme }) => theme.viewport.mobile}) {
+  }
 `;
 
 export const TextBox = styled.div`
