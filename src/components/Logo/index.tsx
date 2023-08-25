@@ -2,10 +2,10 @@ import * as S from './style';
 
 type LogoProps = {
   logo: string;
-  size: 'small' | 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large';
 };
 
-export default function Logo({ logo, size }: LogoProps) {
+export default function Logo({ logo, size = 'medium' }: LogoProps) {
   return (
     <S.LogoContainer className={size}>
       <img src={`../../../public/logos/${logo}`} />
