@@ -35,6 +35,12 @@ export const globalStyle = css`
       'Segoe UI Symbol',
       sans-serif;
   }
+
+  button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
 `;
 
 export const Center = styled.div`
