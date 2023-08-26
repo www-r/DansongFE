@@ -4,7 +4,7 @@ import { theme } from '../../../styles/theme';
 export const Section = styled.section``;
 
 export const VideoSection = styled.section`
-  height: 60vh;
+  height: calc(60vh - 8rem);
   margin-top: 8rem;
   background-image: linear-gradient(to bottom, ${theme.colors.navy1}, ${theme.colors.navy2});
 
