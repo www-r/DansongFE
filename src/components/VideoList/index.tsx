@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { VIDEO } from '../../data/video';
 import * as S from './style';
 export default function VideoList() {
