@@ -11,7 +11,7 @@ export default function Studio() {
   return (
     <>
       <S.Container>
-        <S.TextContainer>
+        <S.TextContainer direction="column">
           <Textline fontSize={28} animation="top" isFontBold={true} color="#fff">
             DSS
           </Textline>

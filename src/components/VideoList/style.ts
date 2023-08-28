@@ -5,13 +5,17 @@ export const Video = styled.video`
   position: absolute;
   top: 0;
   left: 0;
+  background-color: #000;
 `;
 export const ImgContainer = styled.li`
   display: flex;
   align-items: center;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  opacity: 0.1;
   width: 100%;
   & img {
     object-fit: cover;
+    height: 100%;
     width: 100%;
   }
 `;

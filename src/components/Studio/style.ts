@@ -16,8 +16,6 @@ export const Container = styled.div`
 `;
 
 export const TextContainer = styled(CenterContainer)`
-  display: flex;
-  flex-direction: column;
   text-align: center;
   @media screen and (max-width: ${({ theme }) => theme.viewport.mobile}) {
   }
