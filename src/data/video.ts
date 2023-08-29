@@ -1,7 +1,7 @@
-import video1 from '../../public/videos/video1.mp4';
-import video2 from '../../public/videos/video2.mp4';
-import thumbnail1 from '../../public/images/thumbnail1.jpg';
-import thumbnail2 from '../../public/images/thumbnail2.jpg';
+import video1 from 'https://dansong-s3.s3.ap-northeast-2.amazonaws.com/videos/video1.mp4';
+import video2 from 'https://dansong-s3.s3.ap-northeast-2.amazonaws.com/videos/video2.mp4';
+import thumbnail1 from 'https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg';
+import thumbnail2 from 'https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail2.jpg';
 
 export const VIDEO: Video[] = [
   {
