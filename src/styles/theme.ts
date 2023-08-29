@@ -21,13 +21,15 @@ declare module '@emotion/react' {
     };
     backgroundColor: {
       header: string;
+      white: string;
       lightGrey: string;
       grey: string;
       black: string;
     };
     textColor: {
-      header: string;
+      white: string;
       grey: string;
+      black: string;
     };
     width: {
       maxWidth: string;
@@ -60,13 +62,15 @@ export const theme = {
 
   backgroundColor: {
     header: '#454545',
+    white: '#fff',
     lightGrey: '#f5f5f7',
     grey: '#DCDCDE',
     black: '#000',
   },
   textColor: {
-    header: '#f5f5f7',
-    grey: '#6E6E73',
+    white: '#f5f5f7',
+    grey: '#a1a1a6',
+    black: '#1d1d1f',
   },
 
   width: {

@@ -22,14 +22,13 @@ export default function DansongKorea() {
           </Textline>
         </CenterContainer>
       </S.TextSection>
+      <S.LogoSection>
+        <ServiceIntro />
+      </S.LogoSection>
 
       <S.StudioSection>
         <Studio />
       </S.StudioSection>
-
-      <S.LogoSection>
-        <ServiceIntro />
-      </S.LogoSection>
     </>
   );
 }
