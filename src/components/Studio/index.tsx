@@ -1,12 +1,10 @@
-import React from 'react';
 import Textline from '../Textline';
 import * as S from './style';
-import { useScroll, useTransform } from 'framer-motion';
 
 export default function Studio() {
-  const { scrollY } = useScroll();
-  const scale = useTransform(scrollY, [0, 800], [0.9, 1]);
-  const y = useTransform(scrollY, [0, 100], [0, -300]);
+  // const { scrollY } = useScroll();
+  // const scale = useTransform(scrollY, [0, 800], [0.9, 1]);
+  // const y = useTransform(scrollY, [0, 100], [0, -300]);
 
   return (
     <>
