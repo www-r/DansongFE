@@ -10,7 +10,10 @@ export default function ServiceIntro() {
     <S.Wrapper>
       <S.Container>
         <Circle size="large" bgColor="#fff" isBoxShadow={true}>
-          <Logo logo="dansongB.png" />
+          <Logo
+            logo="dansong"
+            src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/dansongB.png"
+          />
         </Circle>
         <S.MiddleContainer direction="column">
           <Textline fontSize={2.4} animation="top" isFontBold={true}>
