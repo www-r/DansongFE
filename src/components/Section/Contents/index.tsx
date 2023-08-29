@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import * as S from './style';
 import { Center } from '../../../styles/global';
 import { CenterContainer } from '../../../styles/global';
@@ -13,16 +13,16 @@ import { Theme } from '@emotion/react';
 
 export default function Contents() {
   const [width, setWidth] = useState(window.innerWidth);
-  const videoRef = useRef();
+  // const videoRef = useRef();
   window.addEventListener('resize', () => {
     setWidth(window.innerWidth);
   });
-  window.addEventListener('scroll', () => {
-    console.log(scrollY);
-    if (scrollY > 4100) {
-      videoRef.current.style.transform = 'scale(' + 0.8 + ')';
-    }
-  });
+  // window.addEventListener('scroll', () => {
+  //   console.log(scrollY);
+  //   if (scrollY > 4100) {
+  //     videoRef.current.style.transform = 'scale(' + 0.8 + ')';
+  //   }
+  // });
   return (
     <S.Section>
       <Center>
@@ -234,7 +234,7 @@ export default function Contents() {
               loop
               muted
               width={width}
-              ref={videoRef}
+              // ref={videoRef}
             >
               팝꽃 광고 영상
             </S.AdvertiseVideo>

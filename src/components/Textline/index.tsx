@@ -3,7 +3,7 @@ import * as S from './style';
 type Props = {
   fontSize: number;
   isFontBold?: boolean;
-  color?: string;
+  color?: any;
   marginBottom?: string;
   children: React.ReactNode;
   animation?: keyof typeof direction;
