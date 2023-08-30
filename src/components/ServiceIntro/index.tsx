@@ -1,4 +1,3 @@
-import React from 'react';
 import Circle from '../Circle';
 import Logo from '../Logo';
 import * as S from './style';

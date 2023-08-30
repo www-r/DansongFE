@@ -8,10 +8,18 @@ export default function Header() {
       <S.Container>
         <Logo logo="dansongW.png" size="small" />
         <S.MenuContainer>
-          <S.Menu>DANSONG KOREA</S.Menu>
-          <S.Menu>CONTENTS</S.Menu>
-          <S.Menu>COMMERCE</S.Menu>
-          <S.Menu>CONTACT</S.Menu>
+          <S.Menu>
+            <a href="#DANSONGKOREA">DANSONG KOREA</a>
+          </S.Menu>
+          <S.Menu>
+            <a href="#CONTENTS">CONTENTS</a>
+          </S.Menu>
+          <S.Menu>
+            <a href="#COMMERCE">COMMERCE</a>
+          </S.Menu>
+          <S.Menu>
+            <a href="#CONTACT">CONTACT</a>
+          </S.Menu>
         </S.MenuContainer>
       </S.Container>
       <DivisionLine />

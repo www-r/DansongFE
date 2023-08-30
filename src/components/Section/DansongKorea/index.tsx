@@ -27,7 +27,7 @@ export default function DansongKorea() {
         <Studio />
       </S.StudioSection>
 
-      <S.LogoSection>
+      <S.LogoSection id="DANSONGKOREA">
         <ServiceIntro />
       </S.LogoSection>
     </>
