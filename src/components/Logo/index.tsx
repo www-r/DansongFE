@@ -1,7 +1,14 @@
-import React from 'react'
+import * as S from './style';
 
-export default function Logo() {
+type LogoProps = {
+  logo: string;
+  size?: 'small' | 'medium' | 'large';
+};
+
+export default function Logo({ logo, size = 'medium' }: LogoProps) {
   return (
-    <div>Logo</div>
-  )
+    <S.LogoContainer className={size}>
+      <img src={`../../../public/logos/${logo}`} />
+    </S.LogoContainer>
+  );
 }

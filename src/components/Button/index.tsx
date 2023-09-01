@@ -1,7 +1,15 @@
-import React from 'react'
+import * as S from './style';
 
-export default function Button() {
+type Props = {
+  text: string;
+  type: 'scroll' | 'link';
+  onClick: () => void;
+};
+
+export default function Button({ text, type, onClick }: Props) {
   return (
-    <div>Button</div>
-  )
+    <S.Button onClick={onClick} className={type}>
+      {text}
+    </S.Button>
+  );
 }
