@@ -21,6 +21,7 @@ declare module '@emotion/react' {
     };
     backgroundColor: {
       header: string;
+      footer: string;
       white: string;
       lightGrey: string;
       grey: string;
@@ -62,8 +63,9 @@ export const theme = {
 
   backgroundColor: {
     header: '#454545',
+    footer: '#f5f5f7',
     white: '#fff',
-    lightGrey: '#f5f5f7',
+    lightGrey: '#d0d1d0',
     grey: '#DCDCDE',
     black: '#000',
   },
