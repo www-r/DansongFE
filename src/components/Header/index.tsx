@@ -1,4 +1,3 @@
-import DivisionLine from '../DivisionLine';
 import Logo from '../Logo';
 import * as S from './style';
 
@@ -6,7 +5,11 @@ export default function Header() {
   return (
     <S.Header>
       <S.Container>
-        <Logo logo="dansongW.png" size="small" />
+        <Logo
+          logo="dansong"
+          size="small"
+          src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/dansongW.png"
+        />
         <S.MenuContainer>
           <S.Menu>
             <a href="#DANSONGKOREA">DANSONG KOREA</a>
@@ -22,7 +25,6 @@ export default function Header() {
           </S.Menu>
         </S.MenuContainer>
       </S.Container>
-      <DivisionLine />
     </S.Header>
   );
 }

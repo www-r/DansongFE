@@ -6,12 +6,12 @@ export const Header = styled.header`
   left: 0;
   z-index: 999;
   width: 100vw;
-  background-color: ${({ theme }) => theme.colors.header};
+  background-color: ${({ theme }) => theme.backgroundColor.header};
   /* min-width: ${({ theme }) => theme.viewport.tablet}; */
   height: 8rem;
-
+  transition: background-color linear 0.2s;
   &:hover {
-    background-color: ${({ theme }) => theme.colors.black};
+    background-color: ${({ theme }) => theme.backgroundColor.black};
   }
 `;
 
@@ -38,10 +38,10 @@ export const MenuContainer = styled.ul`
 
 export const Menu = styled.li`
   font-size: 1.4rem;
-  color: #f5f5f7;
-
+  color: ${({ theme }) => theme.textColor.white};
+  transition: all 0.1s linear;
   &:hover {
+    font-size: 1.55rem;
     text-decoration: underline;
-    color: ${({ theme }) => theme.colors.white};
   }
 `;

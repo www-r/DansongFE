@@ -40,7 +40,7 @@ export const globalStyle = css`
   button {
     outline: none;
     border: none;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
 
   a {
@@ -54,8 +54,8 @@ export const globalStyle = css`
 `;
 
 export const Center = styled.div`
-  margin: auto;
-  padding: 0 7.4rem;
+  padding: 8rem 0 0;
+  width: 100vw;
 `;
 
 type CenterContainerProps = {

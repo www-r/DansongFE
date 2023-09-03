@@ -2,16 +2,16 @@ import styled from '@emotion/styled';
 
 export const Button = styled.button`
   padding: 1rem 2rem;
-  font-size: 1.6rem;
-  border-radius: 4rem;
-
+  font-size: 1.4rem;
+  word-break: keep-all;
+  border-radius: 98rem;
+  background-color: ${({ theme }) => theme.backgroundColor.white};
+  color: ${({ theme }) => theme.backgroundColor.black};
   &.scroll {
-    background-color: #3498db;
-    color: white;
+    /* color: white; */
   }
 
   &.link {
-    background-color: #2ecc71;
-    color: white;
+    /* color: white; */
   }
 `;

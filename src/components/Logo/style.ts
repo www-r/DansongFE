@@ -1,18 +1,23 @@
 import styled from '@emotion/styled';
 
 export const LogoContainer = styled.div`
-  &.small {
+  border-radius: 50%;
+  width: min-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.small img {
     width: 3.6rem;
   }
-  &.medium {
-    width: 6rem;
+
+  &.medium img {
+    width: 15rem;
   }
-  &.large {
-    width: 6rem;
+  &.large img {
+    width: 60rem;
   }
 
   & img {
-    object-fit: cover;
     width: 100%;
   }
 `;
