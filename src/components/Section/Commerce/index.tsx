@@ -38,7 +38,7 @@ export default function Commerce() {
       </S.BrandsSection>
       <DivisionLine />
       <S.CommerceAdvertisementSection>
-        <div>
+        <S.TextContainer>
           <h3>
             <CenterContainer>
               <Textline fontSize={2.4} isFontBold={true}>
@@ -58,7 +58,7 @@ export default function Commerce() {
               </Textline>
             </CenterContainer>
           </h2>
-        </div>
+        </S.TextContainer>
         <S.PicsContainer>
           <S.CommercePic>
             <img

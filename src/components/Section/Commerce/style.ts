@@ -30,6 +30,9 @@ export const BrandLogosContainer = styled.div`
   gap: 15rem;
 `;
 export const CommerceAdvertisementSection = styled.div``;
+export const TextContainer = styled.div`
+  margin: 10rem 0;
+`;
 export const PicsContainer = styled.ul`
   margin: auto;
   width: min-content;
