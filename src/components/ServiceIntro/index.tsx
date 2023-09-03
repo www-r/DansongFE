@@ -51,7 +51,10 @@ export default function ServiceIntro() {
 
       <S.Container>
         <Circle size="large" bgColor="#fff" isBoxShadow={true}>
-          <Logo logo="itreaming1.png" />
+          <Logo
+            logo="itreaming"
+            src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/itreaming1.png"
+          />
         </Circle>
         <S.MiddleContainer direction="column">
           <Textline fontSize={2.4} animation="top" isFontBold={true}>

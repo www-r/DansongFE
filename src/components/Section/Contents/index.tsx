@@ -240,7 +240,11 @@ export default function Contents() {
             </S.AdvertiseVideo>
           </S.AdvertiseVideoContainer>
           <S.AdvertisePicsContainer>
-            <img src="../../public/images/thumbnail1.jpg" alt="" height={200} />
+            <img
+              src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg"
+              alt="thumbnail"
+              height={200}
+            />
           </S.AdvertisePicsContainer>
         </S.AdvertiseSection>
       </Center>
