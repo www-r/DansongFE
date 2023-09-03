@@ -15,12 +15,19 @@ export const LogoContainer = styled.div`
 export const ProductsSection = styled.div`
   height: 200vh;
 `;
-export const BrandsSection = styled.div``;
+export const BrandsSection = styled.div`
+  display: flex;
+`;
+export const BrandsSectionTitle = styled.h3`
+  margin: 6.15rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+`;
 export const BrandLogosContainer = styled.div`
-  padding: 1rem 0;
+  padding: 1rem 6rem;
+  width: 100%;
   display: flex;
   gap: 15rem;
-  margin-bottom: 15rem;
 `;
 export const CommerceAdvertisementSection = styled.div``;
 export const PicsContainer = styled.ul`

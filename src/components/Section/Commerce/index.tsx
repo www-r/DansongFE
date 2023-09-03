@@ -2,6 +2,7 @@ import * as S from './style';
 import { CenterContainer } from '../../../styles/global';
 import Textline from '../../Textline';
 import Logo from '../../Logo';
+import DivisionLine from '../../DivisionLine';
 export default function Commerce() {
   return (
     <S.Section>
@@ -18,30 +19,24 @@ export default function Commerce() {
       </S.LogoSection>
 
       <S.ProductsSection></S.ProductsSection>
+      <DivisionLine />
+
       <S.BrandsSection>
-        <h3>
-          <CenterContainer>
-            <Textline fontSize={2.4} isFontBold={true}>
-              브랜드 입점 현황
-            </Textline>
-          </CenterContainer>
-        </h3>
-        {/* <div>생활맥주, 코트야드바이메리어트</div> */}
-        <CenterContainer>
-          <S.BrandLogosContainer>
-            <Logo
-              logo="생활맥주"
-              size="medium"
-              src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/beer.png"
-            />
-            <Logo
-              logo="코드야드바이메리어트"
-              size="medium"
-              src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/marriot.png"
-            />
-          </S.BrandLogosContainer>
-        </CenterContainer>
+        <S.BrandsSectionTitle>COWORKERS</S.BrandsSectionTitle>
+        <S.BrandLogosContainer>
+          <Logo
+            logo="생활맥주"
+            size="medium"
+            src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/beer.png"
+          />
+          <Logo
+            logo="코드야드바이메리어트"
+            size="medium"
+            src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/marriot.png"
+          />
+        </S.BrandLogosContainer>
       </S.BrandsSection>
+      <DivisionLine />
       <S.CommerceAdvertisementSection>
         <div>
           <h3>
