@@ -1,7 +1,14 @@
-
+import * as S from './style';
 
 export default function Footer() {
   return (
-    <div>Footer</div>
-  )
+    <S.Footer>
+      Footer
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+    </S.Footer>
+  );
 }
