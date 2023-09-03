@@ -1,6 +1,6 @@
 import Textline from '../../Textline';
 import * as S from './style';
-import VideoList from '../../VideoList';
+
 import Studio from '../../Studio';
 import ServiceIntro from '../../ServiceIntro';
 import { CenterContainer } from '../../../styles/global';
@@ -25,7 +25,7 @@ export default function DansongKorea() {
           </Textline>
         </CenterContainer>
       </S.TextSection>
-      <S.LogoSection>
+      <S.LogoSection id="DANSONGKOREA">
         <ServiceIntro />
       </S.LogoSection>
 

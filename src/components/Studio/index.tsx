@@ -1,4 +1,5 @@
 import Textline from '../Textline';
+import { Theme } from '@emotion/react';
 import * as S from './style';
 
 export default function Studio() {
@@ -21,13 +22,28 @@ export default function Studio() {
 
       <S.Overlay>
         <S.TextBox>
-          <Textline fontSize={4} animation="left" color="#fff" marginBottom="2rem">
+          <Textline
+            fontSize={4}
+            animation="left"
+            color={({ theme }: { theme: Theme }) => theme.textColor.white}
+            marginBottom="2rem"
+          >
             단송 스튜디오는 (주)단송코리아의 자체적인 프로덕션 크루 입니다.
           </Textline>
-          <Textline fontSize={4} animation="left" color="#fff" marginBottom="2rem">
+          <Textline
+            fontSize={4}
+            animation="left"
+            color={({ theme }: { theme: Theme }) => theme.textColor.white}
+            marginBottom="2rem"
+          >
             사물과 인물, 사진과 영상, 컨텐츠와 커머스, 등 특정 분야에 구애받지 않는 창의적인 팀으로
           </Textline>
-          <Textline fontSize={4} animation="left" color="#fff" marginBottom="2rem">
+          <Textline
+            fontSize={4}
+            animation="left"
+            marginBottom="2rem"
+            color={({ theme }: { theme: Theme }) => theme.textColor.white}
+          >
             (주)단송코리아를 포함한 다양한 클라이언트들의 아이디어를 실현시켜드립니다
           </Textline>
         </S.TextBox>

@@ -14,6 +14,7 @@ export const globalStyle = css`
 
   html {
     font-size: 10px;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -40,6 +41,15 @@ export const globalStyle = css`
     outline: none;
     border: none;
     /* cursor: pointer; */
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 `;
 
