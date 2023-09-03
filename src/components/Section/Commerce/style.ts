@@ -4,7 +4,13 @@ export const Section = styled.section`
   background-color: ${({ theme }) => theme.backgroundColor.white};
 `;
 export const LogoSection = styled.div`
-  height: 100vh;
+  height: 150vh;
+`;
+export const LogoContainer = styled.div`
+  margin: 10rem 0 0;
+  height: min-content;
+  position: sticky;
+  top: 25rem;
 `;
 export const ProductsSection = styled.div`
   height: 200vh;

@@ -6,10 +6,6 @@ export const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  &.sticky {
-    position: sticky;
-    top: 0;
-  }
   &.small img {
     width: 3.6rem;
   }

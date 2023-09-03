@@ -5,16 +5,18 @@ import Logo from '../../Logo';
 export default function Commerce() {
   return (
     <S.Section>
-      <CenterContainer>
-        <S.LogoSection>
-          <Logo
-            logo="itreamingB"
-            size="large"
-            src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/itreaming2.png"
-            position="sticky"
-          />
-        </S.LogoSection>
-      </CenterContainer>
+      <S.LogoSection>
+        <S.LogoContainer>
+          <CenterContainer>
+            <Logo
+              logo="itreamingB"
+              size="large"
+              src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/itreaming2.png"
+            />
+          </CenterContainer>
+        </S.LogoContainer>
+      </S.LogoSection>
+
       <S.ProductsSection></S.ProductsSection>
       <S.BrandsSection>
         <h3>
@@ -64,10 +66,16 @@ export default function Commerce() {
         </div>
         <S.PicsContainer>
           <S.CommercePic>
-            <img src="../../public/images/commerce1.png" alt="" />
+            <img
+              src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/commerce1.png"
+              alt=""
+            />
           </S.CommercePic>
           <S.CommercePic>
-            <img src="../../public/images/commerce2.png" alt="" />
+            <img
+              src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/commerce2.png"
+              alt=""
+            />
           </S.CommercePic>
         </S.PicsContainer>
       </S.CommerceAdvertisementSection>
