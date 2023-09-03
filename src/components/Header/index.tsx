@@ -1,4 +1,3 @@
-import DivisionLine from '../DivisionLine';
 import Logo from '../Logo';
 import * as S from './style';
 
@@ -18,7 +17,6 @@ export default function Header() {
           <S.Menu>CONTACT</S.Menu>
         </S.MenuContainer>
       </S.Container>
-      <DivisionLine />
     </S.Header>
   );
 }
