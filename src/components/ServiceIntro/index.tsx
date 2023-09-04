@@ -20,7 +20,7 @@ export default function ServiceIntro() {
       <CenterContainer>
         <CenterContainer direction="column">
           <Circle size="large" bgColor="#fff" isBoxShadow={true}>
-            <Logo logo="dansong" src="https://picsum.photos/200" />
+            <Logo logo="dansong" src="/logos/dansongB.png" />
           </Circle>
           <S.MiddleContainer direction="column">
             <Textline
@@ -44,7 +44,7 @@ export default function ServiceIntro() {
         </CenterContainer>
         <CenterContainer direction="column">
           <Circle size="large" bgColor="#fff" isBoxShadow={true}>
-            <Logo logo="dansong" src="https://picsum.photos/200" />
+            <Logo logo="dansong" src="/logos/dansongB.png" />
           </Circle>
           <S.MiddleContainer direction="column">
             <Textline
