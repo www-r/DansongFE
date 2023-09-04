@@ -1,28 +1,26 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import * as S from './style';
 import { Center } from '../../../styles/global';
 import { CenterContainer } from '../../../styles/global';
-import FlipCard from '../../FlipCard';
-import FlipCardFront from '../../FlipCard/Front';
-import FlipCardBack from '../../FlipCard/Back';
+
 import Textline from '../../Textline';
 import Button from '../../Button';
-// import Logo from '../../Logo';
+import Logo from '../../Logo';
 
 import { Theme } from '@emotion/react';
 
 export default function Contents() {
   const [width, setWidth] = useState(window.innerWidth);
-  // const videoRef = useRef();
+  const videoRef = useRef();
   window.addEventListener('resize', () => {
     setWidth(window.innerWidth);
   });
-  // window.addEventListener('scroll', () => {
-  //   console.log(scrollY);
-  //   if (scrollY > 4100) {
-  //     videoRef.current.style.transform = 'scale(' + 0.8 + ')';
-  //   }
-  // });
+  window.addEventListener('scroll', () => {
+    console.log(scrollY);
+    if (scrollY > 4100) {
+      videoRef.current.style.transform = 'scale(' + 0.8 + ')';
+    }
+  });
   return (
     <S.Section>
       <Center>
@@ -91,115 +89,131 @@ export default function Contents() {
                 </Textline>
               </CenterContainer> */}
             </h4>
-            <S.CoBrandCategoryListWrapper>
-              <S.CoBrandCategoryList>
-                <FlipCard>
-                  <FlipCardFront>
-                    <div>
-                      <h4>
-                        <Textline
-                          fontSize={2.1}
-                          color={({ theme }: { theme: Theme }) => theme.textColor.white}
-                          marginBottom="1.6rem"
-                        >
-                          FASHION
-                        </Textline>
-                      </h4>
-                      <h3>
-                        <Textline
-                          fontSize={4}
-                          isFontBold={true}
-                          color={({ theme }: { theme: Theme }) => theme.textColor.white}
-                        >
-                          패션
-                        </Textline>
-                      </h3>
-                      <S.CoBrandCategoryBrands>MLB,오프화이트,코오롱스포스</S.CoBrandCategoryBrands>
-                    </div>
-                    <Button
-                      text="자세히알아보기"
-                      type="scroll"
-                      onClick={() => console.log('ddd')}
+            <CenterContainer>
+              <S.CoBrandCategoryListWrapper>
+                <S.CoBrandCategoryList>
+                  <S.CoBrandCategoryListTitle>
+                    <h4>
+                      <Textline
+                        fontSize={2.1}
+                        color={({ theme }: { theme: Theme }) => theme.textColor.white}
+                        marginBottom="1.6rem"
+                      >
+                        FASHION
+                      </Textline>
+                    </h4>
+                    <h3>
+                      <Textline
+                        fontSize={4}
+                        isFontBold={true}
+                        color={({ theme }: { theme: Theme }) => theme.textColor.white}
+                      >
+                        패션
+                      </Textline>
+                    </h3>
+                  </S.CoBrandCategoryListTitle>
+                  <S.CoBrandLogosContainer>
+                    <Logo
+                      size="small"
+                      logo="mlb"
+                      src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/mlb.png"
                     />
-                  </FlipCardFront>
-                  <FlipCardBack>
-                    <div className="logosContainer"></div>
-                  </FlipCardBack>
-                </FlipCard>
-              </S.CoBrandCategoryList>
-              <S.CoBrandCategoryList>
-                <FlipCard>
-                  <FlipCardFront>
-                    <div>
-                      <h4>
-                        <Textline
-                          fontSize={2.1}
-                          color={({ theme }: { theme: Theme }) => theme.textColor.white}
-                          marginBottom="1.6rem"
-                        >
-                          BEAUTY
-                        </Textline>
-                      </h4>
-                      <h3>
-                        <Textline
-                          fontSize={4}
-                          isFontBold={true}
-                          color={({ theme }: { theme: Theme }) => theme.textColor.white}
-                        >
-                          뷰티
-                        </Textline>
-                      </h3>
-                      <S.CoBrandCategoryBrands>프룻오브디얼스</S.CoBrandCategoryBrands>
-                    </div>
-                    <Button
-                      text="자세히알아보기"
-                      type="scroll"
-                      onClick={() => console.log('ddd')}
+                    <Logo
+                      logo="off white"
+                      src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/offWhite.svg"
                     />
-                  </FlipCardFront>
-                  <FlipCardBack>
-                    <div className="logosContainer"></div>
-                  </FlipCardBack>
-                </FlipCard>
-              </S.CoBrandCategoryList>
-              <S.CoBrandCategoryList>
-                <FlipCard>
-                  <FlipCardFront>
-                    <div>
-                      <h4>
-                        <Textline
-                          fontSize={2.1}
-                          color={({ theme }: { theme: Theme }) => theme.textColor.white}
-                          marginBottom="1.6rem"
-                        >
-                          FOOD
-                        </Textline>
-                      </h4>
-                      <h3>
-                        <Textline
-                          fontSize={4}
-                          isFontBold={true}
-                          color={({ theme }: { theme: Theme }) => theme.textColor.white}
-                        >
-                          푸드
-                        </Textline>
-                      </h3>
-                      <S.CoBrandCategoryBrands>
-                        푸디베어,하이트진로,오리온,더글레리벳위스키,역전할머니맥주,일일향,문현전통한우곱창전골
-                      </S.CoBrandCategoryBrands>
-                    </div>
-                    <Button
-                      text="자세히알아보기"
-                      type="scroll"
-                      onClick={() => console.log('ddd')}
+                    <Logo
+                      logo="kolon sports"
+                      src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/kolonsport.png"
                     />
-                  </FlipCardFront>
-                  <FlipCardBack>
-                    <div className="logosContainer"></div>
-                  </FlipCardBack>
-                </FlipCard>
-              </S.CoBrandCategoryList>
-            </S.CoBrandCategoryListWrapper>
+                  </S.CoBrandLogosContainer>
+                </S.CoBrandCategoryList>
+                <S.CoBrandCategoryList>
+                  <S.CoBrandCategoryListTitle>
+                    <h4>
+                      <Textline
+                        fontSize={2.1}
+                        color={({ theme }: { theme: Theme }) => theme.textColor.white}
+                        marginBottom="1.6rem"
+                      >
+                        BEAUTY
+                      </Textline>
+                    </h4>
+                    <h3>
+                      <Textline
+                        fontSize={4}
+                        isFontBold={true}
+                        color={({ theme }: { theme: Theme }) => theme.textColor.white}
+                      >
+                        뷰티
+                      </Textline>
+                    </h3>
+                  </S.CoBrandCategoryListTitle>
+                  <S.CoBrandLogosContainer>
+                    <Logo
+                      logo="fruit of the earth"
+                      size="medium"
+                      src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/fruitoftheearth.jpeg"
+                      border="circle"
+                    />
+                  </S.CoBrandLogosContainer>
+                </S.CoBrandCategoryList>
+                <S.CoBrandCategoryList>
+                  <S.CoBrandCategoryListTitle>
+                    <h4>
+                      <Textline
+                        fontSize={2.1}
+                        color={({ theme }: { theme: Theme }) => theme.textColor.white}
+                        marginBottom="1.6rem"
+                      >
+                        FOOD
+                      </Textline>
+                    </h4>
+                    <h3>
+                      <Textline
+                        fontSize={4}
+                        isFontBold={true}
+                        color={({ theme }: { theme: Theme }) => theme.textColor.white}
+                      >
+                        푸드
+                      </Textline>
+                    </h3>
+                  </S.CoBrandCategoryListTitle>
+                  <S.CoBrandLogosContainer>
+                    <Logo
+                      logo="FOODYBEAR"
+                      src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/foodybear.png"
+                    />
+                    <Logo
+                      src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/hitejinro.png"
+                      logo="HITE JINRO"
+                    />
+                    <Logo
+                      logo="Orion"
+                      src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/orion.png"
+                    />
+                    <Logo
+                      logo="더 글레리벳 위스키"
+                      src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/glenlivet.png"
+                    />
+                    <Logo
+                      logo="역전할머니맥주"
+                      src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/1982.jpeg"
+                      border="circle"
+                    />
+                    <Logo
+                      logo="일일향"
+                      src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/ililhyang.png"
+                    />
+                    <Logo
+                      logo="문헌 전통 한우 곱창 전골"
+                      src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/logos/meat.png"
+                      border="circle"
+                    />
+                  </S.CoBrandLogosContainer>
+                </S.CoBrandCategoryList>
+              </S.CoBrandCategoryListWrapper>
+            </CenterContainer>
           </S.CoBrandsIntro>
         </S.YoutubeSection>
         <S.AdvertiseSection>
@@ -230,11 +244,11 @@ export default function Contents() {
             <S.AdvertiseVideo
               src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/videos/advertiseVideo.mp4"
               autoPlay
-              // controls
+              controls
               loop
               muted
               width={width}
-              // ref={videoRef}
+              ref={videoRef}
             >
               팝꽃 광고 영상
             </S.AdvertiseVideo>
@@ -243,7 +257,42 @@ export default function Contents() {
             <img
               src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg"
               alt="thumbnail"
-              height={200}
+              height={180}
+            />
+            <img
+              src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg"
+              alt="thumbnail"
+              height={180}
+            />
+            <img
+              src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg"
+              alt="thumbnail"
+              height={180}
+            />
+            <img
+              src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg"
+              alt="thumbnail"
+              height={180}
+            />
+            <img
+              src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg"
+              alt="thumbnail"
+              height={180}
+            />
+            <img
+              src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg"
+              alt="thumbnail"
+              height={180}
+            />
+            <img
+              src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg"
+              alt="thumbnail"
+              height={180}
+            />
+            <img
+              src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg"
+              alt="thumbnail"
+              height={180}
             />
           </S.AdvertisePicsContainer>
         </S.AdvertiseSection>

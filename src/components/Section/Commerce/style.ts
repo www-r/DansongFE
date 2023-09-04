@@ -4,16 +4,37 @@ export const Section = styled.section`
   background-color: ${({ theme }) => theme.backgroundColor.white};
 `;
 export const LogoSection = styled.div`
-  height: 150vh;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 export const LogoContainer = styled.div`
   margin: 10rem 0 0;
   height: min-content;
-  position: sticky;
-  top: 25rem;
+  &.sticky {
+    position: sticky;
+    top: 25rem;
+  }
+  &.absolute {
+    position: absolute;
+    bottom: 0;
+  }
 `;
+
 export const ProductsSection = styled.div`
   height: 200vh;
+  padding: 10rem 0 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+export const CarouselContainer = styled.div`
+  position: absolute;
+  bottom: 5rem;
+  overflow: hidden;
 `;
 export const BrandsSection = styled.div`
   display: flex;
@@ -27,6 +48,7 @@ export const BrandLogosContainer = styled.div`
   padding: 1rem 6rem;
   width: 100%;
   display: flex;
+  justify-content: center;
   gap: 15rem;
 `;
 export const CommerceAdvertisementSection = styled.div``;

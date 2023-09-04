@@ -15,41 +15,39 @@ export const YoutubeSection = styled.div``;
 export const CoBrandsIntro = styled.div`
   height: 100vh;
 `;
-
+export const CoBrandLogosContainer = styled.div`
+  border-radius: 1rem;
+  background-color: #fff;
+  width: 70rem;
+  display: flex;
+  flex-wrap: wrap;
+`;
 export const CoBrandCategoryListWrapper = styled.ul`
   display: flex;
-  gap: 8rem;
-  margin: 10rem; //바뀔수도있음
+  flex-direction: column;
+  gap: 10rem;
+  padding: 10rem;
 `;
 export const CoBrandCategoryList = styled.li`
   display: flex;
-  flex-direction: column;
-  width: calc(100% / 3);
-  color: ${({ theme }) => theme.textColor.grey};
-  font-size: 1.7rem;
+  gap: 10rem;
 `;
-export const CoBrandCategoryBrands = styled.p`
-  margin: 1.2rem 0 0;
-
-  min-height: 7.6rem;
-  display: inline-block;
+export const CoBrandCategoryListTitle = styled.div`
+  width: 9rem;
 `;
 export const AdvertiseSection = styled.div`
-  padding-bottom: 10rem;
+  padding: 40rem 0 10rem;
 `;
 export const AdvertiseVideoContainer = styled.div`
   height: 160vh;
 `;
 export const AdvertiseVideo = styled.video`
-  width: 100vw;
-  height: 100vh;
+  height: 50rem;
   position: sticky;
-  top: 0;
-  transition: 'width' 1s linear;
-  &.scaled {
-    transform: scale(0.6);
-  }
+  top: 15rem;
+  margin: 3rem 0 1rem;
 `;
 export const AdvertisePicsContainer = styled.div`
-  height: 20rem;
+  display: flex;
+  overflow: hidden;
 `;
