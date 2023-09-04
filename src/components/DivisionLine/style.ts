@@ -5,6 +5,6 @@ type Props = {
 };
 
 export const DivisionLine = styled.div<Props>`
-  border: 1px ${({ borderStyle }) => borderStyle} ${({ theme }) => theme.backgroundColor.lightGrey};
+  border: 1px ${({ borderStyle }) => borderStyle} ${({ theme }) => theme.colors.border};
   width: 100%;
 `;
