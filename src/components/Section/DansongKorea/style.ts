@@ -4,8 +4,8 @@ import { theme } from '../../../styles/theme';
 export const Section = styled.section``;
 
 export const VideoSection = styled.section`
-  height: calc(60vh - 8rem);
-  margin-top: 8rem;
+  height: calc(60vh - 6rem);
+  margin-top: 6rem;
   background-image: linear-gradient(to bottom, ${theme.colors.navy1}, ${theme.colors.navy2});
 
   /* @media (max-width: ${theme.viewport.tablet}) {
@@ -22,8 +22,7 @@ export const TextSection = styled.section`
 
 export const StudioSection = styled.section`
   width: 100%;
-  background: url('https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/studio1.webp')
-    no-repeat;
+  background: url('/images/studio.jpg') no-repeat;
   background-size: cover;
   background-attachment: fixed;
   filter: grayscale(100%);

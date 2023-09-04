@@ -5,10 +5,13 @@ import Studio from '../../Studio';
 import ServiceIntro from '../../ServiceIntro';
 import { CenterContainer } from '../../../styles/global';
 import Logo from '../../Logo';
+import VideoList from '../../VideoList';
 export default function DansongKorea() {
   return (
     <>
-      <S.VideoSection>{/* <VideoList /> */}</S.VideoSection>
+      <S.VideoSection>
+        <VideoList />
+      </S.VideoSection>
 
       <S.TextSection>
         <CenterContainer direction="column">

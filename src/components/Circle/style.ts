@@ -14,30 +14,30 @@ export const Container = styled(motion.div)<Props>`
   position: relative;
 
   &.small {
-    min-width: 7rem;
-    min-height: 7rem;
+    width: 7rem;
+    height: 7rem;
 
     @media screen and (max-width: ${({ theme }) => theme.viewport.mobile}) {
-      min-width: 4rem;
-      min-height: 4rem;
+      width: 4rem;
+      height: 4rem;
     }
   }
   &.medium {
-    min-width: 12rem;
-    min-height: 12rem;
+    width: 12rem;
+    height: 12rem;
 
     @media screen and (max-width: ${({ theme }) => theme.viewport.mobile}) {
-      min-width: 6rem;
-      min-height: 6rem;
+      width: 6rem;
+      height: 6rem;
     }
   }
   &.large {
-    min-width: 18rem;
-    min-height: 18rem;
+    width: 18rem;
+    height: 18rem;
 
     @media screen and (max-width: ${({ theme }) => theme.viewport.mobile}) {
-      min-width: 10rem;
-      min-height: 10rem;
+      width: 10rem;
+      height: 10rem;
     }
   }
 

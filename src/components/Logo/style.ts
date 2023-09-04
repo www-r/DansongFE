@@ -7,11 +7,11 @@ export const LogoContainer = styled.div`
   justify-content: center;
   align-items: center;
   &.small img {
-    width: 3.6rem;
+    width: 2rem;
   }
 
   &.medium img {
-    width: 15rem;
+    width: 8rem;
   }
   &.large img {
     width: 60rem;
