@@ -4,8 +4,8 @@ import { theme } from '../../../styles/theme';
 export const Section = styled.section``;
 
 export const VideoSection = styled.section`
-  height: calc(60vh - 8rem);
-  margin-top: 8rem;
+  height: calc(60vh - 6rem);
+  margin-top: 6rem;
   background-image: linear-gradient(to bottom, ${theme.colors.navy1}, ${theme.colors.navy2});
 
   /* @media (max-width: ${theme.viewport.tablet}) {

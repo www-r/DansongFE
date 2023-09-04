@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { CenterContainer } from '../../styles/global';
 
 export const Header = styled.header`
   position: fixed;
@@ -6,21 +7,16 @@ export const Header = styled.header`
   left: 0;
   z-index: 999;
   width: 100vw;
-  background-color: ${({ theme }) => theme.backgroundColor.header};
-  /* min-width: ${({ theme }) => theme.viewport.tablet}; */
-  height: 8rem;
+  background-color: ${({ theme }) => theme.colors.header};
+  height: 6rem;
   transition: background-color linear 0.2s;
   &:hover {
-    background-color: ${({ theme }) => theme.backgroundColor.black};
+    background-color: ${({ theme }) => theme.colors.black};
   }
 `;
 
-export const Container = styled.div`
-  width: 100%;
-  margin: 0 3.6rem;
-  display: flex;
+export const Container = styled(CenterContainer)`
   height: 100%;
-  align-items: center;
 `;
 
 export const MenuContainer = styled.ul`
@@ -29,7 +25,7 @@ export const MenuContainer = styled.ul`
   align-items: center;
   width: 100%;
   height: 100%;
-  gap: 10rem;
+  gap: 7%;
 
   @media screen and (max-width: ${({ theme }) => theme.viewport.mobile}) {
     display: none;
@@ -44,4 +40,8 @@ export const Menu = styled.li`
     font-size: 1.55rem;
     text-decoration: underline;
   }
+`;
+
+export const LogoContainer = styled.div`
+  margin: 2rem;
 `;
