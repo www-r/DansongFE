@@ -22,8 +22,7 @@ export const TextSection = styled.section`
 
 export const StudioSection = styled.section`
   width: 100%;
-  background: url('https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/studio1.webp')
-    no-repeat;
+  background: url('/images/studio.jpg') no-repeat;
   background-size: cover;
   background-attachment: fixed;
   filter: grayscale(100%);
