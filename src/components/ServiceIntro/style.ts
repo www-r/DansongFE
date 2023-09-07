@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 import { CenterContainer } from '../../styles/global';
 
-export const Wrapper = styled.section`
+export const Wrapper = styled.div`
+  width: 70%;
   padding: 10rem 0;
   margin: 0 auto;
 `;
@@ -35,5 +36,26 @@ export const Text = styled.div`
 
   @media screen and (max-width: ${({ theme }) => theme.viewport.mobile}) {
     font-size: 0.9rem;
+  }
+`;
+
+export const LineContainer = styled.div`
+  margin: 1.5rem auto;
+
+  & > div {
+    height: 2rem;
+    width: 50%;
+    border: 2px dotted ${({ theme }) => theme.colors.grey2};
+    border-bottom: none;
+    border-left: none;
+    border-top: none;
+  }
+
+  & div + div {
+    width: 28rem;
+    height: 2rem;
+    margin: 0 auto;
+    border: 2px dotted ${({ theme }) => theme.colors.grey2};
+    border-bottom: none;
   }
 `;

@@ -18,7 +18,7 @@ export const LogoContainer = styled.div`
     width: 8rem;
   }
   &.large img {
-    width: 60rem;
+    width: 20rem;
   }
 
   & img {
