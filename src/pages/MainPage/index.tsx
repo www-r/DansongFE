@@ -6,6 +6,14 @@ import Footer from '../../components/Footer';
 import * as S from './style';
 
 export default function MainPage() {
+  // window.addEventListener('resize', setLayout);
+  // window.addEventListener('scroll', () => {
+  //   scrollLoop();
+  // });
+
+  // useEffect(()=> {
+  //   setLayout()
+  // }, [])
   return (
     <>
       <Header />

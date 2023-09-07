@@ -1,12 +1,6 @@
 import styled from '@emotion/styled';
 import { CenterContainer } from '../../styles/global';
 
-export const Wrapper = styled.div`
-  width: 70%;
-  padding: 10rem 0;
-  margin: 0 auto;
-`;
-
 export const Container = styled(CenterContainer)`
   width: 90%;
   margin: 0 auto;

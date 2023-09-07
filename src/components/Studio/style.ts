@@ -1,28 +1,36 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { CenterContainer } from '../../styles/global';
-
+import { opacityUp, opacityUpAndDown } from '../../styles/keyframes';
 export const Box = styled(motion.div)`
   width: 90%;
 `;
 
-export const Overlay = styled(motion.div)`
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-`;
-
 export const Container = styled.div`
-  padding: 10rem 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 `;
 
-export const TextContainer = styled(CenterContainer)`
+export const TextContainer = styled.div`
+  position: sticky;
+  top: 0;
   text-align: center;
+  height: fit-content;
   @media screen and (max-width: ${({ theme }) => theme.viewport.mobile}) {
+    font-size: 15vw;
   }
 `;
-
+export const Overlay = styled(motion.div)`
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  height: 110vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+`;
 export const TextBox = styled.div`
-  width: 70%;
-  padding: 10rem 0;
-  margin: 0 auto;
+  padding: 0 10vw;
 `;

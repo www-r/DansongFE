@@ -18,7 +18,8 @@ export const globalStyle = css`
   }
 
   body {
-    width: 100%;
+    width: 100vw;
+    word-break: keep-all;
     font-family:
       'Pretendard Variable',
       Pretendard,
@@ -44,8 +45,8 @@ export const globalStyle = css`
   }
 
   a {
-    color: inherit;
     text-decoration: none;
+    color: inherit;
   }
 
   a:hover {
@@ -53,16 +54,12 @@ export const globalStyle = css`
   }
 `;
 
-export const Center = styled.div`
-  padding: 8rem 0 0;
-  width: 100vw;
-`;
-
 type CenterContainerProps = {
   direction?: 'column' | 'row';
 };
 
 export const CenterContainer = styled.div<CenterContainerProps>`
+  padding: 0 10vw;
   display: flex;
   align-items: center;
   justify-content: center;
