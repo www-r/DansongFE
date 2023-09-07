@@ -33,10 +33,8 @@ export const StudioSection = styled.section`
 `;
 
 export const LogoSection = styled.section`
-  height: 100vh;
-  background-color: ${({ theme }) => theme.backgroundColor.black};
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  width: 70%;
+  min-width: 65rem;
+  padding: 10rem 0 20rem 0;
+  margin: 0 auto;
 `;

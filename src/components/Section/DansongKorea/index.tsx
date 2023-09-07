@@ -14,13 +14,13 @@ export default function DansongKorea() {
         </S.VideoSection>
         <S.TextSection>
           <CenterContainer direction="column">
-          <Logo src="/logos/dansongB.png" logo="dansong" />
+            {/* <Logo src="/logos/dansongB.png" logo="dansong" />
             <Textline fontSize={4.8} animation="top" isFontBold={true}>
               Think Make Change
             </Textline>
             <Textline fontSize={2.4} animation="top" isFontBold={true}>
               생각이 실현되는 곳
-            </Textline>
+            </Textline> */}
           </CenterContainer>
         </S.TextSection>
       </div>
