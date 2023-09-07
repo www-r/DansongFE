@@ -1,71 +1,43 @@
-import Circle from '../Circle';
 import Logo from '../Logo';
 import * as S from './style';
 import Textline from '../Textline';
 import DivisionLine from '../DivisionLine';
 import { CenterContainer } from '../../styles/global';
-import { theme } from '../../styles/theme';
 
 export default function ServiceIntro() {
   return (
     <S.Wrapper>
       <CenterContainer>
         <S.MiddleContainer direction="column">
-          <Circle size="large" bgColor="#fff" isBoxShadow={true}>
-            <Logo logo="dansong" src="/logos/dansongB.png" />
-          </Circle>
+          <Logo logo="dansong" src="/logos/dansongB.png" />
         </S.MiddleContainer>
       </CenterContainer>
       <S.LineContainer>
         <div></div>
         <div></div>
       </S.LineContainer>
+      <CenterContainer direction="column">
+        <CenterContainer style={{ justifyContent: 'space-between', width: '60%' }}>
+          <Logo logo="dansong" src="/images/DSS.png" />
+          <Logo logo="dansong" src="/logos/itreaming1.png" />
+        </CenterContainer>
 
-      <CenterContainer style={{ gap: '10rem' }}>
-        <CenterContainer direction="column" style={{ gap: '1rem' }}>
-          <Circle size="large" bgColor="#fff" isBoxShadow={true}>
-            <Logo logo="dansong" src="/images/DSS.png" />
-          </Circle>
-          <S.MiddleContainer direction="column">
-            <Textline
-              fontSize={2.4}
-              animation="top"
-              isFontBold={true}
-              color={theme.textColor.white}
-            >
+        <CenterContainer style={{ justifyContent: 'space-between', width: '60%' }}>
+          <S.MiddleContainer direction="column" style={{ justifyContent: 'flex-start' }}>
+            <Textline fontSize={2.4} animation="top" isFontBold={true}>
               컨텐츠
             </Textline>
             <DivisionLine borderStyle="dashed" />
-            <Textline
-              fontSize={1.8}
-              animation="bottom"
-              isFontBold={true}
-              color={theme.textColor.white}
-            >
+            <Textline fontSize={1.8} animation="bottom" isFontBold={true}>
               단송코리아
             </Textline>
           </S.MiddleContainer>
-        </CenterContainer>
-        <CenterContainer direction="column" style={{ gap: '1rem' }}>
-          <Circle size="large" bgColor="#fff" isBoxShadow={true}>
-            <Logo logo="dansong" src="/logos/itreaming1.png" size="large" />
-          </Circle>
           <S.MiddleContainer direction="column">
-            <Textline
-              fontSize={2.4}
-              animation="top"
-              isFontBold={true}
-              color={theme.textColor.white}
-            >
+            <Textline fontSize={2.4} animation="top" isFontBold={true}>
               커머스
             </Textline>
             <DivisionLine borderStyle="dashed" />
-            <Textline
-              fontSize={1.8}
-              animation="bottom"
-              isFontBold={true}
-              color={theme.textColor.white}
-            >
+            <Textline fontSize={1.8} animation="bottom" isFontBold={true}>
               잇트리밍
             </Textline>
           </S.MiddleContainer>
