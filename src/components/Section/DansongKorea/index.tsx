@@ -14,7 +14,7 @@ export default function DansongKorea() {
 
       <S.TextSection>
         <CenterContainer direction="column">
-          <Logo src="/logos/dansongB.png" logo="dansong" size="sm" />
+          <Logo src="/logos/dansongB.png" logo="dansong" />
           <Textline fontSize={4.8} animation="top" isFontBold={true}>
             Think Make Change
           </Textline>
