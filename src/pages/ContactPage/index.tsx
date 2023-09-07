@@ -1,6 +1,7 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import * as S from './style';
+import Map from '../../components/Map';
 
 export default function ContactPage() {
   return (
@@ -28,6 +29,7 @@ export default function ContactPage() {
             </a>
           </li>
         </ul>
+        <Map />
       </S.Main>
       <Footer />
     </>
