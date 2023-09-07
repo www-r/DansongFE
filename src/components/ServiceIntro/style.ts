@@ -1,11 +1,7 @@
 import styled from '@emotion/styled';
 import { CenterContainer } from '../../styles/global';
 
-export const Wrapper = styled.div`
-  width: 70%;
-  padding: 10rem 0;
-  margin: 0 auto;
-`;
+export const Wrapper = styled.div``;
 
 export const Container = styled(CenterContainer)`
   width: 90%;
@@ -24,9 +20,9 @@ export const Container = styled(CenterContainer)`
 `;
 
 export const MiddleContainer = styled(CenterContainer)`
-  @media screen and (max-width: ${({ theme }) => theme.viewport.mobile}) {
+  /* @media screen and (max-width: ${({ theme }) => theme.viewport.mobile}) {
     min-width: 6.8rem;
-  }
+  } */
 `;
 
 export const Text = styled.div`
@@ -40,22 +36,29 @@ export const Text = styled.div`
 `;
 
 export const LineContainer = styled.div`
-  margin: 1.5rem auto;
+  position: relative;
+  height: 4rem;
 
   & > div {
+    position: absolute;
     height: 2rem;
     width: 50%;
-    border: 2px dotted ${({ theme }) => theme.colors.grey2};
+    top: 0;
+    left: 0;
+
+    border: 2px dotted ${({ theme }) => theme.colors.black};
     border-bottom: none;
     border-left: none;
     border-top: none;
   }
 
   & div + div {
-    width: 28rem;
+    position: absolute;
+    width: 50%;
+    top: 2rem;
+    left: 25%;
     height: 2rem;
-    margin: 0 auto;
-    border: 2px dotted ${({ theme }) => theme.colors.grey2};
+    border: 2px dotted ${({ theme }) => theme.colors.black};
     border-bottom: none;
   }
 `;

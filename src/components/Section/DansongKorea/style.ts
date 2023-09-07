@@ -22,6 +22,7 @@ export const TextSection = styled.section`
 
 export const StudioSection = styled.section`
   width: 100%;
+
   background: url('/images/studio.jpg') no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -29,7 +30,8 @@ export const StudioSection = styled.section`
 `;
 
 export const LogoSection = styled.section`
-  width: 100%;
-  height: 100vh;
-  background-color: ${({ theme }) => theme.colors.navy1};
+  width: 70%;
+  min-width: 65rem;
+  padding: 10rem 0 20rem 0;
+  margin: 0 auto;
 `;
