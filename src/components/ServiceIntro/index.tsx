@@ -16,11 +16,15 @@ export default function ServiceIntro() {
           </Circle>
         </S.MiddleContainer>
       </CenterContainer>
+      <S.LineContainer>
+        <div></div>
+        <div></div>
+      </S.LineContainer>
 
-      <CenterContainer>
-        <CenterContainer direction="column">
+      <CenterContainer style={{ gap: '10rem' }}>
+        <CenterContainer direction="column" style={{ gap: '1rem' }}>
           <Circle size="large" bgColor="#fff" isBoxShadow={true}>
-            <Logo logo="dansong" src="/logos/dansongB.png" />
+            <Logo logo="dansong" src="/images/DSS.png" />
           </Circle>
           <S.MiddleContainer direction="column">
             <Textline
@@ -42,9 +46,9 @@ export default function ServiceIntro() {
             </Textline>
           </S.MiddleContainer>
         </CenterContainer>
-        <CenterContainer direction="column">
+        <CenterContainer direction="column" style={{ gap: '1rem' }}>
           <Circle size="large" bgColor="#fff" isBoxShadow={true}>
-            <Logo logo="dansong" src="/logos/dansongB.png" />
+            <Logo logo="dansong" src="/logos/itreaming1.png" size="large" />
           </Circle>
           <S.MiddleContainer direction="column">
             <Textline
