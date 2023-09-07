@@ -8,7 +8,7 @@ import { theme } from '../../styles/theme';
 
 export default function ServiceIntro() {
   return (
-    <S.Wrapper>
+    <>
       <CenterContainer>
         <S.MiddleContainer direction="column">
           <Circle size="large" bgColor="#fff" isBoxShadow={true}>
@@ -71,6 +71,6 @@ export default function ServiceIntro() {
           </S.MiddleContainer>
         </CenterContainer>
       </CenterContainer>
-    </S.Wrapper>
+    </>
   );
 }

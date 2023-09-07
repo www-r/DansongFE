@@ -1,10 +1,7 @@
 import { useState, useRef } from 'react';
 import * as S from './style';
-import { Center } from '../../../styles/global';
 import { CenterContainer } from '../../../styles/global';
-
 import Textline from '../../Textline';
-import Button from '../../Button';
 import Logo from '../../Logo';
 import { Theme } from '@emotion/react';
 
@@ -15,15 +12,13 @@ export default function Contents() {
     setWidth(window.innerWidth);
   });
   window.addEventListener('scroll', () => {
-    console.log(scrollY);
-    if (scrollY > 4100) {
-      videoRef.current.style.transform = 'scale(' + 0.8 + ')';
-    }
+    // console.log(videoRef.current.width);
+    setWidth(width);
   });
   return (
     <S.Section>
       <CenterContainer>
-        <S.TextSection className="text-section">
+        <S.TextSection className="text-section" id='CONTENTS'>
           <Textline
             fontSize={2.4}
             isFontBold={true}
@@ -193,7 +188,6 @@ export default function Contents() {
             muted
             width={width}
             ref={videoRef}
-       
           >
             팝꽃 광고 영상
           </S.AdvertiseVideo>
