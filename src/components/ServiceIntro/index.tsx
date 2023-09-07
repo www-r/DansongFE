@@ -6,7 +6,7 @@ import { CenterContainer } from '../../styles/global';
 
 export default function ServiceIntro() {
   return (
-    <S.Wrapper>
+    <>
       <CenterContainer>
         <S.MiddleContainer direction="column">
           <Logo logo="dansong" src="/logos/dansongB.png" />
@@ -17,13 +17,15 @@ export default function ServiceIntro() {
         <div></div>
       </S.LineContainer>
       <CenterContainer direction="column">
-        <CenterContainer style={{ justifyContent: 'space-between', width: '60%' }}>
+        <CenterContainer
+          style={{ width: '90%', justifyContent: 'space-between', marginBottom: '1.5rem' }}
+        >
           <Logo logo="dansong" src="/images/DSS.png" />
           <Logo logo="dansong" src="/logos/itreaming1.png" />
         </CenterContainer>
 
-        <CenterContainer style={{ justifyContent: 'space-between', width: '60%' }}>
-          <S.MiddleContainer direction="column" style={{ justifyContent: 'flex-start' }}>
+        <CenterContainer style={{ width: '90%', justifyContent: 'space-between' }}>
+          <S.MiddleContainer direction="column">
             <Textline fontSize={2.4} animation="top" isFontBold={true}>
               컨텐츠
             </Textline>
@@ -43,6 +45,6 @@ export default function ServiceIntro() {
           </S.MiddleContainer>
         </CenterContainer>
       </CenterContainer>
-    </S.Wrapper>
+    </>
   );
 }

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
 
-export const Main = styled.main``;
-
-export const Wrapper = styled.div``;
+export const Main = styled.main`
+  width: 100vw;
+`;

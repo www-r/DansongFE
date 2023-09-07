@@ -1,12 +1,9 @@
 import styled from '@emotion/styled';
 import { CenterContainer } from '../../styles/global';
 
-export const Wrapper = styled.div``;
-
 export const Container = styled(CenterContainer)`
   width: 90%;
   margin: 0 auto;
-  padding: 2rem;
   border-radius: 1rem;
   justify-content: space-evenly;
   background-color: ${({ theme }) => theme.colors.logoContainer};
@@ -36,6 +33,7 @@ export const Text = styled.div`
 `;
 
 export const LineContainer = styled.div`
+  margin: 2rem 0;
   position: relative;
   height: 4rem;
 

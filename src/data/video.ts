@@ -12,6 +12,7 @@ export const VIDEO: Video[] = [
     thumbnail: thumbnail2,
   },
 ];
+
 type Video = {
   id: number;
   video: string;
