@@ -15,13 +15,18 @@ export const LogoContainer = styled.div`
     width: 2rem;
   }
 
+  &.sm img {
+    width: 4rem;
+  }
+
   &.medium img {
     width: 8rem;
 
   }
   &.large img {
-    width: 50rem;
-    height: max-content;
+
+    width: 20rem;
+
   }
 
   & img {

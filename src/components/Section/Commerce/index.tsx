@@ -5,7 +5,7 @@ import Logo from '../../Logo';
 import DivisionLine from '../../DivisionLine';
 export default function Commerce() {
   return (
-    <S.Section>
+    <S.Section id="commerce">
       <S.LogoSection>
         <S.LogoContainer>
           <Logo

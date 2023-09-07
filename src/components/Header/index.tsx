@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import DivisionLine from '../DivisionLine';
 import Logo from '../Logo';
 import * as S from './style';
@@ -7,21 +8,26 @@ export default function Header() {
     <S.Header>
       <S.Container>
         <S.LogoContainer>
-          <Logo logo="dansong" size="small" src="/logos/dansongWS.png" />
+          <Link to="/">
+            <Logo logo="dansong" size="small" src="/logos/dansongWS.png" />
+          </Link>
         </S.LogoContainer>
         <S.MenuContainer>
           <S.Menu>
-            <a href="#DANSONGKOREA">DANSONG KOREA</a>
+            <a href="/#dansongkorea">DANSONG KOREA</a>
           </S.Menu>
+
           <S.Menu>
-            <a href="#CONTENTS">CONTENTS</a>
+            <a href="/#contents">CONTENTS</a>
           </S.Menu>
+
           <S.Menu>
-            <a href="#COMMERCE">COMMERCE</a>
+            <a href="/#commerce">COMMERCE</a>
           </S.Menu>
-          <S.Menu>
-            <a href="#CONTACT">CONTACT</a>
-          </S.Menu>
+
+          <Link to="/contact">
+            <S.Menu>CONTACT</S.Menu>
+          </Link>
         </S.MenuContainer>
       </S.Container>
       <DivisionLine />

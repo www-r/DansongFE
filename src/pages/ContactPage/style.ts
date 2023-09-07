@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
 
-export const MainContainer = styled.div`
-  margin: auto;
+export const Main = styled.main`
+  padding-top: 6rem;
 `;

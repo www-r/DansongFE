@@ -4,6 +4,7 @@ type LogoProps = {
   logo: string;
   size?: 'small' | 'medium' | 'large';
   border?: 'none' | 'circle';
+
   src: string;
 };
 
