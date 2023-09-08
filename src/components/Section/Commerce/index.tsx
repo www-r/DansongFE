@@ -1,43 +1,58 @@
-import { motion, useScroll } from "framer-motion"
 import * as S from './style';
 import { CenterContainer } from '../../../styles/global';
 import Textline from '../../Textline';
 import Logo from '../../Logo';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/autoplay';
 export default function Commerce() {
-  const { scrollYProgress } = useScroll()
   return (
     <S.Section>
       <div id="scroll-scene-6">
-        <S.LogoSection id='COMMERCE'>
-          <S.LogoContainer>
-            <Logo logo="itreamingB" size="large" src="/logos/itreaming1.png" />
+        <S.LogoSection>
+          <S.LogoContainer className="sticky" id="commerce">
+            <Logo logo="itreamingB" size="fullLogo" src="/logos/itreaming1.png" />
           </S.LogoContainer>
         </S.LogoSection>
       </div>
 
       <div id="scroll-scene-7">
         <S.ProductsSection>
-          <S.ScrollProductItem>
-            <img src="images/butter.png" alt="popcorn butter image" />
-          </S.ScrollProductItem>
-          <S.CarouselContainer>
-            <img src="images/caramel.png" alt="popcorn caramel image" height={450} />
-            <img src="images/onion.png" alt="popcorn onion image" height={450} />
-            <img src="/images/bbq.png" alt="popcorn bbq image" height={450} />
-            {/* <img
-                src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/bbq.png"
-                alt=""
-                height={500}
-              /> */}
-          </S.CarouselContainer>
+          <S.ScrollProductContainer>
+            <S.ScrollProductItem opacity={1}>
+              <img src="images/butter.png" alt="popcorn butter image" height={700} />
+            </S.ScrollProductItem>
+          </S.ScrollProductContainer>
+          <S.SwiperContainer>
+            <Swiper
+              modules={[Autoplay]}
+              slidesPerView={3}
+              spaceBetween={0}
+              onSlideChange={() => console.log('slide change')}
+              autoplay
+            >
+              <SwiperSlide>
+                <img src="images/caramel.png" alt="popcorn caramel image" height={500} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="images/onion.png" alt="popcorn onion image" height={500} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="/images/bbq.png" alt="popcorn bbq image" height={500} />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src="/images/butter.png" alt="popcorn butter image" height={500} />
+              </SwiperSlide>
+            </Swiper>
+          </S.SwiperContainer>
+
           <S.CoBrandsContainer>
-            <CenterContainer direction="column">
+            <CenterContainer>
               <S.BrandsContainerTitle>COWORKERS</S.BrandsContainerTitle>
               <S.BrandLogosContainer>
-                <CenterContainer>
-                  <Logo logo="생활맥주" size="medium" src="/logos/beer.png" />
-                  <Logo logo="코드야드바이메리어트" size="medium" src="/logos/marriot.png" />
-                </CenterContainer>
+                <Logo logo="생활맥주" size="brandLogo" src="/logos/beer.png" />
+                <Logo logo="코드야드바이메리어트" size="brandLogo" src="/logos/marriot.png" />
               </S.BrandLogosContainer>
             </CenterContainer>
           </S.CoBrandsContainer>

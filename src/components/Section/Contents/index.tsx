@@ -1,24 +1,40 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import * as S from './style';
+// import { useScroll, useTransform, motion } from 'framer-motion';
 import { CenterContainer } from '../../../styles/global';
 import Textline from '../../Textline';
 import Logo from '../../Logo';
 import { Theme } from '@emotion/react';
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/autoplay';
 export default function Contents() {
-  const [width, setWidth] = useState(window.innerWidth);
-  const videoRef = useRef();
+  const [width, setWidth] = useState(innerWidth);
+  const [slidesPerView, setSlidesPerView] = useState(3);
+
   window.addEventListener('resize', () => {
-    setWidth(window.innerWidth);
+    setWidth(innerWidth);
+
+    if (innerWidth >= 1024) {
+      setSlidesPerView(4.5);
+    }
+    if (innerWidth >= 780 && innerWidth < 1024) {
+      setSlidesPerView(3);
+    }
+    if (innerWidth >= 630 && innerWidth < 780) {
+      setSlidesPerView(2);
+    }
+    if (innerWidth < 480) {
+      setSlidesPerView(1.5);
+    }
+    return;
   });
-  window.addEventListener('scroll', () => {
-    // console.log(videoRef.current.width);
-    setWidth(width);
-  });
+
   return (
     <S.Section>
       <CenterContainer>
-        <S.TextSection className="text-section" id='CONTENTS'>
+        <S.TextSection className="text-section" id="contents">
           <Textline
             fontSize={2.4}
             isFontBold={true}
@@ -83,57 +99,6 @@ export default function Contents() {
                   color={({ theme }: { theme: Theme }) => theme.textColor.white}
                   textAlign="center"
                 >
-                  FASHION
-                </Textline>
-                <Textline
-                  fontSize={4}
-                  isFontBold={true}
-                  color={({ theme }: { theme: Theme }) => theme.textColor.white}
-                  textAlign="center"
-                >
-                  패션
-                </Textline>
-              </S.CategoryListItemTitle>
-              <S.CoBrandLogosContainer>
-                <Logo size="small" logo="mlb" src="/logos/mlb.png" />
-                <Logo logo="off white" src="/logos/offWhite.svg" />
-                <Logo logo="kolon sports" src="/logos/kolonsport.png" />
-              </S.CoBrandLogosContainer>
-            </S.CoBrandCategoryList>
-            <S.CoBrandCategoryList>
-              <S.CategoryListItemTitle>
-                <Textline
-                  fontSize={2.1}
-                  color={({ theme }: { theme: Theme }) => theme.textColor.white}
-                  textAlign="center"
-                >
-                  BEAUTY
-                </Textline>
-                <Textline
-                  fontSize={4}
-                  isFontBold={true}
-                  color={({ theme }: { theme: Theme }) => theme.textColor.white}
-                  textAlign="center"
-                >
-                  뷰티
-                </Textline>
-              </S.CategoryListItemTitle>
-              <S.CoBrandLogosContainer>
-                <Logo
-                  logo="fruit of the earth"
-                  size="medium"
-                  src="/logos/fruitoftheearth.jpeg"
-                  border="circle"
-                />
-              </S.CoBrandLogosContainer>
-            </S.CoBrandCategoryList>
-            <S.CoBrandCategoryList>
-              <S.CategoryListItemTitle>
-                <Textline
-                  fontSize={2.1}
-                  color={({ theme }: { theme: Theme }) => theme.textColor.white}
-                  textAlign="center"
-                >
                   FOOD
                 </Textline>
                 <Textline
@@ -146,13 +111,81 @@ export default function Contents() {
                 </Textline>
               </S.CategoryListItemTitle>
               <S.CoBrandLogosContainer>
-                <Logo logo="푸디베어" src="/logos/foodybear.png" />
-                <Logo logo="하이트 진로" src="/logos/hitejinro.png" />
-                <Logo logo="오리온" src="/logos/orion.png" />
-                <Logo logo="더 글레리벳 위스키" src="/logos/glenlivet.png" />
-                <Logo logo="역전할머니맥주" src="/logos/beer.png" border="circle" />
-                <Logo logo="일일향" src="/logos/ililhyang.png" />
-                <Logo logo="문헌 전통 한우 곱창 전골" src="/logos/meat.png" border="circle" />
+                <a href="https://youtu.be/OsCz6FrfXAI?si=qcfwO3bYjuCR_y5-" target="blank">
+                  <Logo logo="푸디베어" src="/logos/foodybear.png" size="brandLogo" />
+                </a>
+                <a href="https://youtu.be/h8NKkKZcko0?si=Z5lZGJXyn4Ei5qaa" target="blank">
+                  <Logo logo="맵데이" src="/logos/mapday.jpeg" border="circle" size="brandLogo" />
+                </a>
+                <a href="https://youtu.be/YFoKSMItdmA?si=t17svg4FQ-LxQcSL" target="blank">
+                  <Logo logo="하이트 진로" src="/logos/hitejinro.png" size="brandLogo" />
+                </a>
+                <a href="https://youtu.be/YFoKSMItdmA?si=t17svg4FQ-LxQcSL" target="blank">
+                  <Logo logo="오리온" src="/logos/orion.png" size="brandLogo" />
+                </a>
+                <a href="https://youtu.be/SvkCEeosqT0?si=cdzpdh_CPAYNZMB0" target="blank">
+                  <Logo logo="더 글레리벳 위스키" src="/logos/glenlivet.png" size="brandLogo" />
+                </a>
+                <a href="https://youtu.be/Z12AZhTe0HM?si=6bAppNRmbKZ2x-st" target="blank">
+                  <Logo
+                    logo="역전할머니맥주"
+                    src="/logos/beer.png"
+                    border="circle"
+                    size="brandLogo"
+                  />
+                </a>
+                <a href="https://youtu.be/wcWc75IdR9E?si=SOC7wzXlYj813NzE" target="blank">
+                  <Logo logo="일일향" src="/logos/ililhyang.png" size="brandLogo" />
+                </a>
+                <a
+                  href="https://www.youtube.com/live/aCPIsPdx-w4?si=OPuFrfLqBAPbMBMN"
+                  target="blank"
+                >
+                  <Logo
+                    logo="문헌 전통 한우 곱창 전골"
+                    src="/logos/meat.png"
+                    border="circle"
+                    size="brandLogo"
+                  />
+                </a>
+              </S.CoBrandLogosContainer>
+            </S.CoBrandCategoryList>
+            <S.CoBrandCategoryList>
+              <S.CategoryListItemTitle>
+                <Textline
+                  fontSize={2.1}
+                  color={({ theme }: { theme: Theme }) => theme.textColor.white}
+                  textAlign="center"
+                >
+                  FASHION/BEAUTY
+                </Textline>
+                <Textline
+                  fontSize={4}
+                  isFontBold={true}
+                  color={({ theme }: { theme: Theme }) => theme.textColor.white}
+                  textAlign="center"
+                >
+                  패션/뷰티
+                </Textline>
+              </S.CategoryListItemTitle>
+              <S.CoBrandLogosContainer>
+                <a href="https://youtu.be/zl-1GtXMBr4?si=CkAp2PTe3OGb0sHJ" target="blank">
+                  <Logo logo="mlb" src="/logos/mlb.png" size="brandLogo" />
+                </a>
+                <a href="https://youtu.be/WoLBJV1Yibc?si=7EePWAVJ-7SN4KLU" target="blank">
+                  <Logo logo="off white" src="/logos/offWhite.svg" size="brandLogo" />
+                </a>
+                <a href="https://youtu.be/65u25SUq9pw?si=Lq9Yo4eq5lYjI7qM" target="blank">
+                  <Logo logo="kolon sports" src="/logos/kolonsport.png" size="brandLogo" />
+                </a>
+                <a href="https://youtu.be/XlCWDHCoLdU?si=Y2tQJeqJIiQk8hCu" target="blank">
+                  <Logo
+                    logo="fruit of the earth"
+                    src="/logos/fruitoftheearth.jpeg"
+                    border="circle"
+                    size="brandLogo"
+                  />
+                </a>
               </S.CoBrandLogosContainer>
             </S.CoBrandCategoryList>
           </S.CoBrandCategoryListWrapper>
@@ -179,60 +212,49 @@ export default function Contents() {
             </Textline>
           </CenterContainer>
         </h3>
-        <S.AdvertiseVideoContainer>
-          <S.AdvertiseVideo
-           src={`${import.meta.env.VITE_BASE_URL}/videos/advertiseVideo.mp4`}
-            autoPlay
-            controls
-            loop
-            muted
-            width={width}
-            ref={videoRef}
-          >
-            팝꽃 광고 영상
-          </S.AdvertiseVideo>
-        </S.AdvertiseVideoContainer>
+        <CenterContainer>
+          <S.AdvertiseVideo width={1000} />
+        </CenterContainer>
+
         <S.AdvertisePicsContainer>
-          <img
-            src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg"
-            alt="thumbnail"
-            height={180}
-          />
-          <img
-            src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg"
-            alt="thumbnail"
-            height={180}
-          />
-          <img
-            src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg"
-            alt="thumbnail"
-            height={180}
-          />
-          <img
-            src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg"
-            alt="thumbnail"
-            height={180}
-          />
-          <img
-            src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg"
-            alt="thumbnail"
-            height={180}
-          />
-          <img
-            src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg"
-            alt="thumbnail"
-            height={180}
-          />
-          <img
-            src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg"
-            alt="thumbnail"
-            height={180}
-          />
-          <img
-            src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/thumbnail1.jpg"
-            alt="thumbnail"
-            height={180}
-          />
+          <Swiper
+            modules={[Autoplay]}
+            slidesPerView={slidesPerView}
+            spaceBetween={50}
+            onSlideChange={() => console.log('slide change')}
+            autoplay
+          >
+            <SwiperSlide>
+              <img src="/images/A6.jpg" alt="commercial image" height={180} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/A13.jpg" alt="commercial image" height={180} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/A14.jpg" alt="commercial image" height={180} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/A29.jpg" alt="commercial image" height={180} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/A34.jpg" alt="commercial image" height={180} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/A42.jpg" alt="commercial image" height={180} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/A45.jpg" alt="commercial image" height={180} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/A50.jpg" alt="commercial image" height={180} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/A64.jpg" alt="commercial image" height={180} />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="/images/A67.jpg" alt="commercial image" height={180} />
+            </SwiperSlide>
+          </Swiper>
         </S.AdvertisePicsContainer>
       </S.AdvertiseSection>
     </S.Section>
