@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import * as S from './style';
 import { CenterContainer } from '../../../styles/global';
 import Textline from '../../Textline';
@@ -7,7 +7,6 @@ import { Theme } from '@emotion/react';
 
 export default function Contents() {
   const [width, setWidth] = useState(window.innerWidth);
-  const videoRef = useRef();
   window.addEventListener('resize', () => {
     setWidth(window.innerWidth);
   });
@@ -18,7 +17,7 @@ export default function Contents() {
   return (
     <S.Section>
       <CenterContainer>
-        <S.TextSection className="text-section" id='CONTENTS'>
+        <S.TextSection className="text-section" id="CONTENTS">
           <Textline
             fontSize={2.4}
             isFontBold={true}
@@ -181,13 +180,12 @@ export default function Contents() {
         </h3>
         <S.AdvertiseVideoContainer>
           <S.AdvertiseVideo
-           src={`${import.meta.env.VITE_BASE_URL}/videos/advertiseVideo.mp4`}
+            src={`${import.meta.env.VITE_BASE_URL}/videos/advertiseVideo.mp4`}
             autoPlay
             controls
             loop
             muted
             width={width}
-            ref={videoRef}
           >
             팝꽃 광고 영상
           </S.AdvertiseVideo>

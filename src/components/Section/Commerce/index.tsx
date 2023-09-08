@@ -1,14 +1,12 @@
-import { motion, useScroll } from "framer-motion"
 import * as S from './style';
 import { CenterContainer } from '../../../styles/global';
 import Textline from '../../Textline';
 import Logo from '../../Logo';
 export default function Commerce() {
-  const { scrollYProgress } = useScroll()
   return (
     <S.Section>
       <div id="scroll-scene-6">
-        <S.LogoSection id='COMMERCE'>
+        <S.LogoSection id="COMMERCE">
           <S.LogoContainer>
             <Logo logo="itreamingB" size="large" src="/logos/itreaming1.png" />
           </S.LogoContainer>

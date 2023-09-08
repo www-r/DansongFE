@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import DivisionLine from '../DivisionLine';
 import Logo from '../Logo';
 import * as S from './style';
 
@@ -30,7 +29,6 @@ export default function Header() {
           </Link>
         </S.MenuContainer>
       </S.Container>
-      <DivisionLine />
     </S.Header>
   );
 }
