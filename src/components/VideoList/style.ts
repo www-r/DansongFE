@@ -11,9 +11,12 @@ export const ImgContainer = styled.li`
   display: flex;
   align-items: center;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  opacity: 0.1;
+  opacity: 0.12;
   width: 100%;
+
   & img {
+    padding: 1rem;
+    border-radius: 2rem;
     object-fit: cover;
     height: 100%;
     width: 100%;
@@ -25,6 +28,7 @@ export const Wrapper = styled.ul`
   justify-content: center;
   height: 100%;
   position: relative;
+  background-color: #000;
 `;
 /* & img {
     object-fit: cover;
