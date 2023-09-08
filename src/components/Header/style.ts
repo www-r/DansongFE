@@ -7,12 +7,9 @@ export const Header = styled.header`
   left: 0;
   z-index: 999;
   width: 100vw;
-  background-color: ${({ theme }) => theme.colors.header};
+  background-color: ${({ theme }) => theme.colors.black};
   height: 6rem;
   transition: background-color linear 0.2s;
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.black};
-  }
 `;
 
 export const Container = styled(CenterContainer)`
