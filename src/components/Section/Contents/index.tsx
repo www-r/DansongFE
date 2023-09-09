@@ -15,9 +15,9 @@ export default function Contents() {
     setWidth(width);
   });
   return (
-    <S.Section>
+    <S.Section id="contents">
       <CenterContainer>
-        <S.TextSection className="text-section" id="CONTENTS">
+        <S.TextSection className="text-section">
           <Textline
             fontSize={2.4}
             isFontBold={true}

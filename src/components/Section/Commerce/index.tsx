@@ -5,13 +5,11 @@ import Logo from '../../Logo';
 export default function Commerce() {
   return (
     <S.Section>
-      <div id="scroll-scene-6">
-        <S.LogoSection id="COMMERCE">
-          <S.LogoContainer>
-            <Logo logo="itreamingB" size="large" src="/logos/itreaming1.png" />
-          </S.LogoContainer>
-        </S.LogoSection>
-      </div>
+      <S.LogoSection id="commerce">
+        <S.LogoContainer>
+          <Logo logo="itreamingB" size="large" src="/logos/itreaming1.png" />
+        </S.LogoContainer>
+      </S.LogoSection>
 
       <div id="scroll-scene-7">
         <S.ProductsSection>

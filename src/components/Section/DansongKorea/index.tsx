@@ -4,24 +4,18 @@ import ServiceIntro from '../../ServiceIntro';
 import VideoList from '../../VideoList';
 export default function DansongKorea() {
   return (
-    <S.Section>
-      <div id="scroll-scene-0">
-        <S.VideoSection>
-          <VideoList />
-        </S.VideoSection>
-      </div>
+    <S.Section id="dansongkorea">
+      <S.VideoSection>
+        <VideoList />
+      </S.VideoSection>
 
-      <div id="scroll-scene-1">
-        <S.LogoSection id="DANSONGKOREA">
-          <ServiceIntro />
-        </S.LogoSection>
-      </div>
+      <S.LogoSection>
+        <ServiceIntro />
+      </S.LogoSection>
 
-      <div id="scroll-scene-2">
-        <S.StudioSection>
-          <Studio />
-        </S.StudioSection>
-      </div>
+      <S.StudioSection>
+        <Studio />
+      </S.StudioSection>
     </S.Section>
   );
 }
