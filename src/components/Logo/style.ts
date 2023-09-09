@@ -11,7 +11,6 @@ export const LogoContainer = styled.div`
   }
 
   &.small img {
-
     width: 2rem;
   }
 
@@ -21,12 +20,14 @@ export const LogoContainer = styled.div`
 
   &.medium img {
     width: 8rem;
-
   }
+
+  &.ml img {
+    width: 10rem;
+  }
+
   &.large img {
-
     width: 20rem;
-
   }
 
   & img {

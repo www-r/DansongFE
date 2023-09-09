@@ -52,9 +52,9 @@ export const LineContainer = styled.div`
 
   & div + div {
     position: absolute;
-    width: 50%;
+    width: 80%;
     top: 2rem;
-    left: 25%;
+    left: 10%;
     height: 2rem;
     border: 2px dotted ${({ theme }) => theme.colors.black};
     border-bottom: none;

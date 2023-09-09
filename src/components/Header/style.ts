@@ -14,6 +14,7 @@ export const Header = styled.header`
 
 export const Container = styled(CenterContainer)`
   height: 100%;
+  padding: 0 10vw;
 `;
 
 export const MenuContainer = styled.ul`
