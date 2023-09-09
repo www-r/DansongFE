@@ -2,7 +2,7 @@ import * as S from './style';
 
 type LogoProps = {
   logo: string;
-  size?: 'small' | 'medium' | 'large';
+  size?: 'small' | 'sm' | 'medium' | 'ml' | 'large';
   border?: 'none' | 'circle';
 
   src: string;
@@ -11,7 +11,7 @@ type LogoProps = {
 export default function Logo({ logo, size = 'medium', border = 'none', src }: LogoProps) {
   return (
     <S.LogoContainer className={size + ' ' + border}>
-      <img src={src} alt={`${logo} logo`} />
+      <img src={src} alt={`${logo}`} />
     </S.LogoContainer>
   );
 }
