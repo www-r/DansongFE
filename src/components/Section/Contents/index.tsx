@@ -3,7 +3,7 @@ import * as S from './style';
 import { CenterContainer } from '../../../styles/global';
 import Textline from '../../Textline';
 import Logo from '../../Logo';
-import { Theme } from '@emotion/react';
+import { theme } from '../../../styles/theme';
 
 export default function Contents() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -21,7 +21,7 @@ export default function Contents() {
           <Textline
             fontSize={2.4}
             isFontBold={true}
-            color={({ theme }: { theme: Theme }) => theme.textColor.white}
+            color={theme.textColor.white}
             textAlign="center"
           >
             컨텐츠 기획, 게스트 섭외부터 촬영과 편집까지
@@ -30,7 +30,7 @@ export default function Contents() {
             <Textline
               fontSize={7}
               isFontBold={true}
-              color={({ theme }: { theme: Theme }) => theme.textColor.white}
+              color={theme.textColor.white}
               textAlign="center"
             >
               다양한 미디어 컨텐츠
@@ -38,7 +38,7 @@ export default function Contents() {
             <Textline
               fontSize={7}
               isFontBold={true}
-              color={({ theme }: { theme: Theme }) => theme.textColor.white}
+              color={theme.textColor.white}
               textAlign="center"
             >
               직접 제작
@@ -54,7 +54,7 @@ export default function Contents() {
               <Textline
                 fontSize={4}
                 isFontBold={true}
-                color={({ theme }: { theme: Theme }) => theme.textColor.white}
+                color={theme.textColor.white}
                 marginBottom="1.2em"
                 textAlign="center"
               >
@@ -64,7 +64,7 @@ export default function Contents() {
             <h4>
               <Textline
                 fontSize={3}
-                color={({ theme }: { theme: Theme }) => theme.textColor.white}
+                color={theme.textColor.white}
                 textAlign="center"
                 marginBottom="2em"
               >
@@ -77,17 +77,13 @@ export default function Contents() {
           <S.CoBrandCategoryListWrapper>
             <S.CoBrandCategoryList>
               <S.CategoryListItemTitle>
-                <Textline
-                  fontSize={2.1}
-                  color={({ theme }: { theme: Theme }) => theme.textColor.white}
-                  textAlign="center"
-                >
+                <Textline fontSize={2.1} color={theme.textColor.white} textAlign="center">
                   FASHION
                 </Textline>
                 <Textline
                   fontSize={4}
                   isFontBold={true}
-                  color={({ theme }: { theme: Theme }) => theme.textColor.white}
+                  color={theme.textColor.white}
                   textAlign="center"
                 >
                   패션
@@ -101,17 +97,13 @@ export default function Contents() {
             </S.CoBrandCategoryList>
             <S.CoBrandCategoryList>
               <S.CategoryListItemTitle>
-                <Textline
-                  fontSize={2.1}
-                  color={({ theme }: { theme: Theme }) => theme.textColor.white}
-                  textAlign="center"
-                >
+                <Textline fontSize={2.1} color={theme.textColor.white} textAlign="center">
                   BEAUTY
                 </Textline>
                 <Textline
                   fontSize={4}
                   isFontBold={true}
-                  color={({ theme }: { theme: Theme }) => theme.textColor.white}
+                  color={theme.textColor.white}
                   textAlign="center"
                 >
                   뷰티
@@ -128,17 +120,13 @@ export default function Contents() {
             </S.CoBrandCategoryList>
             <S.CoBrandCategoryList>
               <S.CategoryListItemTitle>
-                <Textline
-                  fontSize={2.1}
-                  color={({ theme }: { theme: Theme }) => theme.textColor.white}
-                  textAlign="center"
-                >
+                <Textline fontSize={2.1} color={theme.textColor.white} textAlign="center">
                   FOOD
                 </Textline>
                 <Textline
                   fontSize={4}
                   isFontBold={true}
-                  color={({ theme }: { theme: Theme }) => theme.textColor.white}
+                  color={theme.textColor.white}
                   textAlign="center"
                 >
                   푸드
@@ -161,7 +149,7 @@ export default function Contents() {
       <S.AdvertiseSection>
         <h4>
           <CenterContainer>
-            <Textline fontSize={2.4} color={({ theme }: { theme: Theme }) => theme.textColor.white}>
+            <Textline fontSize={2.4} color={theme.textColor.white}>
               제품 사진부터 광고 영상까지
             </Textline>
           </CenterContainer>
@@ -171,7 +159,7 @@ export default function Contents() {
             <Textline
               fontSize={4}
               isFontBold={true}
-              color={({ theme }: { theme: Theme }) => theme.textColor.white}
+              color={theme.textColor.white}
               marginBottom="5rem"
             >
               광고 / 바이럴
