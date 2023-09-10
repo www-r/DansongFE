@@ -3,7 +3,7 @@ import * as S from './style';
 type Props = {
   fontSize: number;
   isFontBold?: boolean;
-  color?: any;
+  color?: string;
   marginBottom?: string;
   textAlign?: string;
   className?: string;
