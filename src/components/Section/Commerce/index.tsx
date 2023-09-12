@@ -95,18 +95,22 @@ export default function Commerce() {
             <S.PicsContainer>
               <S.CommercePic>
                 <img src="/images/smartstore.png" alt="smartstore" style={{ width: '40vw' }} />
-                <a href="https://smartstore.naver.com/eatreaming" target="blank">
-                  <div>스마트스토어 바로가기</div>
-                </a>
+                <S.BtnsContainer>
+                  <a href="https://smartstore.naver.com/eatreaming" target="blank">
+                    <S.CommerceBtn>스마트스토어 바로가기</S.CommerceBtn>
+                  </a>
+                </S.BtnsContainer>
               </S.CommercePic>
               <S.CommercePic>
                 <img src="/images/sns.png" alt="sns" style={{ width: '40vw' }} />
-                <a href="https://youtube.com/@user-pf6hz4yw2g?si=QStqYwy1bB5c12N6" target="blank">
-                  <div>유튜브 바로가기</div>
-                </a>
-                <a href="https://www.instagram.com/eatreaming/" target="blank">
-                  <div>인스타그램 바로가기</div>
-                </a>
+                <S.BtnsContainer>
+                  <a href="https://youtube.com/@user-pf6hz4yw2g?si=QStqYwy1bB5c12N6" target="blank">
+                    <S.CommerceBtn>유튜브 바로가기</S.CommerceBtn>
+                  </a>
+                  <a href="https://www.instagram.com/eatreaming/" target="blank">
+                    <S.CommerceBtn>인스타그램 바로가기</S.CommerceBtn>
+                  </a>
+                </S.BtnsContainer>
               </S.CommercePic>
             </S.PicsContainer>
           </CenterContainer>

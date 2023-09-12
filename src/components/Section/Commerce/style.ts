@@ -79,6 +79,21 @@ export const PicsContainer = styled.ul`
   display: flex;
 `;
 export const CommercePic = styled.li`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   &:hover {
+  }
+`;
+export const BtnsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+export const CommerceBtn = styled.button`
+  border-radius: 8rem;
+  padding: 1rem 3rem;
+  margin: 0 1rem;
+  &:hover {
+    cursor: pointer;
   }
 `;
