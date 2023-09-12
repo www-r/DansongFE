@@ -10,8 +10,8 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 export default function Contents() {
-  const [width, setWidth] = useState(window.innerWidth);
-  const videoRef = useRef();
+  const [, setWidth] = useState(window.innerWidth);
+
   window.addEventListener('resize', () => {
     setWidth(window.innerWidth);
   });
@@ -19,7 +19,7 @@ export default function Contents() {
   return (
     <S.Section>
       <CenterContainer>
-        <S.TextSection className="text-section" id='CONTENTS'>
+        <S.TextSection className="text-section" id="contents">
           <Textline
             fontSize={2.4}
             isFontBold={true}
@@ -199,23 +199,22 @@ export default function Contents() {
         </h3>
         <CenterContainer>
           <S.AdvertiseVideo
-           src={`${import.meta.env.VITE_BASE_URL}/videos/advertiseVideo.mp4`}
+            src={`${import.meta.env.VITE_BASE_URL}/videos/advertiseVideo.mp4`}
             autoPlay
             controls
             loop
             muted
-            width={width}
-            ref={videoRef}
+            style={{ width: '80vw' }}
           >
             팝꽃 광고 영상
           </S.AdvertiseVideo>
-        </S.AdvertiseVideoContainer>
+        </CenterContainer>
         <S.AdvertisePicsContainer>
           <Swiper
             modules={[Autoplay]}
             slidesPerView={3.5}
             spaceBetween={50}
-            onSlideChange={() => console.log('slide change')}
+            // onSlideChange={() => console.log('slide change')}
             autoplay
           >
             <SwiperSlide>
