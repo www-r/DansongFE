@@ -20,9 +20,10 @@ export default function Commerce() {
       <div id="scroll-scene-7">
         <S.ProductsSection>
           <S.ScrollProductContainer>
-            <S.ScrollProductItem opacity={1}>
+            {/* <S.ScrollProductItem opacity={1}>
               <img src="images/butter.png" alt="popcorn butter image" height={700} />
-            </S.ScrollProductItem>
+            </S.ScrollProductItem> */}
+            {/* <img src="images/eatreaming.png" alt="" /> */}
           </S.ScrollProductContainer>
           <S.SwiperContainer>
             <Swiper
@@ -33,16 +34,32 @@ export default function Commerce() {
               autoplay
             >
               <SwiperSlide>
-                <img src="images/caramel.png" alt="popcorn caramel image" height={500} />
+                <img
+                  src="images/caramel.png"
+                  alt="popcorn caramel image"
+                  style={{ width: '25vw', margin: 'auto' }}
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="images/onion.png" alt="popcorn onion image" height={500} />
+                <img
+                  src="images/onion.png"
+                  alt="popcorn onion image"
+                  style={{ width: '25vw', margin: 'auto' }}
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="/images/bbq.png" alt="popcorn bbq image" height={500} />
+                <img
+                  src="/images/bbq.png"
+                  alt="popcorn bbq image"
+                  style={{ width: '25vw', margin: 'auto' }}
+                />
               </SwiperSlide>
               <SwiperSlide>
-                <img src="/images/butter.png" alt="popcorn butter image" height={500} />
+                <img
+                  src="/images/butter.png"
+                  alt="popcorn butter image"
+                  style={{ width: '25vw', margin: 'auto' }}
+                />
               </SwiperSlide>
             </Swiper>
           </S.SwiperContainer>
@@ -77,10 +94,19 @@ export default function Commerce() {
             </S.TextContainer>
             <S.PicsContainer>
               <S.CommercePic>
-                <img src="/images/smartstore.png" alt="smartstore" />
+                <img src="/images/smartstore.png" alt="smartstore" style={{ width: '40vw' }} />
+                <a href="https://smartstore.naver.com/eatreaming" target="blank">
+                  <div>스마트스토어 바로가기</div>
+                </a>
               </S.CommercePic>
               <S.CommercePic>
-                <img src="/images/sns.png" alt="sns" />
+                <img src="/images/sns.png" alt="sns" style={{ width: '40vw' }} />
+                <a href="https://youtube.com/@user-pf6hz4yw2g?si=QStqYwy1bB5c12N6" target="blank">
+                  <div>유튜브 바로가기</div>
+                </a>
+                <a href="https://www.instagram.com/eatreaming/" target="blank">
+                  <div>인스타그램 바로가기</div>
+                </a>
               </S.CommercePic>
             </S.PicsContainer>
           </CenterContainer>
