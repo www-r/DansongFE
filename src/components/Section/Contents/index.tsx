@@ -11,24 +11,9 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 export default function Contents() {
   const [width, setWidth] = useState(innerWidth);
-  const [slidesPerView, setSlidesPerView] = useState(3);
 
   window.addEventListener('resize', () => {
     setWidth(innerWidth);
-
-    if (innerWidth >= 1024) {
-      setSlidesPerView(4.5);
-    }
-    if (innerWidth >= 780 && innerWidth < 1024) {
-      setSlidesPerView(3);
-    }
-    if (innerWidth >= 630 && innerWidth < 780) {
-      setSlidesPerView(2);
-    }
-    if (innerWidth < 480) {
-      setSlidesPerView(1.5);
-    }
-    return;
   });
 
   return (
@@ -213,46 +198,49 @@ export default function Contents() {
           </CenterContainer>
         </h3>
         <CenterContainer>
-          <S.AdvertiseVideo width={1000} />
+          <S.AdvertiseVideo
+            width={1000}
+            src={`${import.meta.env.VITE_BASE_URL}/videos/advertiseVideo.mp4`}
+          />
         </CenterContainer>
 
         <S.AdvertisePicsContainer>
           <Swiper
             modules={[Autoplay]}
-            slidesPerView={slidesPerView}
+            slidesPerView={3.5}
             spaceBetween={50}
             onSlideChange={() => console.log('slide change')}
             autoplay
           >
             <SwiperSlide>
-              <img src="/images/A6.jpg" alt="commercial image" height={180} />
+              <img src="/images/A6.jpg" alt="commercial image" style={{ height: '20vw' }} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/images/A13.jpg" alt="commercial image" height={180} />
+              <img src="/images/A13.jpg" alt="commercial image" style={{ height: '20vw' }} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/images/A14.jpg" alt="commercial image" height={180} />
+              <img src="/images/A14.jpg" alt="commercial image" style={{ height: '20vw' }} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/images/A29.jpg" alt="commercial image" height={180} />
+              <img src="/images/A29.jpg" alt="commercial image" style={{ height: '20vw' }} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/images/A34.jpg" alt="commercial image" height={180} />
+              <img src="/images/A34.jpg" alt="commercial image" style={{ height: '20vw' }} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/images/A42.jpg" alt="commercial image" height={180} />
+              <img src="/images/A42.jpg" alt="commercial image" style={{ height: '20vw' }} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/images/A45.jpg" alt="commercial image" height={180} />
+              <img src="/images/A45.jpg" alt="commercial image" style={{ height: '20vw' }} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/images/A50.jpg" alt="commercial image" height={180} />
+              <img src="/images/A50.jpg" alt="commercial image" style={{ height: '20vw' }} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/images/A64.jpg" alt="commercial image" height={180} />
+              <img src="/images/A64.jpg" alt="commercial image" style={{ height: '20vw' }} />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/images/A67.jpg" alt="commercial image" height={180} />
+              <img src="/images/A67.jpg" alt="commercial image" style={{ height: '20vw' }} />
             </SwiperSlide>
           </Swiper>
         </S.AdvertisePicsContainer>

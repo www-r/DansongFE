@@ -28,7 +28,7 @@ export const LogoContainer = styled.div`
     width: 50vw;
   }
   &.brandLogo img {
-    width: 10vw;
+    width: 12vw;
   }
   & img {
     width: 100%;
