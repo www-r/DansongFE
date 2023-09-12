@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
-import { CenterContainer } from '../../styles/global';
-import { opacityUp, opacityUpAndDown } from '../../styles/keyframes';
+
 export const Box = styled(motion.div)`
   width: 90%;
 `;

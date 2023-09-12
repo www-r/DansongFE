@@ -32,7 +32,6 @@ export const ScrollProductItem = styled.div`
   position: sticky;
   top: 9rem;
   height: 80vh;
-  opacity: ${({ opacity }) => opacity};
 `;
 export const SwiperContainer = styled.div`
   width: 100vw;

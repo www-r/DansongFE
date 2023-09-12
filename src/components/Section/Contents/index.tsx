@@ -10,10 +10,10 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 export default function Contents() {
-  const [width, setWidth] = useState(innerWidth);
+  const [, setWidth] = useState(innerWidth);
 
   window.addEventListener('resize', () => {
-    setWidth(innerWidth);
+    setWidth(window.innerWidth);
   });
 
   return (
