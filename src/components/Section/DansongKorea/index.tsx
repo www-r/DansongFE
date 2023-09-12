@@ -12,7 +12,7 @@ export default function DansongKorea() {
       </div>
 
       <div id="scroll-scene-1">
-        <S.LogoSection id="DANSONGKOREA">
+        <S.LogoSection id="dansongkorea">
           <ServiceIntro />
         </S.LogoSection>
       </div>

@@ -31,6 +31,7 @@ declare module '@emotion/react' {
       white: string;
       grey: string;
       black: string;
+      footer: string;
     };
     width: {
       maxWidth: string;
@@ -73,6 +74,7 @@ export const theme = {
     white: '#f5f5f7',
     grey: '#a1a1a6',
     black: '#1d1d1f',
+    footer: '#6e6e73',
   },
 
   width: {
