@@ -1,7 +1,11 @@
 import { useState } from 'react';
+import Lottie from 'lottie-react';
+import scrollLottie from '../../data/scrollLottie.json';
+
 import { VIDEO } from '../../data/video';
 import * as S from './style';
 import Logo from '../Logo';
+
 export default function VideoList() {
   const [activeItem, setActiveItem] = useState(0);
   console.log(activeItem);
@@ -18,6 +22,9 @@ export default function VideoList() {
       <div style={{ position: 'absolute', top: '20%' }}>
         <Logo logo="dansong" src="/logos/dansongW.png" />
       </div>
+      <S.LottieContainer>
+        <Lottie animationData={scrollLottie} />
+      </S.LottieContainer>
 
       {activeItem !== 0 && (
         <S.Box initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>

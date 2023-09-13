@@ -9,13 +9,11 @@ import 'swiper/css/autoplay';
 export default function Commerce() {
   return (
     <S.Section>
-      <div id="scroll-scene-6">
-        <S.LogoSection>
-          <S.LogoContainer className="sticky" id="commerce">
-            <Logo logo="itreamingB" size="fullLogo" src="/logos/itreaming1.png" />
-          </S.LogoContainer>
-        </S.LogoSection>
-      </div>
+      <S.LogoSection id="commerce">
+        <S.LogoContainer>
+          <Logo logo="itreamingB" size="large" src="/logos/itreaming1.png" />
+        </S.LogoContainer>
+      </S.LogoSection>
 
       <div id="scroll-scene-7">
         <S.ProductsSection>

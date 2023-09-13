@@ -12,19 +12,15 @@ export default function ServiceIntro() {
           <Logo logo="dansong" src="/logos/dansongB.png" />
         </S.MiddleContainer>
       </CenterContainer>
+
       <S.LineContainer>
         <div></div>
         <div></div>
       </S.LineContainer>
-      <CenterContainer direction="column">
-        <CenterContainer
-          style={{ width: '90%', justifyContent: 'space-between', marginBottom: '1.5rem' }}
-        >
-          <Logo logo="dansong" src="/images/DSS.png" />
-          <Logo logo="dansong" src="/logos/itreaming1.png" />
-        </CenterContainer>
 
-        <CenterContainer style={{ width: '90%', justifyContent: 'space-between' }}>
+      <CenterContainer style={{ justifyContent: 'space-between' }}>
+        <CenterContainer direction="column" style={{ gap: '1rem' }}>
+          <Logo logo="dansong" src="/images/DSS.png" size="ml" />
           <S.MiddleContainer direction="column">
             <Textline fontSize={2.4} animation="top" isFontBold={true}>
               컨텐츠
@@ -34,6 +30,9 @@ export default function ServiceIntro() {
               단송코리아
             </Textline>
           </S.MiddleContainer>
+        </CenterContainer>
+        <CenterContainer direction="column" style={{ gap: '1rem' }}>
+          <Logo logo="dansong" src="/logos/itreaming1.png" size="ml" />
           <S.MiddleContainer direction="column">
             <Textline fontSize={2.4} animation="top" isFontBold={true}>
               커머스

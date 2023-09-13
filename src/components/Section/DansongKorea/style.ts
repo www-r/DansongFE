@@ -33,8 +33,7 @@ export const StudioSection = styled.section`
 `;
 
 export const LogoSection = styled.section`
-  width: 70%;
-  min-width: 65rem;
+  width: 45rem;
   padding: 10rem 0 20rem 0;
   margin: 0 auto;
 `;

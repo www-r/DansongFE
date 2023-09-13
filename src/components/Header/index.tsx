@@ -1,8 +1,19 @@
 import { Link } from 'react-router-dom';
 import Logo from '../Logo';
+import { RxHamburgerMenu } from 'react-icons/rx';
+
 import * as S from './style';
+import { theme } from '../../styles/theme';
+import useModals from '../../hooks/useModals';
+import Modal from '../Modals';
 
 export default function Header() {
+  const { openModal } = useModals();
+
+  const handleTouchStart = () => {
+    openModal(Modal, { modalName: 'headerModal' });
+  };
+
   return (
     <S.Header>
       <S.Container>
@@ -28,6 +39,10 @@ export default function Header() {
             <S.Menu>CONTACT</S.Menu>
           </Link>
         </S.MenuContainer>
+
+        <S.IconContainer onTouchStart={handleTouchStart}>
+          <RxHamburgerMenu size={24} color={theme.colors.white} />
+        </S.IconContainer>
       </S.Container>
     </S.Header>
   );
