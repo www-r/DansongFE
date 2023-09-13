@@ -5,7 +5,7 @@ import * as S from './style';
 export default function Studio() {
   return (
     <>
-      <S.Container className="container">
+      <S.Container>
         <S.TextContainer>
           <Textline
             fontSize={28}
