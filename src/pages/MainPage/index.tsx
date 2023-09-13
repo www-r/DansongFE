@@ -3,6 +3,7 @@ import DansongKorea from '../../components/Section/DansongKorea';
 import Contents from '../../components/Section/Contents';
 import Commerce from '../../components/Section/Commerce';
 import Footer from '../../components/Footer';
+import ContactIcon from '../../components/ContactIcon';
 import * as S from './style';
 
 export default function MainPage() {
@@ -23,6 +24,7 @@ export default function MainPage() {
         <Commerce />
       </S.Main>
       <Footer />
+      <ContactIcon />
     </>
   );
 }

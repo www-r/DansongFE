@@ -2,6 +2,10 @@ import * as S from './style';
 import { CenterContainer } from '../../../styles/global';
 import Textline from '../../Textline';
 import Logo from '../../Logo';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/autoplay';
 export default function Commerce() {
   return (
     <S.Section>
@@ -13,27 +17,57 @@ export default function Commerce() {
 
       <div id="scroll-scene-7">
         <S.ProductsSection>
-          <S.ScrollProductItem>
-            <img src="images/butter.png" alt="popcorn butter image" />
-          </S.ScrollProductItem>
-          <S.CarouselContainer>
-            <img src="images/caramel.png" alt="popcorn caramel image" height={450} />
-            <img src="images/onion.png" alt="popcorn onion image" height={450} />
-            <img src="/images/bbq.png" alt="popcorn bbq image" height={450} />
-            {/* <img
-                src="https://dansong-s3.s3.ap-northeast-2.amazonaws.com/images/bbq.png"
-                alt=""
-                height={500}
-              /> */}
-          </S.CarouselContainer>
+          <S.ScrollProductContainer>
+            {/* <S.ScrollProductItem opacity={1}>
+              <img src="images/butter.png" alt="popcorn butter image" height={700} />
+            </S.ScrollProductItem> */}
+            {/* <img src="images/eatreaming.png" alt="" /> */}
+          </S.ScrollProductContainer>
+          <S.SwiperContainer>
+            <Swiper
+              modules={[Autoplay]}
+              slidesPerView={3}
+              spaceBetween={0}
+              onSlideChange={() => console.log('slide change')}
+              autoplay
+            >
+              <SwiperSlide>
+                <img
+                  src="images/caramel.png"
+                  alt="popcorn caramel image"
+                  style={{ width: '25vw', margin: 'auto' }}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="images/onion.png"
+                  alt="popcorn onion image"
+                  style={{ width: '25vw', margin: 'auto' }}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="/images/bbq.png"
+                  alt="popcorn bbq image"
+                  style={{ width: '25vw', margin: 'auto' }}
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  src="/images/butter.png"
+                  alt="popcorn butter image"
+                  style={{ width: '25vw', margin: 'auto' }}
+                />
+              </SwiperSlide>
+            </Swiper>
+          </S.SwiperContainer>
+
           <S.CoBrandsContainer>
-            <CenterContainer direction="column">
+            <CenterContainer>
               <S.BrandsContainerTitle>COWORKERS</S.BrandsContainerTitle>
               <S.BrandLogosContainer>
-                <CenterContainer>
-                  <Logo logo="생활맥주" size="medium" src="/logos/beer.png" />
-                  <Logo logo="코드야드바이메리어트" size="medium" src="/logos/marriot.png" />
-                </CenterContainer>
+                <Logo logo="생활맥주" size="brandLogo" src="/logos/beer.png" />
+                <Logo logo="코드야드바이메리어트" size="brandLogo" src="/logos/marriot.png" />
               </S.BrandLogosContainer>
             </CenterContainer>
           </S.CoBrandsContainer>
@@ -58,10 +92,23 @@ export default function Commerce() {
             </S.TextContainer>
             <S.PicsContainer>
               <S.CommercePic>
-                <img src="/images/smartstore.png" alt="smartstore" />
+                <img src="/images/smartstore.png" alt="smartstore" style={{ width: '40vw' }} />
+                <S.BtnsContainer>
+                  <a href="https://smartstore.naver.com/eatreaming" target="blank">
+                    <S.CommerceBtn>스마트스토어 바로가기</S.CommerceBtn>
+                  </a>
+                </S.BtnsContainer>
               </S.CommercePic>
               <S.CommercePic>
-                <img src="/images/sns.png" alt="sns" />
+                <img src="/images/sns.png" alt="sns" style={{ width: '40vw' }} />
+                <S.BtnsContainer>
+                  <a href="https://youtube.com/@user-pf6hz4yw2g?si=QStqYwy1bB5c12N6" target="blank">
+                    <S.CommerceBtn>유튜브 바로가기</S.CommerceBtn>
+                  </a>
+                  <a href="https://www.instagram.com/eatreaming/" target="blank">
+                    <S.CommerceBtn>인스타그램 바로가기</S.CommerceBtn>
+                  </a>
+                </S.BtnsContainer>
               </S.CommercePic>
             </S.PicsContainer>
           </CenterContainer>

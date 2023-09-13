@@ -29,7 +29,12 @@ export const LogoContainer = styled.div`
   &.large img {
     width: 20rem;
   }
-
+  &.fullLogo img {
+    width: 50vw;
+  }
+  &.brandLogo img {
+    width: 12vw;
+  }
   & img {
     width: 100%;
   }

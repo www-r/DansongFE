@@ -2,7 +2,7 @@ import * as S from './style';
 
 type LogoProps = {
   logo: string;
-  size?: 'small' | 'sm' | 'medium' | 'ml' | 'large';
+  size?: 'small' | 'sm' | 'medium' | 'ml' | 'large' | 'fullLogo' | 'brandLogo';
   border?: 'none' | 'circle';
 
   src: string;

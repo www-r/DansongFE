@@ -33,48 +33,29 @@ export const CategoryListItemTitle = styled.h5``;
 export const CoBrandLogosContainer = styled.div`
   border-radius: 1rem;
   background-color: #fff;
-  padding: 1rem;
+  padding: 0.5rem 0.1rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  @media (min-width: ${props => props.theme.viewport.desktop}) {
-    padding: 5vw;
+  gap: 1rem;
+  a {
+    display: flex;
+    align-items: center;
   }
 `;
 export const AdvertiseSection = styled.div`
-  height: 200vh;
   padding: 25vh 0 0;
   position: relative;
-  @media (min-width: ${props => props.theme.viewport.desktop}) {
-    height: 350vh;
-  }
-`;
-export const AdvertiseVideoContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  position: sticky;
-  top: 0;
-  margin-bottom: 17vw;
 `;
 export const AdvertiseVideo = styled.video`
-  width: ${props => props.width};
-  margin: 0;
-  max-width: 192rem;
-  max-height: 108rem;
-  /* @media (min-width: ${props => props.theme.viewport.desktop}) {
-    max-width: 192rem;
-    max-height: 108rem;
-  } */
+  margin-bottom: 10rem;
+  background-color: red;
+  display: block;
 `;
 export const AdvertisePicsContainer = styled.div`
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 15vw;
-  background-color: red;
-  display: none;
-  @media (min-width: ${props => props.theme.viewport.desktop}) {
+  padding: 3rem 0 5rem;
+  /* background-color: ${({ theme }) => theme.backgroundColor.white}; */
+  /* @media (max-width: ${props => props.theme.viewport.desktop}) {
     height: 20rem;
-  }
+  } */
 `;
