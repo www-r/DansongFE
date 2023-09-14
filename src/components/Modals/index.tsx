@@ -6,8 +6,6 @@ export default function Modals() {
   return openedModals.map((modal, index) => {
     const { Component, props } = modal;
 
-    console.log(Component);
-
     return <Component key={index} {...props} />;
   });
 }
