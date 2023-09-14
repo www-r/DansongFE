@@ -1,4 +1,3 @@
-import React from 'react';
 import * as S from './style';
 import { CenterContainer } from '../../styles/global';
 import { AiOutlineClose } from 'react-icons/ai';
@@ -8,7 +7,7 @@ import { Link } from 'react-router-dom';
 import DivisionLine from '../DivisionLine';
 import { theme } from '../../styles/theme';
 
-export default function HeaderModal() {
+export default function HeaderModal({ onClose }) {
   return (
     <S.ModalContainer>
       <S.MenuContainer direction="column">
@@ -16,7 +15,7 @@ export default function HeaderModal() {
           style={{ justifyContent: 'space-between', width: '100%', marginBottom: '3rem' }}
         >
           <Logo size="sm" logo="dansong" src="/logos/dansongB.png" />
-          <AiOutlineClose size={24} />
+          <AiOutlineClose size={24} onTouchStart={onClose} />
         </CenterContainer>
 
         <S.Menu>
@@ -35,7 +34,7 @@ export default function HeaderModal() {
         </S.Menu>
 
         <S.Menu>
-          <Link to="/contact"> CONTACT</Link>
+          {/* <Link to="/contact"> CONTACT</Link> */}
           <DivisionLine color={theme.colors.grey1} />
         </S.Menu>
       </S.MenuContainer>

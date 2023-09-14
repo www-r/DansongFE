@@ -1,11 +1,22 @@
-import React, { useContext } from 'react';
-import { ModalsStateContext } from '../../Context/ModalsContext';
+import { useContext } from 'react';
+import { ModalsDispatchContext, ModalsStateContext } from '../../Context/ModalsContext';
+import HeaderModal from '../HeaderModal';
+
+export const modals = {
+  headerModal: HeaderModal,
+};
 
 export default function Modals() {
   const openedModals = useContext(ModalsStateContext);
-  return openedModals.map((modal, index) => {
-    const { Component, props } = modal;
+  const { close } = useContext(ModalsDispatchContext);
 
-    return <Component key={index} {...props} />;
+  return openedModals.map((modal, index) => {
+    const { Component } = modal;
+
+    const onClose = () => {
+      close(Component);
+    };
+
+    return <Component key={index} onClose={onClose} />;
   });
 }
