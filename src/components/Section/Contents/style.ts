@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { SwiperSlide } from 'swiper/element';
 
 export const Section = styled.section`
   background-color: ${({ theme }) => theme.backgroundColor.black};
@@ -64,15 +63,5 @@ export const AdvertiseVideo = styled.video`
 // `;
 export const Center = styled.div`
   display: flex;
-  justify-content: center;
-`;
-export const SwiperContainer = styled.div`
-  padding-bottom: 5rem;
-`;
-export const SwiperSlide = styled.div<SwiperSlide>`
-  background-color: ${props => props.backgroundColor};
-  width: 70vw;
-  display: flex;
-  align-items: center;
   justify-content: center;
 `;
