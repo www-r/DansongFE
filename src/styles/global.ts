@@ -18,7 +18,7 @@ export const globalStyle = css`
   }
 
   body {
-    width: 100vw;
+    width: 100%;
     word-break: keep-all;
     font-family:
       'Pretendard Variable',
