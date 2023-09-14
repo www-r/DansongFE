@@ -34,7 +34,7 @@ export const ScrollProductItem = styled.div`
   height: 80vh;
 `;
 export const SwiperContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   padding: 5rem;
   display: flex;
   justify-content: center;
@@ -75,10 +75,11 @@ export const TextContainer = styled.div`
 `;
 export const PicsContainer = styled.ul`
   margin: auto;
-  width: min-content;
+  width: 100%;
   display: flex;
 `;
 export const CommercePic = styled.li`
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -91,7 +92,7 @@ export const BtnsContainer = styled.div`
 `;
 export const CommerceBtn = styled.button`
   border-radius: 8rem;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   margin: 0 1rem;
   &:hover {
     cursor: pointer;

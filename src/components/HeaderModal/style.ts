@@ -2,11 +2,11 @@ import styled from '@emotion/styled';
 import { CenterContainer } from '../../styles/global';
 
 export const ModalContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   padding: 1rem 2rem;
   background: ${({ theme }) => theme.backgroundColor.white};
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   border-radius: 0 0 2rem 2rem;
   box-shadow: ${({ theme }) => theme.border.boxShadow};
 `;

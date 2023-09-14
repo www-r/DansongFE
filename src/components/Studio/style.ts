@@ -25,7 +25,7 @@ export const Overlay = styled(motion.div)`
   bottom: 0;
   z-index: 1;
   height: 110vh;
-  width: 100vw;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;

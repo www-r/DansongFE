@@ -5,14 +5,15 @@ export const Header = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
-  width: 100vw;
+  z-index: 2;
+  width: 100%;
   background-color: ${({ theme }) => theme.colors.black};
   height: 6rem;
   transition: background-color linear 0.2s;
 `;
 
 export const Container = styled(CenterContainer)`
+  width: 100%;
   height: 100%;
   padding: 0 10vw;
   justify-content: space-between;
