@@ -202,7 +202,7 @@ export default function Contents() {
             controls
             loop
             muted
-            style={{ width: '80vw' }}
+            style={{ width: '80vw', maxWidth: '174rem' }}
           >
             팝꽃 광고 영상
           </S.AdvertiseVideo>
