@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Modal, ModalsDispatchContext, ModalsStateContext } from './ModalsContext';
+import Modals from '../components/Modals';
 
 export type Props = {
   modalName: string;
@@ -22,12 +23,13 @@ const ModalsProvider = ({ children }: { children: React.ReactNode }) => {
     });
   };
 
-  console.log(openedModals);
-
   const dispatch = useMemo(() => ({ open, close }), []);
   return (
     <ModalsStateContext.Provider value={openedModals}>
-      <ModalsDispatchContext.Provider value={dispatch}>{children}</ModalsDispatchContext.Provider>
+      <ModalsDispatchContext.Provider value={dispatch}>
+        <Modals />
+        {children}
+      </ModalsDispatchContext.Provider>
     </ModalsStateContext.Provider>
   );
 };
