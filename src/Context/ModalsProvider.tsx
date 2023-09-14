@@ -3,19 +3,19 @@ import { Modal, ModalsDispatchContext, ModalsStateContext } from './ModalsContex
 import Modals from '../components/Modals';
 
 export type Props = {
-  modalName: string;
+  onClose: () => void;
 };
 
 const ModalsProvider = ({ children }: { children: React.ReactNode }) => {
   const [openedModals, setOpenedModals] = useState<Modal[]>([]);
 
-  const open = (Component: React.ReactNode, props: Props) => {
+  const open = (Component: (props: Props) => JSX.Element, props: Props) => {
     setOpenedModals(modals => {
       return [...modals, { Component, props }];
     });
   };
 
-  const close = (Component: React.ReactNode) => {
+  const close = (Component: (props: Props) => JSX.Element) => {
     setOpenedModals(modals => {
       return modals.filter(modal => {
         return modal.Component !== Component;
