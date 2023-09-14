@@ -9,10 +9,12 @@ export const Container = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
 `;
 
 export const TextContainer = styled.div`
   position: sticky;
+
   top: 0;
   text-align: center;
   height: fit-content;
@@ -21,7 +23,7 @@ export const TextContainer = styled.div`
   }
 `;
 export const Overlay = styled(motion.div)`
-  position: fixed;
+  position: absolute;
   bottom: 0;
   z-index: 1;
   height: 110vh;

@@ -133,8 +133,16 @@ export default function Contents() {
             </S.CoBrandCategoryList>
             <S.CoBrandCategoryList>
               <S.CategoryListItemTitle>
-                <Textline fontSize={2.1} color={theme.textColor.white} textAlign="center">
-                  FASHION/BEAUTY
+
+                <Textline
+                  fontSize={2.1}
+                  color={({ theme }: { theme: Theme }) => theme.textColor.white}
+                  textAlign="center"
+                >
+                  FASHION/
+                  <br />
+                  BEAUTY
+
                 </Textline>
                 <Textline
                   fontSize={4}
@@ -142,7 +150,9 @@ export default function Contents() {
                   color={theme.textColor.white}
                   textAlign="center"
                 >
-                  패션/뷰티
+                  패션/
+                  <br />
+                  뷰티
                 </Textline>
               </S.CategoryListItemTitle>
               <S.CoBrandLogosContainer>
@@ -220,9 +230,6 @@ export default function Contents() {
             </SwiperSlide>
             <SwiperSlide>
               <img src="/images/A29.jpg" alt="commercial image" style={{ height: '20vw' }} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="/images/A34.jpg" alt="commercial image" style={{ height: '20vw' }} />
             </SwiperSlide>
             <SwiperSlide>
               <img src="/images/A42.jpg" alt="commercial image" style={{ height: '20vw' }} />

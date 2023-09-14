@@ -41,9 +41,10 @@ export const globalStyle = css`
   button {
     outline: none;
     border: none;
-    /* cursor: pointer; */
   }
-
+  button:hover {
+    cursor: pointer;
+  }
   a {
     text-decoration: none;
     color: inherit;
