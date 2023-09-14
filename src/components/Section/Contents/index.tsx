@@ -5,9 +5,11 @@ import { CenterContainer } from '../../../styles/global';
 import Textline from '../../Textline';
 import Logo from '../../Logo';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Navigation, EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/navigation';
 import { theme } from '../../../styles/theme';
 export default function Contents() {
   const [, setWidth] = useState(window.innerWidth);
@@ -110,7 +112,7 @@ export default function Contents() {
                 <a href="https://youtu.be/Z12AZhTe0HM?si=6bAppNRmbKZ2x-st" target="blank">
                   <Logo
                     logo="역전할머니맥주"
-                    src="/logos/beer.png"
+                    src="/logos/1982.jpeg"
                     border="circle"
                     size="brandLogo"
                   />
@@ -133,16 +135,12 @@ export default function Contents() {
             </S.CoBrandCategoryList>
             <S.CoBrandCategoryList>
               <S.CategoryListItemTitle>
-
                 <Textline
                   fontSize={2.1}
                   color={({ theme }: { theme: Theme }) => theme.textColor.white}
                   textAlign="center"
                 >
-                  FASHION/
-                  <br />
-                  BEAUTY
-
+                  FASHION/BEAUTY
                 </Textline>
                 <Textline
                   fontSize={4}
@@ -150,9 +148,7 @@ export default function Contents() {
                   color={theme.textColor.white}
                   textAlign="center"
                 >
-                  패션/
-                  <br />
-                  뷰티
+                  패션/뷰티
                 </Textline>
               </S.CategoryListItemTitle>
               <S.CoBrandLogosContainer>
@@ -211,43 +207,72 @@ export default function Contents() {
             팝꽃 광고 영상
           </S.AdvertiseVideo>
         </CenterContainer>
-        <S.AdvertisePicsContainer>
+        <S.SwiperContainer>
           <Swiper
-            modules={[Autoplay]}
-            slidesPerView={3.5}
-            spaceBetween={50}
-            // onSlideChange={() => console.log('slide change')}
+            slidesPerView={2}
+            centeredSlides={true}
+            spaceBetween={0}
+            grabCursor={true}
+            effect={'coverflow'}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 2,
+              slideShadows: true,
+            }}
+            modules={[Autoplay, Navigation, EffectCoverflow]}
             autoplay
+            loop={true}
+            navigation={true}
           >
             <SwiperSlide>
-              <img src="/images/A6.jpg" alt="commercial image" style={{ height: '20vw' }} />
+              <S.SwiperSlide backgroundColor="rgb(247,237,229)">
+                <CenterContainer>
+                  <img
+                    src="/images/butter.png"
+                    alt="popcorn butter image"
+                    style={{ width: '25vw', margin: 'auto' }}
+                  />
+                </CenterContainer>
+              </S.SwiperSlide>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <S.SwiperSlide backgroundColor="rgb(196, 155, 109)">
+                <CenterContainer>
+                  <img
+                    src="images/caramel.png"
+                    alt="popcorn caramel image"
+                    style={{ width: '25vw', margin: 'auto' }}
+                  />
+                </CenterContainer>
+              </S.SwiperSlide>
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/images/A13.jpg" alt="commercial image" style={{ height: '20vw' }} />
+              <S.SwiperSlide backgroundColor="rgb(200,218,176)">
+                <CenterContainer>
+                  <img
+                    src="images/onion.png"
+                    alt="popcorn onion image"
+                    style={{ width: '25vw', margin: 'auto' }}
+                  />
+                </CenterContainer>
+              </S.SwiperSlide>
             </SwiperSlide>
             <SwiperSlide>
-              <img src="/images/A14.jpg" alt="commercial image" style={{ height: '20vw' }} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="/images/A29.jpg" alt="commercial image" style={{ height: '20vw' }} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="/images/A42.jpg" alt="commercial image" style={{ height: '20vw' }} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="/images/A45.jpg" alt="commercial image" style={{ height: '20vw' }} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="/images/A50.jpg" alt="commercial image" style={{ height: '20vw' }} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="/images/A64.jpg" alt="commercial image" style={{ height: '20vw' }} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="/images/A67.jpg" alt="commercial image" style={{ height: '20vw' }} />
+              <S.SwiperSlide backgroundColor="rgb(196,155,154)">
+                <CenterContainer>
+                  <img
+                    src="/images/bbq.png"
+                    alt="popcorn bbq image"
+                    style={{ width: '25vw', margin: 'auto' }}
+                  />
+                </CenterContainer>
+              </S.SwiperSlide>
             </SwiperSlide>
           </Swiper>
-        </S.AdvertisePicsContainer>
+        </S.SwiperContainer>
       </S.AdvertiseSection>
     </S.Section>
   );

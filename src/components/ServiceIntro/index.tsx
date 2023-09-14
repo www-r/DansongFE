@@ -10,6 +10,9 @@ export default function ServiceIntro() {
       <CenterContainer>
         <S.MiddleContainer direction="column">
           <Logo logo="dansong" src="/logos/dansongB.png" />
+          <Textline fontSize={2.4} animation="top" isFontBold={true}>
+              단송 코리아
+            </Textline>
         </S.MiddleContainer>
       </CenterContainer>
 
@@ -21,13 +24,14 @@ export default function ServiceIntro() {
       <CenterContainer style={{ justifyContent: 'space-between' }}>
         <CenterContainer direction="column" style={{ gap: '1rem' }}>
           <Logo logo="dansong" src="/images/DSS.png" size="ml" />
+
           <S.MiddleContainer direction="column">
             <Textline fontSize={2.4} animation="top" isFontBold={true}>
               컨텐츠
             </Textline>
             <DivisionLine borderStyle="dashed" />
             <Textline fontSize={1.8} animation="bottom" isFontBold={true}>
-              단송코리아
+              DSS STUDIO
             </Textline>
           </S.MiddleContainer>
         </CenterContainer>
