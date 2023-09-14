@@ -5,7 +5,7 @@ export const Header = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 1;
   width: 100vw;
   background-color: ${({ theme }) => theme.colors.black};
   height: 6rem;
