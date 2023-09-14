@@ -18,6 +18,8 @@ export const globalStyle = css`
   }
 
   body {
+    margin: 0 auto;
+    max-width: 1480px;
     width: 100%;
     word-break: keep-all;
     font-family:
