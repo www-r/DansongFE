@@ -60,7 +60,6 @@ type CenterContainerProps = {
 };
 
 export const CenterContainer = styled.div<CenterContainerProps>`
-  padding: 0 10vw;
   display: flex;
   align-items: center;
   justify-content: center;

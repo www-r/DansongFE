@@ -1,6 +1,14 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 export const Box = styled(motion.div)``;
+export const LottieContainer = styled.div`
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1rem;
+`;
 export const Video = styled.video`
   position: absolute;
   top: 0;

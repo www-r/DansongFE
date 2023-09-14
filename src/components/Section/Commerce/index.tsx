@@ -9,9 +9,11 @@ import 'swiper/css/autoplay';
 export default function Commerce() {
   return (
     <S.Section>
+
       <S.LogoSection>
         <S.LogoContainer id="commerce">
           <Logo logo="itreamingB" size="fullLogo" src="/logos/itreaming1.png" />
+
         </S.LogoContainer>
       </S.LogoSection>
 

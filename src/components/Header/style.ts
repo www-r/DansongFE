@@ -14,6 +14,12 @@ export const Header = styled.header`
 
 export const Container = styled(CenterContainer)`
   height: 100%;
+  padding: 0 10vw;
+  justify-content: space-between;
+
+  @media screen and (max-width: ${({ theme }) => theme.viewport.mobile}) {
+    padding: 0;
+  }
 `;
 
 export const MenuContainer = styled.ul`
@@ -41,4 +47,13 @@ export const Menu = styled.li`
 
 export const LogoContainer = styled.div`
   margin: 2rem;
+`;
+
+export const IconContainer = styled.div`
+  padding: 2rem;
+  display: none;
+
+  @media screen and (max-width: ${({ theme }) => theme.viewport.mobile}) {
+    display: block;
+  }
 `;

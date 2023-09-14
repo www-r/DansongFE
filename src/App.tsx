@@ -4,6 +4,7 @@ import ContactPage from './pages/ContactPage';
 import { Global, ThemeProvider } from '@emotion/react';
 import { globalStyle } from './styles/global';
 import { theme } from './styles/theme';
+import ModalsProvider from './Context/ModalsProvider';
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,9 @@ function App() {
     <>
       <Global styles={globalStyle} />
       <ThemeProvider theme={theme}>
-        <RouterProvider router={router} />
+        <ModalsProvider>
+          <RouterProvider router={router} />
+        </ModalsProvider>
       </ThemeProvider>
     </>
   );
