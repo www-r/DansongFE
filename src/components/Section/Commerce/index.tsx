@@ -28,7 +28,7 @@ export default function Commerce() {
               modules={[Autoplay]}
               slidesPerView={3}
               spaceBetween={0}
-              onSlideChange={() => console.log('slide change')}
+              onSlideChange={() => {}}
               autoplay
             >
               <SwiperSlide>
