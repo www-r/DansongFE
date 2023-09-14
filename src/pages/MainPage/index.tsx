@@ -1,20 +1,22 @@
+import { useState } from 'react';
 import Header from '../../components/Header';
 import DansongKorea from '../../components/Section/DansongKorea';
 import Contents from '../../components/Section/Contents';
 import Commerce from '../../components/Section/Commerce';
 import Footer from '../../components/Footer';
 import ContactIcon from '../../components/ContactIcon';
+
 import * as S from './style';
 
 export default function MainPage() {
-  // window.addEventListener('resize', setLayout);
+  const [viewWidth, setViewWidth] = useState(window.innerWidth);
+  window.addEventListener('resize', () => {
+    setViewWidth(window.innerWidth);
+  });
   // window.addEventListener('scroll', () => {
   //   scrollLoop();
   // });
 
-  // useEffect(()=> {
-  //   setLayout()
-  // }, [])
   return (
     <>
       <Header />
@@ -24,7 +26,7 @@ export default function MainPage() {
         <Commerce />
       </S.Main>
       <Footer />
-      <ContactIcon />
+      {viewWidth > 480 && <ContactIcon />}
     </>
   );
 }
