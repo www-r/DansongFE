@@ -4,7 +4,7 @@ export const ContactIcon = styled.div`
   position: fixed;
   bottom: 4rem;
   right: 4rem;
-  z-index: 999;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;

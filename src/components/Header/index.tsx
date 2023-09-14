@@ -5,13 +5,17 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import * as S from './style';
 import { theme } from '../../styles/theme';
 import useModals from '../../hooks/useModals';
-import Modal from '../Modals';
+import { modals } from '../Modals';
 
 export default function Header() {
   const { openModal } = useModals();
 
   const handleTouchStart = () => {
-    openModal(Modal, { modalName: 'headerModal' });
+    openModal(modals.headerModal, {
+      onClose: () => {
+        console.log('...');
+      },
+    });
   };
 
   return (

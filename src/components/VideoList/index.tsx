@@ -8,7 +8,6 @@ import Logo from '../Logo';
 
 export default function VideoList() {
   const [activeItem, setActiveItem] = useState(0);
-  console.log(activeItem);
   const handleItemMouseEnter = (idx: number) => {
     idx === activeItem ? setActiveItem(0) : setActiveItem(idx);
   };

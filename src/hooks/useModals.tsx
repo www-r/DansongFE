@@ -4,10 +4,10 @@ import { Props } from '../Context/ModalsProvider';
 
 export default function useModals() {
   const { open, close } = useContext(ModalsDispatchContext);
-  const openModal = (Component: React.ReactNode, props: Props) => {
+  const openModal = (Component: (props: Props) => JSX.Element, props: Props) => {
     open(Component, props);
   };
-  const closeModal = (Component: React.ReactNode) => {
+  const closeModal = (Component: (props: Props) => JSX.Element) => {
     close(Component);
   };
   return {

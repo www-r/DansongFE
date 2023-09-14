@@ -34,7 +34,7 @@ export const ScrollProductContainer = styled.div`
 `;
 
 export const SwiperContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   padding: 5rem;
   display: flex;
   justify-content: center;
@@ -79,13 +79,15 @@ export const TextContainer = styled.div`
   gap: 1rem; */
 `;
 export const PicsContainer = styled.ul`
-  width: min-content;
+  margin: auto;
+  width: 100%;
   display: flex;
   @media (max-width: ${({ theme }) => theme.viewport.tablet}) {
     flex-direction: column;
   }
 `;
 export const CommercePic = styled.li`
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
