@@ -29,7 +29,6 @@ export const StudioSection = styled.section`
   background-attachment: fixed;
   filter: grayscale(100%);
   height: 200vh;
-  padding-bottom: 10vh;
 `;
 
 export const LogoSection = styled.section`

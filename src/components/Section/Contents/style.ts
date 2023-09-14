@@ -26,14 +26,15 @@ export const CoBrandCategoryList = styled.li`
   flex-direction: column;
   gap: 5em;
   @media (min-width: ${props => props.theme.viewport.desktop}) {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
   }
 `;
 export const CategoryListItemTitle = styled.h5``;
 export const CoBrandLogosContainer = styled.div`
   border-radius: 1rem;
   background-color: #fff;
-  padding: 0.5rem 0.1rem;
+  padding: 1rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -44,7 +45,7 @@ export const CoBrandLogosContainer = styled.div`
   }
 `;
 export const AdvertiseSection = styled.div`
-  padding: 25vh 0 0;
+  padding: 15vh 0 0;
   position: relative;
 `;
 export const AdvertiseVideo = styled.video`

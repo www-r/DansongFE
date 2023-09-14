@@ -10,8 +10,6 @@ export const ContactIcon = styled.div`
   align-items: center;
   background-color: ${({ theme }) => theme.backgroundColor.white};
   border-radius: 50%;
-  padding: 2rem;
-  &:hover {
-    cursor: pointer;
-  }
+  padding: 1rem;
+  font-size: 4rem;
 `;
