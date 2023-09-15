@@ -18,6 +18,8 @@ export const globalStyle = css`
   }
 
   body {
+    padding-top: 6rem;
+
     margin: 0 auto;
     max-width: 1740px;
     width: 100%;
