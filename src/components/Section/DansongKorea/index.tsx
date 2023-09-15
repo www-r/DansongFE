@@ -7,11 +7,8 @@ export default function DansongKorea() {
     <S.Section id="dansongkorea">
       <S.VideoSection>
         <VideoList />
-      </S.VideoSection>
-
-      <S.LogoSection>
         <ServiceIntro />
-      </S.LogoSection>
+      </S.VideoSection>
 
       <S.StudioSection>
         <Studio />

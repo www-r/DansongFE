@@ -3,10 +3,12 @@ import { CenterContainer } from '../../styles/global';
 
 export const Header = styled.header`
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
   width: 100%;
+  max-width: 1740px;
   background-color: ${({ theme }) => theme.colors.black};
   height: 6rem;
   transition: background-color linear 0.2s;

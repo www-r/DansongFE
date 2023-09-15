@@ -13,8 +13,8 @@ export const Container = styled.div`
 `;
 
 export const TextContainer = styled.div`
+  margin-top: 20rem;
   position: sticky;
-
   top: 0;
   text-align: center;
   height: fit-content;
@@ -26,7 +26,7 @@ export const Overlay = styled(motion.div)`
   position: absolute;
   bottom: 0;
   z-index: 1;
-  height: 110vh;
+  height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
