@@ -26,10 +26,13 @@ export const SwiperSlide = styled.div`
   padding: 1rem 0;
   width: 100%;
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
 `;
-
+export const SwiperNamesContainer = styled.ul``;
+export const NameTag = styled.li``;
 export const TextContainer = styled.div`
   height: 30rem;
   padding: 0 10vw;
@@ -99,15 +102,23 @@ export const AdvertisementSection = styled.div`
 export const PicsContainer = styled.ul`
   margin: auto;
   width: 100%;
-  flex-direction: column;
   padding: 10vw 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  @media (min-width: ${props => props.theme.viewport.desktop}) {
+    flex-direction: row;
+  }
 `;
-export const CommercePic = styled.li`
+export const CommerceItem = styled.li`
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  &:hover {
+  gap: 2rem;
+  @media (max-width: ${props => props.theme.viewport.desktop}) {
+    padding: 0 3.6rem;
   }
 `;
 export const BtnsContainer = styled.div`

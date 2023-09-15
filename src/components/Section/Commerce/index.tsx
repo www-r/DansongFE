@@ -11,8 +11,13 @@ import Logo from '../../Logo';
 import FlipCard from '../../FlipCard';
 import FlipCardBack from '../../FlipCard/Back';
 import FlipCardFront from '../../FlipCard/Front';
+import Button from '../../Button';
+import { isMobile } from 'react-device-detect';
 
 export default function Commerce() {
+  window.addEventListener('resize', () => {
+    console.log(isMobile);
+  });
   return (
     <S.Section>
       <S.SwiperContainer>
@@ -27,50 +32,56 @@ export default function Commerce() {
         >
           <SwiperSlide>
             <S.SwiperSlide>
-              <CenterContainer>
-                <img
-                  src="/images/butter.png"
-                  alt="popcorn butter image"
-                  style={{ width: '80%', margin: 'auto' }}
-                />
-              </CenterContainer>
+              <img
+                src="/images/butter.png"
+                alt="popcorn butter image"
+                style={{ width: '80%', margin: 'auto' }}
+              />
+              <S.NameTag>
+                <Textline fontSize={2}># 바삭버터맛</Textline>
+              </S.NameTag>
             </S.SwiperSlide>
           </SwiperSlide>
           <SwiperSlide>
             <S.SwiperSlide>
-              <CenterContainer>
-                <img
-                  src="images/caramel.png"
-                  alt="popcorn caramel image"
-                  style={{ width: '80%', margin: 'auto' }}
-                />
-              </CenterContainer>
+              <img
+                src="images/caramel.png"
+                alt="popcorn caramel image"
+                style={{ width: '80%', margin: 'auto' }}
+              />
+              <S.NameTag>
+                <Textline fontSize={2}># 바삭카라멜맛</Textline>
+              </S.NameTag>
             </S.SwiperSlide>
           </SwiperSlide>
           <SwiperSlide>
             <S.SwiperSlide>
-              <CenterContainer>
-                <img
-                  src="images/onion.png"
-                  alt="popcorn onion image"
-                  style={{ width: '80%', margin: 'auto' }}
-                />
-              </CenterContainer>
+              <img
+                src="images/onion.png"
+                alt="popcorn onion image"
+                style={{ width: '80%', margin: 'auto' }}
+              />
+              <S.NameTag>
+                <Textline fontSize={2}># 바삭어니언맛</Textline>
+              </S.NameTag>
             </S.SwiperSlide>
           </SwiperSlide>
           <SwiperSlide>
             <S.SwiperSlide>
-              <CenterContainer>
-                <img
-                  src="/images/bbq.png"
-                  alt="popcorn bbq image"
-                  style={{ width: '80%', margin: 'auto' }}
-                />
-              </CenterContainer>
+              <img
+                src="/images/bbq.png"
+                alt="popcorn bbq image"
+                style={{ width: '80%', margin: 'auto' }}
+              />
+              <S.NameTag>
+                <Textline fontSize={2}># 바삭바베큐맛</Textline>
+              </S.NameTag>
             </S.SwiperSlide>
           </SwiperSlide>
         </Swiper>
       </S.SwiperContainer>
+
+      <S.SwiperNamesContainer></S.SwiperNamesContainer>
 
       <S.TextContainer>
         <CenterContainer direction="column">
@@ -283,25 +294,45 @@ export default function Commerce() {
           </S.TextContainer>
 
           <S.PicsContainer>
-            <S.CommercePic>
-              <img src="/images/smartstore.png" alt="smartstore" style={{ width: '40vw' }} />
+            <S.CommerceItem>
+              <img
+                src="/images/smartstore.png"
+                alt="smartstore"
+                style={true ? { width: '90%' } : { width: '40vw' }}
+              />
               <S.BtnsContainer>
                 <a href="https://smartstore.naver.com/eatreaming" target="blank">
-                  <S.CommerceBtn>스마트스토어 바로가기</S.CommerceBtn>
+                  <Button>
+                    <Textline fontSize={3} isFontBold textAlign="center">
+                      스마트스토어 바로가기
+                    </Textline>
+                  </Button>
                 </a>
               </S.BtnsContainer>
-            </S.CommercePic>
-            <S.CommercePic>
-              <img src="/images/sns.png" alt="sns" style={{ width: '40vw' }} />
+            </S.CommerceItem>
+            <S.CommerceItem>
+              <img
+                src="/images/sns.png"
+                alt="sns"
+                style={true ? { width: '100%' } : { width: '40vw' }}
+              />
               <S.BtnsContainer>
                 <a href="https://youtube.com/@user-pf6hz4yw2g?si=QStqYwy1bB5c12N6" target="blank">
-                  <S.CommerceBtn>유튜브 바로가기</S.CommerceBtn>
+                  <Button>
+                    <Textline fontSize={3} isFontBold textAlign="center">
+                      유튜브 바로가기
+                    </Textline>
+                  </Button>
                 </a>
                 <a href="https://www.instagram.com/eatreaming/" target="blank">
-                  <S.CommerceBtn>인스타그램 바로가기</S.CommerceBtn>
+                  <Button>
+                    <Textline fontSize={3} isFontBold textAlign="center">
+                      인스타그램 바로가기
+                    </Textline>
+                  </Button>
                 </a>
               </S.BtnsContainer>
-            </S.CommercePic>
+            </S.CommerceItem>
           </S.PicsContainer>
         </CenterContainer>
       </S.AdvertisementSection>
