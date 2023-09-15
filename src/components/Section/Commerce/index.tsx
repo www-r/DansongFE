@@ -12,12 +12,10 @@ import FlipCard from '../../FlipCard';
 import FlipCardBack from '../../FlipCard/Back';
 import FlipCardFront from '../../FlipCard/Front';
 import Button from '../../Button';
-import { isMobile } from 'react-device-detect';
+
 
 export default function Commerce() {
-  window.addEventListener('resize', () => {
-    console.log(isMobile);
-  });
+  
   return (
     <S.Section>
       <S.SwiperContainer>
