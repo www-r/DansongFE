@@ -31,7 +31,6 @@ export const SwiperSlide = styled.div`
 `;
 
 export const TextContainer = styled.div`
-  font-size: ${({ textSize }) => textSize};
   height: 30rem;
   padding: 0 10vw;
   display: flex;
