@@ -6,7 +6,11 @@ import Logo from '../Logo';
 import DivisionLine from '../DivisionLine';
 import { theme } from '../../styles/theme';
 
-export default function HeaderModal({ onClose }) {
+type Props = {
+  onClose: () => void;
+};
+
+export default function HeaderModal({ onClose }: Props) {
   return (
     <S.ModalContainer>
       <S.MenuContainer direction="column">
