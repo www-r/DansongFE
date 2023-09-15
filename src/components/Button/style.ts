@@ -5,7 +5,7 @@ export const Button = styled.button`
   border: 0.2rem solid black;
   border-radius: 8rem;
   padding: 2rem;
-  width: 40rem;
+  width: 34rem;
   font-size: 3rem;
   @media (min-width: ${({ theme }) => theme.viewport.desktop}) {
     font-size: 1.7rem;
