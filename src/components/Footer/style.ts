@@ -7,6 +7,7 @@ export const Footer = styled.footer`
   color: ${({ theme }) => theme.textColor.footer};
   font-size: 1.3rem;
   padding: 2rem 10vw;
+  width: 100%;
   line-height: 1.6;
   flex-wrap: wrap;
   .footer--logo {

@@ -4,12 +4,7 @@ import * as S from './style';
 import { CenterContainer } from '../../../styles/global';
 import Textline from '../../Textline';
 import Logo from '../../Logo';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, EffectCoverflow } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/autoplay';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/navigation';
+
 import { theme } from '../../../styles/theme';
 export default function Contents() {
   const [, setWidth] = useState(window.innerWidth);
@@ -135,11 +130,7 @@ export default function Contents() {
             </S.CoBrandCategoryList>
             <S.CoBrandCategoryList>
               <S.CategoryListItemTitle>
-                <Textline
-                  fontSize={2.1}
-                  color={({ theme }: { theme: Theme }) => theme.textColor.white}
-                  textAlign="center"
-                >
+                <Textline fontSize={2.1} color={theme.textColor.white} textAlign="center">
                   FASHION/BEAUTY
                 </Textline>
                 <Textline
@@ -197,6 +188,7 @@ export default function Contents() {
         </h3>
         <CenterContainer>
           <S.AdvertiseVideo
+            id="commerce"
             src={`${import.meta.env.VITE_BASE_URL}/videos/advertiseVideo.mp4`}
             autoPlay
             controls
@@ -207,72 +199,6 @@ export default function Contents() {
             팝꽃 광고 영상
           </S.AdvertiseVideo>
         </CenterContainer>
-        <S.SwiperContainer>
-          <Swiper
-            slidesPerView={2}
-            centeredSlides={true}
-            spaceBetween={0}
-            grabCursor={true}
-            effect={'coverflow'}
-            coverflowEffect={{
-              rotate: 50,
-              stretch: 0,
-              depth: 100,
-              modifier: 2,
-              slideShadows: true,
-            }}
-            modules={[Autoplay, Navigation, EffectCoverflow]}
-            autoplay
-            loop={true}
-            navigation={true}
-          >
-            <SwiperSlide>
-              <S.SwiperSlide backgroundColor="rgb(247,237,229)">
-                <CenterContainer>
-                  <img
-                    src="/images/butter.png"
-                    alt="popcorn butter image"
-                    style={{ width: '25vw', margin: 'auto' }}
-                  />
-                </CenterContainer>
-              </S.SwiperSlide>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <S.SwiperSlide backgroundColor="rgb(196, 155, 109)">
-                <CenterContainer>
-                  <img
-                    src="images/caramel.png"
-                    alt="popcorn caramel image"
-                    style={{ width: '25vw', margin: 'auto' }}
-                  />
-                </CenterContainer>
-              </S.SwiperSlide>
-            </SwiperSlide>
-            <SwiperSlide>
-              <S.SwiperSlide backgroundColor="rgb(200,218,176)">
-                <CenterContainer>
-                  <img
-                    src="images/onion.png"
-                    alt="popcorn onion image"
-                    style={{ width: '25vw', margin: 'auto' }}
-                  />
-                </CenterContainer>
-              </S.SwiperSlide>
-            </SwiperSlide>
-            <SwiperSlide>
-              <S.SwiperSlide backgroundColor="rgb(196,155,154)">
-                <CenterContainer>
-                  <img
-                    src="/images/bbq.png"
-                    alt="popcorn bbq image"
-                    style={{ width: '25vw', margin: 'auto' }}
-                  />
-                </CenterContainer>
-              </S.SwiperSlide>
-            </SwiperSlide>
-          </Swiper>
-        </S.SwiperContainer>
       </S.AdvertiseSection>
     </S.Section>
   );

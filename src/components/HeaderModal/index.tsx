@@ -3,7 +3,6 @@ import { CenterContainer } from '../../styles/global';
 import { AiOutlineClose } from 'react-icons/ai';
 
 import Logo from '../Logo';
-import { Link } from 'react-router-dom';
 import DivisionLine from '../DivisionLine';
 import { theme } from '../../styles/theme';
 
