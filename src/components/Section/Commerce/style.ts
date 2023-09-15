@@ -42,7 +42,7 @@ export const TextContainer = styled.div`
   justify-content: center;
   @media (max-width: 1400px) {
     height: fit-content;
-    padding: 3rem 10vw;
+    padding: 3rem 3.75rem;
   }
 `;
 export const CoBrandsContainer = styled.div`

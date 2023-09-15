@@ -6,6 +6,9 @@ export const Section = styled.section`
 
 export const TextSection = styled.div`
   padding: 50vh 0 0;
+  @media (max-width: ${({ theme }) => theme.viewport.desktop}) {
+    padding: 50vh 3.75rem 0;
+  }
 `;
 export const YoutubeSection = styled.div`
   padding: 50vh 0 0;
