@@ -1,7 +1,5 @@
-
 import * as S from './style';
 import Map from '../Map';
-
 
 export default function ContactInfo() {
   return (
