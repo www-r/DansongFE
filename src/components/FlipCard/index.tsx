@@ -14,4 +14,3 @@ export default function FlipCard({ children }: { children: React.ReactNode }) {
     </S.FlipCard>
   );
 }
-``
