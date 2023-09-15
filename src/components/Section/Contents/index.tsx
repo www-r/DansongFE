@@ -192,6 +192,7 @@ export default function Contents() {
         </h3>
         <CenterContainer>
           <S.AdvertiseVideo
+            id="commerce"
             src={`${import.meta.env.VITE_BASE_URL}/videos/advertiseVideo.mp4`}
             autoPlay
             controls
