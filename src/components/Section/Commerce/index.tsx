@@ -1,13 +1,12 @@
 import * as S from './style';
 import { CenterContainer } from '../../../styles/global';
 import Textline from '../../Textline';
+import { theme } from '../../../styles/theme';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, EffectCoverflow } from 'swiper/modules';
+// import { Autoplay, Navigation} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
-import Circle from '../../Circle';
 import Logo from '../../Logo';
 import FlipCard from '../../FlipCard';
 import FlipCardBack from '../../FlipCard/Back';
@@ -18,63 +17,54 @@ export default function Commerce() {
     <S.Section>
       <S.SwiperContainer>
         <Swiper
-          slidesPerView={2}
-          centeredSlides={true}
+          slidesPerView={4}
           spaceBetween={0}
-          grabCursor={true}
-          effect={'coverflow'}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 2,
-            slideShadows: true,
-          }}
-          modules={[Autoplay, Navigation, EffectCoverflow]}
-          autoplay
-          loop={true}
-          navigation={true}
+          // grabCursor={true}
+          // modules={[Autoplay, Navigation]}
+          // autoplay
+          // loop={true}
+          // navigation={true}
         >
           <SwiperSlide>
-            <S.SwiperSlide backgroundColor="rgb(247,237,229)">
+            <S.SwiperSlide>
               <CenterContainer>
                 <img
                   src="/images/butter.png"
                   alt="popcorn butter image"
-                  style={{ width: '25%', margin: 'auto' }}
+                  style={{ width: '80%', margin: 'auto' }}
                 />
               </CenterContainer>
             </S.SwiperSlide>
           </SwiperSlide>
           <SwiperSlide>
-            <S.SwiperSlide backgroundColor="rgb(196, 155, 109)">
+            <S.SwiperSlide>
               <CenterContainer>
                 <img
                   src="images/caramel.png"
                   alt="popcorn caramel image"
-                  style={{ width: '25%', margin: 'auto' }}
+                  style={{ width: '80%', margin: 'auto' }}
                 />
               </CenterContainer>
             </S.SwiperSlide>
           </SwiperSlide>
           <SwiperSlide>
-            <S.SwiperSlide backgroundColor="rgb(200,218,176)">
+            <S.SwiperSlide>
               <CenterContainer>
                 <img
                   src="images/onion.png"
                   alt="popcorn onion image"
-                  style={{ width: '25%', margin: 'auto' }}
+                  style={{ width: '80%', margin: 'auto' }}
                 />
               </CenterContainer>
             </S.SwiperSlide>
           </SwiperSlide>
           <SwiperSlide>
-            <S.SwiperSlide backgroundColor="rgb(196,155,154)">
+            <S.SwiperSlide>
               <CenterContainer>
                 <img
                   src="/images/bbq.png"
                   alt="popcorn bbq image"
-                  style={{ width: '25%', margin: 'auto' }}
+                  style={{ width: '80%', margin: 'auto' }}
                 />
               </CenterContainer>
             </S.SwiperSlide>
@@ -95,21 +85,15 @@ export default function Commerce() {
         <CenterContainer direction="column">
           <S.BrandsContainerTitle>COWORKERS</S.BrandsContainerTitle>
           <S.LogosContainer>
-            <Circle size="medium" bgColor="#fff" isBoxShadow={true}>
-              <Logo logo="생활맥주 logo" src="/logos/beer.png"></Logo>
-            </Circle>
-            <Circle size="medium" bgColor="#fff" isBoxShadow={true}>
-              <Logo logo="감성커피 logo" src="/logos/coffee.png"></Logo>
-            </Circle>
-            <Circle size="medium" bgColor="#fff" isBoxShadow={true}>
-              <Logo logo="cu logo" src="/logos/cu.png"></Logo>
-            </Circle>
-            <Circle size="medium" bgColor="#fff" isBoxShadow={true}>
-              <Logo logo="thebornkorea logo" src="/logos/theborn.jpeg"></Logo>
-            </Circle>
-            <Circle size="medium" bgColor="#fff" isBoxShadow={true}>
-              <Logo logo="marriot logo" src="/logos/marriot.png"></Logo>
-            </Circle>
+            <Logo logo="생활맥주 logo" src="/logos/beer.png" size="brandLogo"></Logo>
+
+            <Logo logo="감성커피 logo" src="/logos/coffee.png" size="brandLogo"></Logo>
+
+            <Logo logo="cu logo" src="/logos/cu.png" size="brandLogo"></Logo>
+
+            <Logo logo="thebornkorea logo" src="/logos/theborn.jpeg" size="brandLogo"></Logo>
+
+            <Logo logo="marriot logo" src="/logos/marriot.png" size="brandLogo"></Logo>
           </S.LogosContainer>
         </CenterContainer>
       </S.CoBrandsContainer>
@@ -126,23 +110,19 @@ export default function Commerce() {
                     <Textline
                       fontSize={4}
                       isFontBold={true}
-                      color={({ theme }: { theme: Theme }) => theme.textColor.black}
+                      color={theme.textColor.black}
                       textAlign="center"
                     >
                       버터풍미
                     </Textline>
 
                     <p>
-                      <Textline
-                        fontSize={2.1}
-                        color={({ theme }: { theme: Theme }) => theme.textColor.black}
-                        textAlign="center"
-                      >
+                      <Textline fontSize={2.1} color={theme.textColor.black} textAlign="center">
                         입안 가득 퍼지는
                       </Textline>
                       <Textline
                         fontSize={2.1}
-                        color={({ theme }: { theme: Theme }) => theme.textColor.black}
+                        color={theme.textColor.black}
                         textAlign="center"
                         marginBottom="1.6rem"
                       >
@@ -151,16 +131,12 @@ export default function Commerce() {
                     </p>
                     <img src="/images/srcButter.png" alt="" style={{ width: '100%' }} />
                     <p>
-                      <Textline
-                        fontSize={2.1}
-                        color={({ theme }: { theme: Theme }) => theme.textColor.grey}
-                        textAlign="center"
-                      >
+                      <Textline fontSize={2.1} color={theme.textColor.grey} textAlign="center">
                         씹는 순간 입안 가득 퍼지는
                       </Textline>
                       <Textline
                         fontSize={2.1}
-                        color={({ theme }: { theme: Theme }) => theme.textColor.grey}
+                        color={theme.textColor.grey}
                         textAlign="center"
                         marginBottom="1.6rem"
                       >
@@ -181,23 +157,19 @@ export default function Commerce() {
                     <Textline
                       fontSize={4}
                       isFontBold={true}
-                      color={({ theme }: { theme: Theme }) => theme.textColor.black}
+                      color={theme.textColor.black}
                       textAlign="center"
                     >
                       바삭바삭
                     </Textline>
 
                     <p>
-                      <Textline
-                        fontSize={2.1}
-                        color={({ theme }: { theme: Theme }) => theme.textColor.black}
-                        textAlign="center"
-                      >
+                      <Textline fontSize={2.1} color={theme.textColor.black} textAlign="center">
                         두 번 구워
                       </Textline>
                       <Textline
                         fontSize={2.1}
-                        color={({ theme }: { theme: Theme }) => theme.textColor.black}
+                        color={theme.textColor.black}
                         textAlign="center"
                         marginBottom="1.6rem"
                       >
@@ -208,18 +180,10 @@ export default function Commerce() {
                       <img src="/images/srcCorns.png" alt="" style={{ width: '100%' }} />
                     </S.ImageContainer>
                     <p>
-                      <Textline
-                        fontSize={2.1}
-                        color={({ theme }: { theme: Theme }) => theme.textColor.grey}
-                        textAlign="center"
-                      >
+                      <Textline fontSize={2.1} color={theme.textColor.grey} textAlign="center">
                         고온과 저온에 한 번씩
                       </Textline>
-                      <Textline
-                        fontSize={2.1}
-                        color={({ theme }: { theme: Theme }) => theme.textColor.grey}
-                        textAlign="center"
-                      >
+                      <Textline fontSize={2.1} color={theme.textColor.grey} textAlign="center">
                         버터에 두 번 제대로 구워낸 바삭함!
                       </Textline>
                     </p>
@@ -237,22 +201,18 @@ export default function Commerce() {
                     <Textline
                       fontSize={4}
                       isFontBold={true}
-                      color={({ theme }: { theme: Theme }) => theme.textColor.black}
+                      color={theme.textColor.black}
                       textAlign="center"
                     >
                       단짠단짠
                     </Textline>
                     <p>
-                      <Textline
-                        fontSize={2.1}
-                        color={({ theme }: { theme: Theme }) => theme.textColor.black}
-                        textAlign="center"
-                      >
+                      <Textline fontSize={2.1} color={theme.textColor.black} textAlign="center">
                         손이 계속 가는
                       </Textline>
                       <Textline
                         fontSize={2.1}
-                        color={({ theme }: { theme: Theme }) => theme.textColor.black}
+                        color={theme.textColor.black}
                         textAlign="center"
                         marginBottom="1.6rem"
                       >
@@ -263,16 +223,12 @@ export default function Commerce() {
                       <img src="/images/srcPopcorns.png" alt="" style={{ width: '100%' }} />
                     </S.ImageContainer>
                     <p>
-                      <Textline
-                        fontSize={2.1}
-                        color={({ theme }: { theme: Theme }) => theme.textColor.grey}
-                        textAlign="center"
-                      >
+                      <Textline fontSize={2.1} color={theme.textColor.grey} textAlign="center">
                         안 먹어본 사람은 있어도
                       </Textline>
                       <Textline
                         fontSize={2.1}
-                        color={({ theme }: { theme: Theme }) => theme.textColor.grey}
+                        color={theme.textColor.grey}
                         textAlign="center"
                         marginBottom="1.6rem"
                       >
@@ -296,15 +252,11 @@ export default function Commerce() {
         <Textline fontSize={4} isFontBold={true} marginBottom="5rem" textAlign="center">
           왜 안심일까?
         </Textline>
-
-        {/* <S.ImageContainer>
-            <img src="/logos/safeLogos.png" alt="" width="60%" />
-          </S.ImageContainer> */}
         <S.LogosContainer>
-          <Logo src="/logos/haccp.png"></Logo>
-          <Logo src="/logos/haccp.png"></Logo>
-          <Logo src="/logos/haccp.png"></Logo>
-          <Logo src="/logos/haccp.png"></Logo>
+          <Logo logo="nongmo logo" src="/logos/nongmo.png" size="brandLogo"></Logo>
+          <Logo logo="haccp logo" src="/logos/haccp.png" size="brandLogo"></Logo>
+          <Logo logo="iso logo" src="/logos/iso.png" size="brandLogo"></Logo>
+          <Logo logo="iso22000 logo" src="/logos/iso22000.png" size="brandLogo"></Logo>
         </S.LogosContainer>
       </S.SafeSection>
 

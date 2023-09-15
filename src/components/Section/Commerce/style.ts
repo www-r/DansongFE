@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 
 export const Section = styled.section`
   background-color: ${({ theme }) => theme.backgroundColor.white};
-  /* position: relative; */
 `;
 export const ImageContainer = styled.div`
   margin: auto;
@@ -16,24 +15,13 @@ export const LogosContainer = styled.div`
   gap: 4rem;
   align-items: center;
   padding: 2rem 6rem;
+  background-color: #fff;
 `;
-export const SwiperSection = styled.div`
-  height: 90rem;
-
-  @media (max-width: 1095px) {
-    height: fit-content;
-  }
-`;
+export const SwiperSection = styled.div``;
 export const SwiperContainer = styled.div`
   padding: 5rem 0%;
-
-  height: 30rem;
-  @media (max-width: 1095px) {
-    height: fit-content;
-  }
 `;
 export const SwiperSlide = styled.div`
-  background-color: ${props => props.backgroundColor};
   border-radius: 1rem;
   padding: 1rem 0;
   width: 100%;
@@ -42,12 +30,6 @@ export const SwiperSlide = styled.div`
   justify-content: center;
 `;
 
-export const OverlayScreen = styled.div`
-  /* background-color: ${({ theme }) => theme.backgroundColor.white};
-  height: fit-content;
-  width: 100%;
-  z-index: ${({ zIndex }) => zIndex}; */
-`;
 export const TextContainer = styled.div`
   font-size: ${({ textSize }) => textSize};
   height: 30rem;
@@ -56,7 +38,7 @@ export const TextContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @media (max-width: 1095px) {
+  @media (max-width: 1400px) {
     height: fit-content;
     padding: 3rem 10vw;
   }
@@ -66,10 +48,10 @@ export const CoBrandsContainer = styled.div`
   flex-direction: column;
   padding: 0 10vw;
   width: 100%;
-  height: 30rem;
+  background-color: #fff;
   border-top: 0.1rem solid ${({ theme }) => theme.colors.border};
   border-bottom: 0.1rem solid ${({ theme }) => theme.colors.border};
-  @media (max-width: 1095px) {
+  @media (max-width: 1400px) {
     height: fit-content;
   }
 `;
@@ -79,7 +61,6 @@ export const BrandsContainerTitle = styled.h3`
   font-weight: 700;
 
   @media (min-width: ${({ theme }) => theme.viewport.desktop}) {
-    /* margin: 6.15rem 0; */
     font-size: 2.5rem;
   }
 `;
@@ -108,7 +89,7 @@ export const CardGrid = styled.div`
 `;
 
 export const SafeSection = styled.div`
-  margin-top: 20vh;
+  margin-top: 15vh;
 `;
 
 export const AdvertisementSection = styled.div`
