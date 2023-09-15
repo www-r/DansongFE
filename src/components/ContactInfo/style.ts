@@ -5,6 +5,10 @@ export const Wrapper = styled.section`
   margin: 0 auto;
   padding: 4rem;
   font-size: 1.6rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.viewport.tablet}) {
+    width: 100%;
+  }
 `;
 
 export const TextContainer = styled.div`
