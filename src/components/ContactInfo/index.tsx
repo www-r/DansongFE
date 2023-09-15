@@ -1,7 +1,7 @@
-import React from 'react';
+
 import * as S from './style';
 import Map from '../Map';
-import { TextContainer } from '../Studio/style';
+
 
 export default function ContactInfo() {
   return (

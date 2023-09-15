@@ -130,11 +130,7 @@ export default function Contents() {
             </S.CoBrandCategoryList>
             <S.CoBrandCategoryList>
               <S.CategoryListItemTitle>
-                <Textline
-                  fontSize={2.1}
-                  color={({ theme }: { theme: Theme }) => theme.textColor.white}
-                  textAlign="center"
-                >
+                <Textline fontSize={2.1} color={theme.textColor.white} textAlign="center">
                   FASHION/BEAUTY
                 </Textline>
                 <Textline
