@@ -65,7 +65,7 @@ export const theme = {
   backgroundColor: {
     header: '#454545',
     footer: '#f5f5f7',
-    white: '#fff',
+    white: '#fafafa',
     lightGrey: '#d0d1d0',
     grey: '#DCDCDE',
     black: '#000',
