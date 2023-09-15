@@ -1,19 +1,14 @@
-import { useState } from 'react';
-import Lottie from 'lottie-react';
-import scrollLottie from '../../data/scrollLottie.json';
-
 import { VIDEO } from '../../data/video';
 import * as S from './style';
-import Logo from '../Logo';
 
 export default function VideoList() {
-  const [activeItem, setActiveItem] = useState(0);
-  const handleItemMouseEnter = (idx: number) => {
-    idx === activeItem ? setActiveItem(0) : setActiveItem(idx);
-  };
+  // const [activeItem, setActiveItem] = useState(0);
+  // const handleItemMouseEnter = (idx: number) => {
+  //   idx === activeItem ? setActiveItem(0) : setActiveItem(idx);
+  // };
   return (
     <S.Wrapper>
-      {VIDEO.map((item, idx) => (
+      {/* {VIDEO.map((item, idx) => (
         <S.ImgContainer key={item.id} onMouseEnter={() => handleItemMouseEnter(idx + 1)}>
           <img src={item.thumbnail} />
         </S.ImgContainer>
@@ -23,22 +18,15 @@ export default function VideoList() {
       </div>
       <S.LottieContainer>
         <Lottie animationData={scrollLottie} />
-      </S.LottieContainer>
+      </S.LottieContainer> */}
 
-      {activeItem !== 0 && (
-        <S.Box initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-          <S.Video
-            width="100%"
-            height="100%"
-            autoPlay
-            muted
-            loop
-            onMouseLeave={() => setActiveItem(0)}
-          >
-            <source src={VIDEO[activeItem - 1].video} type="video/mp4" />
+      {VIDEO.map((item, idx) => (
+        <S.VidoContainer key={item.id}>
+          <S.Video width="100%" height="100%" autoPlay muted loop>
+            <source src={VIDEO[idx].video} type="video/mp4" />
           </S.Video>
-        </S.Box>
-      )}
+        </S.VidoContainer>
+      ))}
     </S.Wrapper>
   );
 }

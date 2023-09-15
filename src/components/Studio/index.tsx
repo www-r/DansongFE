@@ -32,7 +32,7 @@ export default function Studio() {
               fontSize={4}
               animation="top"
               color={theme.textColor.white}
-              marginBottom="2rem"
+              marginBottom="4rem"
               className="messageA "
             >
               단송 스튜디오는
@@ -43,7 +43,7 @@ export default function Studio() {
               fontSize={4}
               animation="top"
               color={theme.textColor.white}
-              marginBottom="2rem"
+              marginBottom="4rem"
               className="messageB"
             >
               사물과 인물, 사진과 영상,
@@ -54,7 +54,7 @@ export default function Studio() {
             <Textline
               fontSize={4}
               animation="top"
-              marginBottom="2rem"
+              marginBottom="4rem"
               color={theme.textColor.white}
               className="messageC"
             >
