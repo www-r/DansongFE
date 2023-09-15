@@ -9,11 +9,28 @@ export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
+export const LogosContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
+  padding: 2rem 6rem;
+`;
+export const SwiperSection = styled.div`
+  height: 90rem;
+
+  @media (max-width: 1095px) {
+    height: fit-content;
+  }
+`;
 export const SwiperContainer = styled.div`
-  padding: 10rem 0;
-  /* position: absolute;
-  top: 250px; */
-  position: relative;
+  padding: 5rem 0%;
+
+  height: 30rem;
+  @media (max-width: 1095px) {
+    height: fit-content;
+  }
 `;
 export const SwiperSlide = styled.div`
   background-color: ${props => props.backgroundColor};
@@ -25,57 +42,50 @@ export const SwiperSlide = styled.div`
   justify-content: center;
 `;
 
-export const ProductsSection = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
 export const OverlayScreen = styled.div`
-  position: absolute;
-  top: 0;
-  padding: 10rem 0;
-  background-color: rgba(255, 255, 255, 0.7);
-  height: 100%;
+  /* background-color: ${({ theme }) => theme.backgroundColor.white};
+  height: fit-content;
   width: 100%;
-  z-index: ${({ zIndex }) => zIndex};
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  z-index: ${({ zIndex }) => zIndex}; */
 `;
 export const TextContainer = styled.div`
   font-size: ${({ textSize }) => textSize};
-  @media (max-width: ${props => props.theme.viewport.tablet}) {
-    padding: 0 3.6rem;
+  height: 30rem;
+  padding: 0 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 1095px) {
+    height: fit-content;
+    padding: 3rem 10vw;
   }
 `;
 export const CoBrandsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 2vw 10vw;
+  padding: 0 10vw;
   width: 100%;
+  height: 30rem;
   border-top: 0.1rem solid ${({ theme }) => theme.colors.border};
   border-bottom: 0.1rem solid ${({ theme }) => theme.colors.border};
+  @media (max-width: 1095px) {
+    height: fit-content;
+  }
 `;
 export const BrandsContainerTitle = styled.h3`
-  margin: 3rem 0;
+  margin: 2rem 0;
   font-size: 4vw;
   font-weight: 700;
-  margin-right: 1rem;
+
   @media (min-width: ${({ theme }) => theme.viewport.desktop}) {
-    margin: 6.15rem 0;
+    /* margin: 6.15rem 0; */
     font-size: 2.5rem;
   }
 `;
-export const BrandLogosContainer = styled.div`
-  display: flex;
-  gap: 1rem;
-  align-items: center;
 
-  @media (min-width: ${props => props.theme.viewport.desktop}) {
-    padding: 1rem 6rem;
-  }
-`;
 export const DeliciousSection = styled.div`
-  margin-top: 20vh;
+  margin-top: 10vh;
 `;
 
 export const FlipCardsContainer = styled.div`
@@ -100,10 +110,7 @@ export const CardGrid = styled.div`
 export const SafeSection = styled.div`
   margin-top: 20vh;
 `;
-export const SafeLogosContainer = styled.div`
-  background-color: #fff;
-  padding: 5rem;
-`;
+
 export const AdvertisementSection = styled.div`
   margin-top: 20vh;
   padding-bottom: 2rem;
@@ -113,6 +120,7 @@ export const PicsContainer = styled.ul`
   margin: auto;
   width: 100%;
   flex-direction: column;
+  padding: 10vw 0;
 `;
 export const CommercePic = styled.li`
   width: 100%;
@@ -131,7 +139,6 @@ export const BtnsContainer = styled.div`
   gap: 1rem;
 `;
 export const CommerceBtn = styled.button`
-  margin: 0 1rem 0 0;
   padding: 1rem 3rem;
   border-radius: 8rem;
   font-size: 1.7rem;
@@ -144,7 +151,7 @@ export const CommerceBtn = styled.button`
     color: ${({ theme }) => theme.colors.white};
   }
   @media (max-width: ${({ theme }) => theme.viewport.mobile}) {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 2.2rem;
     font-size: 1rem;
   }

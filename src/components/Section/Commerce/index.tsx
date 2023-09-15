@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
+import Circle from '../../Circle';
 import Logo from '../../Logo';
 import FlipCard from '../../FlipCard';
 import FlipCardBack from '../../FlipCard/Back';
@@ -45,7 +46,6 @@ export default function Commerce() {
               </CenterContainer>
             </S.SwiperSlide>
           </SwiperSlide>
-
           <SwiperSlide>
             <S.SwiperSlide backgroundColor="rgb(196, 155, 109)">
               <CenterContainer>
@@ -57,7 +57,6 @@ export default function Commerce() {
               </CenterContainer>
             </S.SwiperSlide>
           </SwiperSlide>
-
           <SwiperSlide>
             <S.SwiperSlide backgroundColor="rgb(200,218,176)">
               <CenterContainer>
@@ -69,7 +68,6 @@ export default function Commerce() {
               </CenterContainer>
             </S.SwiperSlide>
           </SwiperSlide>
-
           <SwiperSlide>
             <S.SwiperSlide backgroundColor="rgb(196,155,154)">
               <CenterContainer>
@@ -82,29 +80,39 @@ export default function Commerce() {
             </S.SwiperSlide>
           </SwiperSlide>
         </Swiper>
-
-        <S.OverlayScreen zIndex="9">
-          <S.TextContainer>
-            <CenterContainer direction="column">
-              <Textline fontSize={3}>'팝꽃'은 개봉하자마자 내용물이 알알이 꽃처럼</Textline>
-              <Textline fontSize={3}>예쁘게 피어난 것과 같아 붙여진 이름입니다.</Textline>
-            </CenterContainer>
-          </S.TextContainer>
-        </S.OverlayScreen>
-        <S.OverlayScreen zIndex="19">
-          <S.CoBrandsContainer>
-            <CenterContainer direction="column">
-              <S.BrandsContainerTitle>COWORKERS</S.BrandsContainerTitle>
-              <S.BrandLogosContainer>
-                <Logo>
-                  <img src="/logos/beer.png" />
-                </Logo>
-              </S.BrandLogosContainer>
-            </CenterContainer>
-          </S.CoBrandsContainer>
-        </S.OverlayScreen>
       </S.SwiperContainer>
 
+      <S.TextContainer>
+        <CenterContainer direction="column">
+          <Textline fontSize={3}>'팝꽃'은 개봉하자마자 내용물이 알알이 꽃처럼</Textline>
+          <Textline fontSize={3} marginBottom="2rem">
+            예쁘게 피어난 것과 같아 붙여진 이름입니다.
+          </Textline>
+        </CenterContainer>
+      </S.TextContainer>
+
+      <S.CoBrandsContainer>
+        <CenterContainer direction="column">
+          <S.BrandsContainerTitle>COWORKERS</S.BrandsContainerTitle>
+          <S.LogosContainer>
+            <Circle size="medium" bgColor="#fff" isBoxShadow={true}>
+              <Logo logo="생활맥주 logo" src="/logos/beer.png"></Logo>
+            </Circle>
+            <Circle size="medium" bgColor="#fff" isBoxShadow={true}>
+              <Logo logo="감성커피 logo" src="/logos/coffee.png"></Logo>
+            </Circle>
+            <Circle size="medium" bgColor="#fff" isBoxShadow={true}>
+              <Logo logo="cu logo" src="/logos/cu.png"></Logo>
+            </Circle>
+            <Circle size="medium" bgColor="#fff" isBoxShadow={true}>
+              <Logo logo="thebornkorea logo" src="/logos/theborn.jpeg"></Logo>
+            </Circle>
+            <Circle size="medium" bgColor="#fff" isBoxShadow={true}>
+              <Logo logo="marriot logo" src="/logos/marriot.png"></Logo>
+            </Circle>
+          </S.LogosContainer>
+        </CenterContainer>
+      </S.CoBrandsContainer>
       <S.DeliciousSection>
         <CenterContainer>
           <div>
@@ -288,11 +296,16 @@ export default function Commerce() {
         <Textline fontSize={4} isFontBold={true} marginBottom="5rem" textAlign="center">
           왜 안심일까?
         </Textline>
-        <S.SafeLogosContainer>
-          <S.ImageContainer>
+
+        {/* <S.ImageContainer>
             <img src="/logos/safeLogos.png" alt="" width="60%" />
-          </S.ImageContainer>
-        </S.SafeLogosContainer>
+          </S.ImageContainer> */}
+        <S.LogosContainer>
+          <Logo src="/logos/haccp.png"></Logo>
+          <Logo src="/logos/haccp.png"></Logo>
+          <Logo src="/logos/haccp.png"></Logo>
+          <Logo src="/logos/haccp.png"></Logo>
+        </S.LogosContainer>
       </S.SafeSection>
 
       <S.AdvertisementSection>
@@ -309,8 +322,6 @@ export default function Commerce() {
                 판매까지
               </Textline>
             </h2>
-          </S.TextContainer>
-          <S.TextContainer>
             <Textline fontSize={2.4} textAlign="center">
               유통 중간마진을 최소화 하여
             </Textline>
@@ -318,6 +329,7 @@ export default function Commerce() {
               제조사와 소비자들을 바로 연결
             </Textline>
           </S.TextContainer>
+
           <S.PicsContainer>
             <S.CommercePic>
               <img src="/images/smartstore.png" alt="smartstore" style={{ width: '40vw' }} />
