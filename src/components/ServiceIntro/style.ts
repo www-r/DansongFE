@@ -1,18 +1,23 @@
 import styled from '@emotion/styled';
 import { CenterContainer } from '../../styles/global';
 
-export const Container = styled(CenterContainer)`
-  width: 90%;
-  margin: 0 auto;
-  border-radius: 1rem;
-  justify-content: space-evenly;
-  background-color: ${({ theme }) => theme.colors.logoContainer};
-  margin-bottom: 6rem;
+export const Wrapper = styled.section`
   position: relative;
-  gap: 3rem;
+  padding: 10rem 0 20rem 0;
+  margin: 0 auto;
+  background-color: ${({ theme }) => theme.backgroundColor.white};
+  opacity: 0.8;
+  z-index: 1;
+`;
 
-  @media screen and (max-width: ${({ theme }) => theme.viewport.mobile}) {
-    min-width: 38rem;
+export const Container = styled.div`
+  width: max-content;
+  min-width: 70rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  @media screen and (max-width: ${({ theme }) => theme.viewport.tablet}) {
+    min-width: 30rem;
   }
 `;
 

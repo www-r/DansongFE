@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { CenterContainer } from '../../styles/global';
+
 export const Box = styled(motion.div)``;
 export const LottieContainer = styled.div`
   width: 6rem;
@@ -9,13 +11,20 @@ export const LottieContainer = styled.div`
   transform: translateX(-50%);
   bottom: 1rem;
 `;
-export const Video = styled.video`
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #000;
+
+export const VidoContainer = styled(CenterContainer)`
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding: 2rem 0 6rem 0;
 `;
-export const ImgContainer = styled.li`
+
+export const Video = styled.video`
+  border-radius: 2rem;
+  padding: 1rem;
+`;
+
+export const ImgContainer = styled.div`
   display: flex;
   align-items: center;
   /* background-color: rgba(0, 0, 0, 0.5); */
@@ -31,24 +40,16 @@ export const ImgContainer = styled.li`
   }
 `;
 
-export const Wrapper = styled.ul`
+export const Wrapper = styled.div`
+  position: sticky;
+  top: 6rem;
+  left: 0;
   display: flex;
   justify-content: center;
   height: 100%;
-  position: relative;
-  background-color: #000;
+  background-color: ${({ theme }) => theme.backgroundColor.white})
+
+  @media (max-width: ${({ theme }) => theme.viewport.tablet}) {
+    display: none;
+  }
 `;
-/* & img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-  @media (max-width: ${theme.viewport.tablet}) {
-    display: block;
-    height: 50%;
-  }
-  @media (max-width: ${theme.viewport.mobile}) {
-    & img {
-      min-width: ${theme.viewport.mobile};
-    }
-  } */

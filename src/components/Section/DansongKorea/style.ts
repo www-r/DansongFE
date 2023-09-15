@@ -4,13 +4,9 @@ import { theme } from '../../../styles/theme';
 export const Section = styled.section``;
 
 export const VideoSection = styled.section`
-  height: calc(80vh - 6rem);
-  margin-top: 6rem;
-  background-image: ${({ theme }) => theme.backgroundColor.black};
-
-  @media (max-width: ${theme.viewport.tablet}) {
-    display: none;
-  }
+  position: relative;
+  height: 100%;
+  background: ${({ theme }) => theme.backgroundColor.white};
 `;
 
 export const TextSection = styled.section`
@@ -29,10 +25,4 @@ export const StudioSection = styled.section`
   background-attachment: fixed;
   filter: grayscale(100%);
   height: 200vh;
-`;
-
-export const LogoSection = styled.section`
-  /* width: 45rem; */
-  padding: 10rem 0 20rem 0;
-  margin: 0 auto;
 `;
