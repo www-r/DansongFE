@@ -9,12 +9,15 @@ export const FlipCard = styled.div`
     transition: transform 0.8s;
     transform-style: preserve-3d;
     position: relative;
-    /* display: flex;
-    justify-content: center; */
   }
   &:hover .FlipCardInner {
     transform: rotateY(180deg);
   }
+  /* @media (min-width: ${({ theme }) => theme.viewport.desktop}) {
+    &:hover .FlipCardInner {
+      transform: rotateY(180deg);
+    }
+  } */
   @media (max-width: ${props => props.theme.viewport.tablet}) {
     width: 27rem;
   }
