@@ -51,16 +51,9 @@ export const AdvertiseSection = styled.div`
 `;
 export const AdvertiseVideo = styled.video`
   margin-bottom: 5rem;
-  background-color: red;
   display: block;
 `;
-// export const AdvertisePicsContainer = styled.div`
-//   padding: 3rem 0 5rem;
-//   background-color: ${({ theme }) => theme.backgroundColor.white};
-//    @media (max-width: ${props => props.theme.viewport.desktop}) {
-//     height: 20rem;
-//   }
-// `;
+
 export const Center = styled.div`
   display: flex;
   justify-content: center;
