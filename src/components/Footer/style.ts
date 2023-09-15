@@ -19,10 +19,8 @@ export const Footer = styled.footer`
     display: grid;
     grid-template-columns: 4fr 1fr;
     gap: 5rem;
-    .footer--logo {
-      @media (max-width: ${({ theme }) => theme.viewport.desktop}) {
-        display: block;
-      }
+    @media (max-width: ${({ theme }) => theme.viewport.desktop}) {
+      display: block;
     }
   }
   .text--bottom {
