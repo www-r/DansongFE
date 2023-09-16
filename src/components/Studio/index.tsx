@@ -58,7 +58,7 @@ export default function Studio() {
               color={theme.textColor.white}
               className="messageC"
             >
-              (주)단송코리아를 포함한 다양한 클라이언트들의 아이디어를 실현시켜드립니다
+              (주)단송코리아를 포함한 다양한 클라이언트들의 아이디어를 실현시켜드립니다.
             </Textline>
           </S.TextBox>
         </S.Overlay>
