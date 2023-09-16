@@ -36,6 +36,7 @@ export const CoBrandCategoryList = styled.li`
 `;
 export const CategoryListItemTitle = styled.h5``;
 export const CoBrandLogosContainer = styled.div`
+  position: relative;
   border-radius: 1rem;
   background-color: #fff;
   padding: 1rem;
@@ -43,6 +44,14 @@ export const CoBrandLogosContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  .comment {
+    position: absolute;
+    top: -3rem;
+    right: 0.5rem;
+    @media screen and (max-width: ${({ theme }) => theme.viewport.mobile}) {
+      top: -2rem;
+    }
+  }
   a {
     display: flex;
     align-items: center;

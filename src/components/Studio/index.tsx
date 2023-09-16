@@ -33,7 +33,6 @@ export default function Studio() {
               animation="top"
               color={theme.textColor.white}
               marginBottom="4rem"
-              className="messageA "
             >
               단송 스튜디오는
               <br />
@@ -44,7 +43,6 @@ export default function Studio() {
               animation="top"
               color={theme.textColor.white}
               marginBottom="4rem"
-              className="messageB"
             >
               사물과 인물, 사진과 영상,
               <br />
@@ -56,7 +54,6 @@ export default function Studio() {
               animation="top"
               marginBottom="4rem"
               color={theme.textColor.white}
-              className="messageC"
             >
               (주)단송코리아를 포함한 다양한 클라이언트들의 아이디어를 실현시켜드립니다.
             </Textline>

@@ -40,9 +40,19 @@ export const TextContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
   @media (max-width: 1400px) {
     height: fit-content;
     padding: 3rem 3.75rem;
+  }
+`;
+export const TextImage = styled.img`
+  width: 6rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  @media (max-width: ${({ theme }) => theme.viewport.mobile}) {
+    display: none;
   }
 `;
 export const CoBrandsContainer = styled.div`

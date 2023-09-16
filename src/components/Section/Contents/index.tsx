@@ -56,6 +56,7 @@ export default function Contents() {
                 color={theme.textColor.white}
                 marginBottom="1.2em"
                 textAlign="center"
+                animation="bottom"
               >
                 유튜브
               </Textline>
@@ -66,6 +67,7 @@ export default function Contents() {
                 color={theme.textColor.white}
                 textAlign="center"
                 marginBottom="2em"
+                animation="bottom"
               >
                 구.안.지. X 브랜드
                 <br />
@@ -89,6 +91,9 @@ export default function Contents() {
                 </Textline>
               </S.CategoryListItemTitle>
               <S.CoBrandLogosContainer>
+                <Textline fontSize={1.6} color={theme.textColor.white} className="comment">
+                  로고를 클릭해보세요
+                </Textline>
                 <a href="https://youtu.be/OsCz6FrfXAI?si=qcfwO3bYjuCR_y5-" target="blank">
                   <Logo logo="푸디베어" src="/logos/foodybear.png" size="brandLogo" />
                 </a>
@@ -143,6 +148,9 @@ export default function Contents() {
                 </Textline>
               </S.CategoryListItemTitle>
               <S.CoBrandLogosContainer>
+                <Textline fontSize={1.6} color={theme.textColor.white} className="comment">
+                  로고를 클릭해보세요
+                </Textline>
                 <a href="https://youtu.be/zl-1GtXMBr4?si=CkAp2PTe3OGb0sHJ" target="blank">
                   <Logo logo="mlb" src="/logos/mlb.png" size="brandLogo" />
                 </a>
@@ -169,7 +177,7 @@ export default function Contents() {
       <S.AdvertiseSection>
         <h4>
           <CenterContainer>
-            <Textline fontSize={2.4} color={theme.textColor.white}>
+            <Textline fontSize={2.4} color={theme.textColor.white} animation="bottom">
               제품 사진부터 광고 영상까지
             </Textline>
           </CenterContainer>
@@ -181,6 +189,7 @@ export default function Contents() {
               isFontBold={true}
               color={theme.textColor.white}
               marginBottom="5rem"
+              animation="bottom"
             >
               광고 / 바이럴
             </Textline>

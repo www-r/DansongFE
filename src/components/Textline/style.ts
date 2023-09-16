@@ -16,6 +16,7 @@ export const Textline = styled(motion.span)<TextlineProps>`
   font-size: ${props => props.fontSize}rem;
   font-weight: ${props => (props.isFontBold ? '900' : '500')};
   color: ${props => props.color};
+  z-index: 9;
   @media screen and (max-width: ${({ theme }) => theme.viewport.mobile}) {
     font-size: ${props => props.fontSize * 0.65}rem;
   }
