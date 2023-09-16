@@ -34,8 +34,7 @@ export const SwiperSlide = styled.div`
 export const SwiperNamesContainer = styled.ul``;
 export const NameTag = styled.li``;
 export const TextContainer = styled.div`
-  height: 30rem;
-  padding: 0 10vw;
+  padding: 5rem 10vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,6 +50,10 @@ export const TextImage = styled.img`
   position: absolute;
   left: 0;
   top: 0;
+  @media (min-width: 1400) {
+    left: 10rem;
+    top: 2rem;
+  }
   @media (max-width: ${({ theme }) => theme.viewport.mobile}) {
     display: none;
   }
