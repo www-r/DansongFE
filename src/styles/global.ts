@@ -18,7 +18,6 @@ export const globalStyle = css`
   }
 
   body {
-
     margin: 0 auto;
     max-width: 1740px;
     width: 100%;

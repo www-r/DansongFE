@@ -50,8 +50,8 @@ export const TextImage = styled.img`
   position: absolute;
   left: 0;
   top: 0;
-  @media (min-width: 1400) {
-    left: 10rem;
+  @media (min-width: 1400px) {
+    left: 8vw;
     top: 2rem;
   }
   @media (max-width: ${({ theme }) => theme.viewport.mobile}) {
