@@ -26,6 +26,7 @@ declare module '@emotion/react' {
       lightGrey: string;
       grey: string;
       black: string;
+      yellow: string;
     };
     textColor: {
       white: string;
@@ -69,6 +70,7 @@ export const theme = {
     lightGrey: '#d0d1d0',
     grey: '#DCDCDE',
     black: '#000',
+    yellow: '#ffd489'
   },
   textColor: {
     white: '#f5f5f7',

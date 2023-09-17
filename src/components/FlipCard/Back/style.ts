@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
 export const Back = styled.div`
-  border: 6px solid #ffd489;
-  background-color: #ffd489;
+  border: 6px solid ${({ theme }) => theme.backgroundColor.yellow};
+  background-color: ${({ theme }) => theme.backgroundColor.yellow};
   border-radius: 1.8rem;
   width: 35rem;
   height: 50rem;
@@ -13,7 +13,7 @@ export const Back = styled.div`
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
   transform: rotateY(180deg);
-  @media (max-width: ${props => props.theme.viewport.tablet}) {
+  @media (max-width: ${props => props.theme.viewport.desktop}) {
     width: 27rem;
   }
 `;
