@@ -4,19 +4,17 @@ import emotionReset from 'emotion-reset';
 
 export const globalStyle = css`
   ${emotionReset}
-
   * {
     margin: 0;
     padding: 0;
     line-height: 1.5;
     box-sizing: border-box;
   }
-
   html {
     font-size: 10px;
     scroll-behavior: smooth;
+    min-width: 320px;
   }
-
   body {
     margin: 0 auto;
     max-width: 1740px;
@@ -39,7 +37,6 @@ export const globalStyle = css`
       'Segoe UI Symbol',
       sans-serif;
   }
-
   button {
     outline: none;
     border: none;
@@ -51,7 +48,6 @@ export const globalStyle = css`
     text-decoration: none;
     color: inherit;
   }
-
   a:hover {
     text-decoration: underline;
   }

@@ -3,6 +3,7 @@ import { CenterContainer } from '../../styles/global';
 
 export const ModalContainer = styled.div`
   width: 100%;
+  min-width: 32rem;
   padding: 1rem 2rem;
   background: ${({ theme }) => theme.backgroundColor.white};
   position: fixed;
