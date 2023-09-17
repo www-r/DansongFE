@@ -40,7 +40,7 @@ export default function ServiceIntro() {
             </a>
           </CenterContainer>
           <CenterContainer direction="column" style={{ gap: '1rem' }}>
-            <a href="/#contents">
+            <a href="/#commerce">
               <Logo logo="dansong" src="/logos/itreaming1.png" size="ml" />
             </a>
             <a href="/#commerce">
