@@ -5,5 +5,9 @@ type ButtonProps = {
 };
 
 export default function Button({ children }: ButtonProps) {
-  return <S.Button>{children}</S.Button>;
+  return (
+    <S.Button>
+      <span>{children}</span>
+    </S.Button>
+  );
 }
