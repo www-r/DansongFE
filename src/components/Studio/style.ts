@@ -1,10 +1,6 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 
-export const Box = styled(motion.div)`
-  width: 90%;
-`;
-
 export const Container = styled.div`
   height: 100%;
   display: flex;
@@ -18,20 +14,26 @@ export const TextContainer = styled.div`
   top: 0;
   text-align: center;
   height: fit-content;
-  @media screen and (max-width: ${({ theme }) => theme.viewport.mobile}) {
+  padding: 0 10vw;
+  @media screen and (max-width: ${({ theme }) => theme.viewport.desktop}) {
     font-size: 15vw;
+    position: static;
   }
 `;
 export const Overlay = styled(motion.div)`
   position: absolute;
   bottom: 0;
-  z-index: 1;
+  z-index: 0;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
+  @media screen and (max-width: ${({ theme }) => theme.viewport.desktop}) {
+    /* position: static; */
+    height: 100vh;
+  }
 `;
 export const TextBox = styled.div`
-  padding: 0 10vw;
+  padding: 10vw 10vw 0;
 `;

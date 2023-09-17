@@ -31,8 +31,7 @@ export const SwiperSlide = styled.div`
   align-items: center;
   justify-content: center;
 `;
-export const SwiperNamesContainer = styled.ul``;
-export const NameTag = styled.li``;
+export const NameTag = styled.p``;
 export const TextContainer = styled.div`
   padding: 5rem 10vw;
   display: flex;
@@ -58,10 +57,11 @@ export const TextImage = styled.img`
     display: none;
   }
 `;
+
 export const CoBrandsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 10vw;
+  padding: 2rem 10vw;
   width: 100%;
   background-color: #fff;
   border-top: 0.1rem solid ${({ theme }) => theme.colors.border};
@@ -71,7 +71,7 @@ export const CoBrandsContainer = styled.div`
   }
 `;
 export const BrandsContainerTitle = styled.h3`
-  margin: 2rem 0;
+  margin: 0 0 2rem;
   font-size: 4vw;
   font-weight: 700;
 

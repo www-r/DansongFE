@@ -12,7 +12,7 @@ import FlipCard from '../../FlipCard';
 import FlipCardBack from '../../FlipCard/Back';
 import FlipCardFront from '../../FlipCard/Front';
 import Button from '../../Button';
-
+import { isMobile } from 'react-device-detect';
 
 export default function Commerce() {
   
@@ -80,8 +80,6 @@ export default function Commerce() {
         </Swiper>
       </S.SwiperContainer>
 
-      <S.SwiperNamesContainer></S.SwiperNamesContainer>
-
       <CenterContainer>
         <S.TextContainer>
           <Textline fontSize={3}>'팝꽃'은 개봉하자마자 내용물이 알알이 꽃처럼</Textline>
@@ -97,13 +95,9 @@ export default function Commerce() {
           <S.BrandsContainerTitle>COWORKERS</S.BrandsContainerTitle>
           <S.LogosContainer>
             <Logo logo="생활맥주 logo" src="/logos/beer.png" size="brandLogo"></Logo>
-
             <Logo logo="감성커피 logo" src="/logos/coffee.png" size="brandLogo"></Logo>
-
             <Logo logo="cu logo" src="/logos/cu.png" size="brandLogo"></Logo>
-
             <Logo logo="thebornkorea logo" src="/logos/theborn.jpeg" size="brandLogo"></Logo>
-
             <Logo logo="marriot logo" src="/logos/marriot.png" size="brandLogo"></Logo>
           </S.LogosContainer>
         </CenterContainer>
@@ -114,12 +108,22 @@ export default function Commerce() {
             <Textline
               fontSize={4}
               isFontBold={true}
-              marginBottom="5rem"
+              marginBottom="1rem"
               textAlign="center"
-              animation="bottom"
+              animation={isMobile ? 'none' : 'bottom'}
             >
               왜 가장 맛있는 팝콘일까?
             </Textline>
+            {isMobile && (
+              <Textline
+                fontSize={2.5}
+                color={theme.textColor.black}
+                textAlign="center"
+                marginBottom="5rem"
+              >
+                카드를 눌러보세요
+              </Textline>
+            )}
             <S.FlipCardsContainer>
               <FlipCard>
                 <FlipCardFront>
@@ -166,6 +170,16 @@ export default function Commerce() {
                   <S.ImageContainer>
                     <img src="/images/srcButter.png" alt="" style={{ width: '100%' }} />
                   </S.ImageContainer>
+                  {isMobile && (
+                    <Textline
+                      fontSize={2.3}
+                      textAlign="center"
+                      marginBottom="1rem"
+                      color={theme.textColor.white}
+                    >
+                      카드 밖을 눌러보세요
+                    </Textline>
+                  )}
                 </FlipCardBack>
               </FlipCard>
               <FlipCard>
@@ -210,6 +224,16 @@ export default function Commerce() {
                   <S.ImageContainer>
                     <img src="/images/srcCorns.png" alt="" style={{ width: '100%' }} />
                   </S.ImageContainer>
+                  {isMobile && (
+                    <Textline
+                      fontSize={2.3}
+                      textAlign="center"
+                      marginBottom="1rem"
+                      color={theme.textColor.white}
+                    >
+                      카드 밖을 눌러보세요
+                    </Textline>
+                  )}
                 </FlipCardBack>
               </FlipCard>
               <FlipCard>
@@ -258,6 +282,16 @@ export default function Commerce() {
                   <S.ImageContainer>
                     <img src="/images/srcPopcorns.png" alt="" style={{ width: '100%' }} />
                   </S.ImageContainer>
+                  {isMobile && (
+                    <Textline
+                      fontSize={2.3}
+                      textAlign="center"
+                      marginBottom="1rem"
+                      color={theme.textColor.white}
+                    >
+                      카드 밖을 눌러보세요
+                    </Textline>
+                  )}
                 </FlipCardBack>
               </FlipCard>
             </S.FlipCardsContainer>
@@ -271,7 +305,7 @@ export default function Commerce() {
           isFontBold={true}
           marginBottom="5rem"
           textAlign="center"
-          animation="bottom"
+          animation={isMobile ? 'none' : 'bottom'}
         >
           왜 안심일까?
         </Textline>
@@ -286,21 +320,36 @@ export default function Commerce() {
       <S.AdvertisementSection>
         <CenterContainer direction="column">
           <S.TextContainer>
-            <Textline fontSize={2.4} textAlign="center" animation="bottom">
+            <Textline fontSize={2.4} textAlign="center" animation={isMobile ? 'none' : 'bottom'}>
               네이버 스마트 스토어부터, 인스타그램, 유튜브, 틱톡까지
             </Textline>
             <h2>
-              <Textline fontSize={8} isFontBold={true} textAlign="center" animation="bottom">
+              <Textline
+                fontSize={8}
+                isFontBold={true}
+                textAlign="center"
+                animation={isMobile ? 'none' : 'bottom'}
+              >
                 제품 홍보부터,
               </Textline>
-              <Textline fontSize={8} isFontBold={true} textAlign="center" animation="bottom">
+              <Textline
+                fontSize={8}
+                isFontBold={true}
+                textAlign="center"
+                animation={isMobile ? 'none' : 'bottom'}
+              >
                 판매까지
               </Textline>
             </h2>
-            <Textline fontSize={2.4} textAlign="center" animation="bottom">
+            <Textline fontSize={2.4} textAlign="center" animation={isMobile ? 'none' : 'bottom'}>
               유통 중간마진을 최소화 하여
             </Textline>
-            <Textline fontSize={2.4} textAlign="center" marginBottom="2rem" animation="bottom">
+            <Textline
+              fontSize={2.4}
+              textAlign="center"
+              marginBottom="2rem"
+              animation={isMobile ? 'none' : 'bottom'}
+            >
               제조사와 소비자들을 바로 연결
             </Textline>
           </S.TextContainer>

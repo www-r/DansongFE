@@ -1,7 +1,7 @@
 import { theme } from '../../styles/theme';
 import Textline from '../Textline';
 import * as S from './style';
-
+import { isMobile } from 'react-device-detect';
 export default function Studio() {
   return (
     <>
@@ -9,7 +9,7 @@ export default function Studio() {
         <S.TextContainer>
           <Textline
             fontSize={28}
-            animation="top"
+            animation={isMobile ? 'none' : 'top'}
             isFontBold={true}
             color={theme.textColor.white}
             textAlign="center"
@@ -18,7 +18,7 @@ export default function Studio() {
           </Textline>
           <Textline
             fontSize={8}
-            animation="top"
+            animation={isMobile ? 'none' : 'top'}
             isFontBold={true}
             color={theme.textColor.white}
             textAlign="center"
@@ -30,7 +30,7 @@ export default function Studio() {
           <S.TextBox className="textbox">
             <Textline
               fontSize={4}
-              animation="top"
+              animation={isMobile ? 'none' : 'top'}
               color={theme.textColor.white}
               marginBottom="4rem"
             >
@@ -40,7 +40,7 @@ export default function Studio() {
             </Textline>
             <Textline
               fontSize={4}
-              animation="top"
+              animation={isMobile ? 'none' : 'top'}
               color={theme.textColor.white}
               marginBottom="4rem"
             >
@@ -51,7 +51,7 @@ export default function Studio() {
             </Textline>
             <Textline
               fontSize={4}
-              animation="top"
+              animation={isMobile ? 'none' : 'top'}
               marginBottom="4rem"
               color={theme.textColor.white}
             >

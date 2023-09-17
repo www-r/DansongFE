@@ -4,7 +4,7 @@ import * as S from './style';
 import { CenterContainer } from '../../../styles/global';
 import Textline from '../../Textline';
 import Logo from '../../Logo';
-
+import { isMobile } from 'react-device-detect';
 import { theme } from '../../../styles/theme';
 export default function Contents() {
   const [, setWidth] = useState(window.innerWidth);
@@ -56,7 +56,7 @@ export default function Contents() {
                 color={theme.textColor.white}
                 marginBottom="1.2em"
                 textAlign="center"
-                animation="bottom"
+                animation={isMobile ? 'none' : 'bottom'}
               >
                 유튜브
               </Textline>
@@ -67,7 +67,7 @@ export default function Contents() {
                 color={theme.textColor.white}
                 textAlign="center"
                 marginBottom="2em"
-                animation="bottom"
+                animation={isMobile ? 'none' : 'bottom'}
               >
                 구.안.지. X 브랜드
                 <br />
@@ -177,7 +177,11 @@ export default function Contents() {
       <S.AdvertiseSection>
         <h4>
           <CenterContainer>
-            <Textline fontSize={2.4} color={theme.textColor.white} animation="bottom">
+            <Textline
+              fontSize={2.4}
+              color={theme.textColor.white}
+              animation={isMobile ? 'none' : 'bottom'}
+            >
               제품 사진부터 광고 영상까지
             </Textline>
           </CenterContainer>
@@ -189,13 +193,13 @@ export default function Contents() {
               isFontBold={true}
               color={theme.textColor.white}
               marginBottom="5rem"
-              animation="bottom"
+              animation={isMobile ? 'none' : 'bottom'}
             >
               광고 / 바이럴
             </Textline>
           </CenterContainer>
         </h3>
-        <CenterContainer>
+        <CenterContainer direction="column">
           <S.AdvertiseVideo
             id="commerce"
             src={`${import.meta.env.VITE_BASE_URL}/videos/advertiseVideo.mp4`}
@@ -207,6 +211,9 @@ export default function Contents() {
           >
             팝꽃 광고 영상
           </S.AdvertiseVideo>
+          <Textline fontSize={2} color={theme.backgroundColor.white} marginBottom="5rem">
+            # 팝꽃 광고 영상
+          </Textline>
         </CenterContainer>
       </S.AdvertiseSection>
     </S.Section>

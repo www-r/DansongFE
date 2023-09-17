@@ -62,7 +62,7 @@ export const AdvertiseSection = styled.div`
   position: relative;
 `;
 export const AdvertiseVideo = styled.video`
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
   display: block;
 `;
 
