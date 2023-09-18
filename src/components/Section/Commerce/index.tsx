@@ -359,7 +359,7 @@ export default function Commerce() {
               <img src="/images/smartstore.png" alt="smartstore" style={{ width: '90%' }} />
               <S.BtnsContainer>
                 <a href="https://smartstore.naver.com/eatreaming" target="blank">
-                  <Button>
+                  <Button className="mainPage">
                     <Textline fontSize={3} isFontBold textAlign="center">
                       스마트스토어 바로가기
                     </Textline>
@@ -371,14 +371,14 @@ export default function Commerce() {
               <img src="/images/sns.png" alt="sns" style={{ width: '100%' }} />
               <S.BtnsContainer>
                 <a href="https://youtube.com/@user-pf6hz4yw2g?si=QStqYwy1bB5c12N6" target="blank">
-                  <Button>
+                  <Button className="mainPage">
                     <Textline fontSize={3} isFontBold textAlign="center">
                       유튜브 바로가기
                     </Textline>
                   </Button>
                 </a>
                 <a href="https://www.instagram.com/eatreaming/" target="blank">
-                  <Button>
+                  <Button className="mainPage">
                     <Textline fontSize={3} isFontBold textAlign="center">
                       인스타그램 바로가기
                     </Textline>

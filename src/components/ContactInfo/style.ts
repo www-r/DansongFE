@@ -5,8 +5,7 @@ export const Wrapper = styled.section`
   margin: 0 auto;
   padding: 4rem;
   font-size: 1.6rem;
-
-  @media screen and (max-width: ${({ theme }) => theme.viewport.tablet}) {
+  @media screen and (max-width: ${({ theme }) => theme.viewport.desktop}) {
     width: 100%;
   }
 `;
@@ -14,19 +13,25 @@ export const Wrapper = styled.section`
 export const TextContainer = styled.div`
   width: fit-content;
   margin-bottom: 2rem;
-
-  & div {
-    display: grid;
-    grid-template-columns: 10rem 1fr;
-    gap: 1rem;
-  }
 `;
 
+interface TableRowProps {
+  isMobile: boolean;
+}
+export const TableRow = styled.tr<TableRowProps>`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: ${({ isMobile }) => (isMobile ? 'column' : 'row')};
+`;
+export const TableHeader = styled.th`
+  text-align: left;
+`;
 export const Label = styled.label`
+  display: inline-block;
   font-weight: bold;
+  width: 5rem;
+  text-align: left;
 `;
-
-export const Title = styled.h3`
-  font-weight: bold;
-  margin-bottom: 2rem;
+export const Info = styled.div`
+  display: flex;
 `;
