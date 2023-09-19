@@ -16,7 +16,7 @@ export default function Contents() {
   return (
     <S.Section id="contents">
       <CenterContainer>
-        <S.TextSection className="text-section" id="contents">
+        <S.TextSection className="text-section">
           <Textline
             fontSize={2.4}
             isFontBold={true}
