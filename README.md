@@ -11,7 +11,7 @@
 
 ## 사이트 소개
 ### 1. 메인 페이지 ( 3가지 섹션 : Dansong Korea, Contents, Commerce )
-<img src="https://github.com/www-r/DansongFE/assets/117294002/846ac2a1-e90d-4caf-8511-24b3f3f2d73a" width=800>
+<img src="https://github.com/www-r/DansongFE/assets/117294002/8da914ad-96a4-4375-b5ef-7a2e8f3f2c80" width=800>
 
 ### 2. 컨택트 페이지
 <img src="https://github.com/www-r/DansongFE/assets/117294002/d6710d56-02d2-44be-bc25-824d8bb2bbc0"  width=800>
